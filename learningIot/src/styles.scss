@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "EB_Garamond";
+  src: url("./assets/fonts/EB_Garamond/static/EBGaramond-Bold.ttf");
+}
+
+
+.maxWidth{
+  max-width: 80%;
+}
+
+.btnColor{
+  padding: 10px;
+  background-color: rgb(4, 30, 67);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+}

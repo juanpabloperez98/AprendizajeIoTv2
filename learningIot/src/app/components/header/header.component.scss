@@ -1,0 +1,25 @@
+.containerNavbar{
+  // max-width: 1200px;
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  background-color: rgb(4, 30, 67);
+  z-index: 2;
+  nav{
+    max-width: 1200px;
+    margin: auto;
+
+    li{
+      margin-left: 120px;
+    }
+
+    a{
+      color: white;
+
+      img{
+        width: 60px;
+      }
+    }
+  }
+
+}
