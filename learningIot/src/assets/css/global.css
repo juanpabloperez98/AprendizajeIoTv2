@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "EBGaramond";
+    src: url("../fonts/EBGaramond/EBGaramond-VariableFont_wght.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+*{
+    font-family: "EBGaramond";
+}
+.reduce-90{
+    width: 90%;
+}
+.reduce-60{
+    width: 60%;
+}
+.btn-btns{
+    background-color: rgb(4, 30, 67);
+    color: white;
+    border-radius: 20px;
+}
+.btn-btns:hover{
+    color: white;
+    text-shadow: 2px 5px 3px rgb(176, 176, 176);
+    background-color: rgba(4, 30, 67, .8);
+}
+.bg-color-main{
+    background-color: rgba(4, 30, 67, .9);
+    color: white !important;
+    margin-top: 20px;
+}
+.back-arrow-a{
+    text-decoration: none;
+    color: black;
+}
+.color-gray{
+    background-color: rgb(193, 193, 193);
+    padding: 20px;
+    border-radius: 20px;
+}
+.back-arrow-a:hover{
+    text-decoration: none;
+    color: #B0DAF2;
+}
+.back-arrow{
+    width: 20px;
+    margin-right: 3px;
+}
+.btn-go-learning{
+    padding: 10px;
+    background-color: rgb(4, 30, 67);
+    border-radius: 10px;
+    color: white;
+    text-decoration:none;
+    width: 200px;
+}
+.btn-go-learning:hover{
+    color: rgb(160, 160, 160);
+}
+.desactivate{
+    display: none;
+}
+.btn-go-learning img {
+    /* display: block; */
+    /* float: left; */
+    height: 30px;
+    /* margin-top: -9px; */
+    /* margin-right: 10px; */
+    animation: latir infinite 5s linear;
+}
+
+@keyframes latir {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(1.02, 1.02);
+    }
+    50% {
+        transform: scale(1.02, 1.02);
+    }
+
+    75%{
+        transform: scale(0.95, 0.95);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}

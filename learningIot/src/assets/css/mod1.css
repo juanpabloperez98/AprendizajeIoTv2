@@ -1,0 +1,80 @@
+main{
+    padding-top: 130px;
+}
+#left-arrow{
+    position: fixed;
+    left: 10%;
+    top: 60%;
+}
+#right-arrow{
+    position: fixed;
+    left: 90%;
+    top: 60%;
+}
+.row_{
+    background-color: rgb(176, 176, 176);
+    padding: 10px 20px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+}
+.row_:hover{
+    cursor: pointer;
+    background-color: rgb(4, 30, 67);
+    color: white;
+}
+.btn-carrousel-tem .carrousel-icon{
+    background-color: rgb(4, 30, 67, .8);
+    padding: 30px;
+    border-radius: 50%;
+}
+
+.content-img img{
+    width: 600px;
+    height: 300px;
+}
+.pass-to-pass-container{
+    background-color: rgb(209, 209, 209);
+    border-radius: 15px;
+}
+.pass-to-pass-container > div{
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#line-explain1{
+    content: "";
+    background-color: rgba(223, 223, 223, 0.3);
+    width: 100%;
+    height: 18px;
+    position: absolute;
+    top: 20px;
+    margin-left: -10px;
+}
+#line-explain2{
+    content: "";
+    background-color: rgba(223, 223, 223, 0.3);
+    width: 100%;
+    height: 18px;
+    position: absolute;
+    top: 20px;
+    margin-left: -50px;
+}
+#line-explain3{
+    content: "";
+    background-color: rgba(223, 223, 223, 0.3);
+    width: 100%;
+    height: 18px;
+    position: absolute;
+    top: 20px;
+    margin-left: -50px;
+}
+
+.content-img img{
+    width: 100%; 
+    border-radius: 20px;
+}
+#last_section{
+    margin-bottom: 8em;
+}
