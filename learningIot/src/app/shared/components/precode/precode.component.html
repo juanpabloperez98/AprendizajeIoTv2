@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-lg-6">
+    <pre class="language-language-markup line-numbers">
+      <code class="language-c">{{ code }}
+      </code>
+      <span [style.top]="top_style" class="line-explain"> </span>
+    </pre>
+  </div>
+  <div class="col-lg-6 text-center pass-container">
+    <h4>Explicación</h4>
+    <p class="text-start px-4">
+      {{ explain_txt }}
+    </p>
+  </div>
+  <div class="col-lg-12 text-center mt-4">
+    <a class="btn btn-primary" (click)="back()"><</a>
+    <a class="btn btn-primary ms-2" (click)="next()">></a>
+  </div>
+</div>

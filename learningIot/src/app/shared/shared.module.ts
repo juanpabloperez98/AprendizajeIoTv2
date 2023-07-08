@@ -2,13 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PrecodeComponent } from './components/precode/precode.component';
 
 
 
 @NgModule({
   declarations: [
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    PrecodeComponent,
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,7 @@ import { HeaderComponent } from './components/header/header.component';
   exports: [
     FooterComponent,
     HeaderComponent,
-
+    PrecodeComponent,
   ]
 })
 export class SharedModule { }
