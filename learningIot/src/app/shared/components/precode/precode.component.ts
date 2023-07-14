@@ -15,7 +15,19 @@ export class PrecodeComponent implements OnInit {
   @Input() curent_line:number = 1;
   top_style:string = '';
   explain_txt:string = '';
+  estiloEx:string='';
+  estilo:string='display:none';
+
+
+
   constructor() { }
+
+  ocultar():void {
+      this.estiloEx="display:none";
+      this.estilo="display:inline";
+
+
+  }
 
   ngOnInit(): void {
     this.top_style = `${this.top}px`;
