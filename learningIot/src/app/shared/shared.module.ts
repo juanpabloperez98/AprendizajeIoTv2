@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PrecodeComponent } from './components/precode/precode.component';
+import { ButtonGoBackComponent } from './components/button-go-back/button-go-back.component';
 
 
 
@@ -11,6 +12,7 @@ import { PrecodeComponent } from './components/precode/precode.component';
     FooterComponent,
     HeaderComponent,
     PrecodeComponent,
+    ButtonGoBackComponent,
   ],
   imports: [
     CommonModule,
@@ -19,6 +21,7 @@ import { PrecodeComponent } from './components/precode/precode.component';
     FooterComponent,
     HeaderComponent,
     PrecodeComponent,
+    ButtonGoBackComponent,
   ]
 })
 export class SharedModule { }
