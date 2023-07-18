@@ -239,6 +239,8 @@ export class MainComponent implements OnInit {
 
 
 
+  QUESTION_PATH = "/introduccion/questions";
+
   constructor(
     private highlightService: HighlightService,
   ) { }

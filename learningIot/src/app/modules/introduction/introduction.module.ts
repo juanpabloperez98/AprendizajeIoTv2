@@ -4,12 +4,14 @@ import { MainComponent } from './main/main.component';
 import { RouterModule } from '@angular/router';
 import { introductionRoutes } from './introduction.routing';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { QuestionsComponent } from './questions/questions.component';
 
 
 
 @NgModule({
   declarations: [
-    MainComponent
+    MainComponent,
+    QuestionsComponent
   ],
   imports: [
     CommonModule,
