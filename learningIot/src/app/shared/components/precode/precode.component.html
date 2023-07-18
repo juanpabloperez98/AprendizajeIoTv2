@@ -3,12 +3,16 @@
     <pre class="language-language-markup line-numbers">
       <code class="language-c">{{ code }}
       </code>
-      <span [style.top]="top_style" class="line-explain"> </span>
+      <span [style]="estilo" [style.top]="top_style" class="line-explain"> </span>
     </pre>
   </div>
-  <div class="col-lg-6 text-center pass-container">
+  <div class="col-lg-5 text-center pass-container">
+    <h4>Línea</h4>
+    <p class="text-center  px-4">
+      {{ line }}
+    </p>
     <h4>Explicación</h4>
-    <p class="text-start px-4">
+    <p style="text-align: justify" class="text-start px-4">
       {{ explain_txt }}
     </p>
   </div>
