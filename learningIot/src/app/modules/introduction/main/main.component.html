@@ -1,5 +1,6 @@
 <shared-header></shared-header>
 <section style="max-width:70%" class="initial-section maxwidth">
+ <shared-button-go-back></shared-button-go-back>
   <div class="row">
     <div class="col-lg-6">
       <h3>1.1 Que es Iot?</h3>
@@ -130,8 +131,13 @@
       </div>
     </div>
     <div class="col-lg-6 top-margin">
-      <a [routerLink]="QUESTION_PATH" routerLinkActive="router-link-active"  class="btn d-block w-50 mx-auto mt-5 btn-success">Vamos aprender más</a>
-      <a class="btn d-block w-50 mx-auto mt-3 btn-success">Siguiente módulo</a>
+      <a [routerLink]="QUESTION_PATH" class="btn d-block w-50 mx-auto mt-5 botonColor">
+        Vamos aprender más
+        <img style="width: 30px;" class="ms-3" src="../../../../assets/icons/questionnaire.png" alt=""></a>
+      <a class="btn d-block w-50 mx-auto mt-3 botonColor">
+        Siguiente módulo
+        <img style="width: 30px;" class="ms-3" src="../../../../assets/icons/next_module.png" alt="">
+      </a>
     </div>
   </div>
 

@@ -12,10 +12,27 @@
 }
 
 .colorButton{
-  background-color: rgb(4, 30, 67);
-  border: 1px solid rgb(4, 30, 67);
+  padding: 13px;
+  background-color: #515936;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 1px solid #515936;
 
 }
+
+.background{
+  background-color: #515936;
+}
+
+.container{
+    min-height: 45px;
+}
+
+.container1{
+  min-height: 100px;
+}
+
 
 
 
