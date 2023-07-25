@@ -3,3 +3,21 @@
   padding: 20px;
   border-radius: 20px;
 }
+.section-final{
+  background-color: rgba(0, 123, 255, .6);
+  padding: 20px;
+  border-radius: 20px;
+  width: 50%;
+  color: white;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img{
+    width: 100px;
+    margin: auto;
+  }
+
+}

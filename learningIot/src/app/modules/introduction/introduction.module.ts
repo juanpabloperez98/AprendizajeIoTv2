@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { introductionRoutes } from './introduction.routing';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { QuestionsComponent } from './questions/questions.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -17,6 +19,7 @@ import { QuestionsComponent } from './questions/questions.component';
     CommonModule,
     RouterModule.forChild(introductionRoutes),
     SharedModule,
+    FormsModule,
   ]
 })
 export class IntroductionModule { }
