@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainComponent } from './main/main.component';
 import { RouterModule } from '@angular/router';
-import { introductionRoutes } from './introduction.routing';
+
+import { MainComponent } from './main/main.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { presentationRoutes } from './presentation1.routing';
+
 
 
 
@@ -13,9 +15,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(introductionRoutes),
     SharedModule,
-  ],
-  exports:[RouterModule],
+    RouterModule.forChild(presentationRoutes),
+  ]
 })
-export class IntroductionModule { }
+export class Presentation1Module { }

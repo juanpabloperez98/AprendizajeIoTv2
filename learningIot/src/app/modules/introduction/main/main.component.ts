@@ -237,8 +237,6 @@ export class MainComponent implements OnInit {
       ];
       max_line4:number = 21;
 
-
-
   constructor(
     private highlightService: HighlightService,
   ) { }
