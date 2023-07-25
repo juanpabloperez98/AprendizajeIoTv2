@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     RouterModule.forChild(introductionRoutes),
     SharedModule,
     FormsModule,
-  ]
+  ],
+  exports:[RouterModule],
 })
 export class IntroductionModule { }
