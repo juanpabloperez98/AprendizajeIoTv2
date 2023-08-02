@@ -26,6 +26,24 @@ export const AppRoutes: Routes = [
     ]
   },
   {
+    path: 'presentationTwo',
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./modules/presentation2/presentation2.module').then( m => m.Presentation2Module)
+      }
+    ]
+  },
+  {
+    path: 'aplicaciones',
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./modules/aplicaciones/aplicaciones.module').then( m => m.AplicacionesModule)
+      }
+    ]
+  },
+  {
     path: '**',
     redirectTo:'',
   },

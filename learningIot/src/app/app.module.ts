@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HighlightService } from './services/highlight.service';
 
+
 //Modules
 @NgModule({
   declarations: [
