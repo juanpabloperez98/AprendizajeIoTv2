@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  QUESTION_PATH = "/presentationTwo/questions";
+
   constructor() { }
 
   ngOnInit(): void {

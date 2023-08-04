@@ -16,6 +16,12 @@ p, li{
   grid-gap: 30px;
 }
 
+.ContenedorPadre1{
+  display: grid;
+  grid-template-columns:50% 50%;
+  grid-gap: 10px;
+}
+
 
 .box1{
   grid-column-start: 1;
@@ -36,3 +42,12 @@ p, li{
   padding: 20px;
   margin-bottom: 10px;
 }
+
+.botonColor{
+  background-color: rgb(4, 30, 67);
+  color: #fff;
+ }
+
+ .botonColor:hover{
+   color: #aca8a8;
+  }
