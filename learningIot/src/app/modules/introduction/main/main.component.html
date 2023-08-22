@@ -1,6 +1,6 @@
 <shared-header></shared-header>
 <section style="max-width:70%" class="initial-section maxwidth">
- <shared-button-go-back></shared-button-go-back>
+  <shared-button-go-back></shared-button-go-back>
   <div class="row">
     <div class="col-lg-6">
       <h3>1.1 Que es Iot?</h3>
@@ -16,7 +16,6 @@
     <div style="text-align: justify" class="col-lg-6">
       <br>
       <br>
-
       Por supuesto, todo esto es con el propósito de recopilar datos para no es solo tenerlos, sino usarlos para la toma
       de decisiones automatizadas, o hacer ciertas predicciones más eficientes. Una vez que los dispositivos de IoT
       recopilan y transmiten los datos, el último paso es analizarlos y crear una acción o tomar una decisión
@@ -38,15 +37,55 @@
         decisiones posteriores agilizando así todo proceso al evitar la intervención o factor humano, el cual aumenta
         las posibilidades de fallo del sistema. Todo esto se puede resumir en 4 “sencillos pasos” que necesitan su
         propio desarrollo según las necesidades de cada sistema.
-        <br>
-        <br>
-        <br>
-        <span style="font-weight: bold;">- Toma De Datos:</span> Usamos todos los sensores con los que dispone un objeto
-        IOT para adquirir todos los datos relevantes, sin ningún tipo de manipulación de dichos datos del ambiente en el
-        que se desarrollará dicho trabajo.
       </p>
     </div>
-    <app-precode [code]="CODE1" [LINE_CODE]="LINE_CODE1" [top]="top" [explain]="explain1" [max_line]="max_line1"></app-precode>
+    <hr>
+    <div class="col-12">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h1>Veamos unos ejemplos teoricos</h1>
+        </div>
+        <div class="col-6">
+          <h4>Termostatos Inteligentes</h4>
+          <h5>Descripción</h5>
+          <p>
+            Estos dispositivos permiten controlar la temperatura de un hogar o edificio de manera remota a través de un
+            smartphone o computadora. Aprenden de los hábitos de los habitantes y ajustan automáticamente la temperatura
+            para maximizar el confort mientras ahorran energía.
+          </p>
+          <h5>Funcionamiento IoT</h5>
+          <p>
+            El termostato recopila datos sobre la temperatura actual, la presencia de personas (a través de sensores de
+            movimiento) y las preferencias del usuario. Estos datos se procesan localmente o en la nube para tomar
+            decisiones de climatización. Además, el usuario puede ajustar la temperatura a distancia a través de una
+            aplicación, y el termostato puede incluso integrarse con servicios meteorológicos para adaptarse a las
+            condiciones externas.
+          </p>
+        </div>
+        <div class="col-6">
+          <h4>Monitoreo de calidad del aire en ciudades</h4>
+          <h5>Descripción</h5>
+          <p>
+            En muchas ciudades, se han instalado sensores en diferentes lugares para monitorear la calidad del aire en
+            tiempo real, proporcionando datos sobre la concentración de contaminantes.
+          </p>
+          <h5>Funcionamiento IoT</h5>
+          <p>
+            Los sensores recopilan datos de contaminantes y los envían a una plataforma centralizada mediante conexiones
+            inalámbricas. Estos datos se procesan, almacenan y analizan para identificar patrones, alertar sobre niveles
+            peligrosos y informar al público a través de aplicaciones o sitios web.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr class="mb-5">
+    <p style="text-align: justify">
+      <span style="font-weight: bold;">- Toma De Datos:</span> Usamos todos los sensores con los que dispone un objeto
+        IOT para adquirir todos los datos relevantes, sin ningún tipo de manipulación de dichos datos del ambiente en el
+        que se desarrollará dicho trabajo.
+    </p>
+    <app-precode [code]="CODE1" [LINE_CODE]="LINE_CODE1" [top]="top" [explain]="explain1"
+      [max_line]="max_line1"></app-precode>
     <div class="col-lg-12 mt-5">
       <p style="text-align: justify">
         <span style="font-weight: bold;">- Migración De Datos:</span> Ya que tenemos todos los datos tomados por
@@ -55,25 +94,30 @@
         / ETHERNET) a un servidor en la nube, ya sea público o privado.
       </p>
     </div>
-    <app-precode [code]="CODE2" [LINE_CODE]="LINE_CODE2" [top]="top"  [explain]="explain2" [max_line]="max_line2"></app-precode>
+    <app-precode [code]="CODE2" [LINE_CODE]="LINE_CODE2" [top]="top" [explain]="explain2"
+      [max_line]="max_line2"></app-precode>
 
     <div class="col-lg-12 mt-5">
       <p style="text-align: justify">
-        <span style="font-weight: bold;">- Procesamiento De Datos: </span> Aquí es donde transformamos los datos recogidos por los
+        <span style="font-weight: bold;">- Procesamiento De Datos: </span> Aquí es donde transformamos los datos
+        recogidos por los
         sensores (datos analógicos / datos digitales) usando los algoritmos y software disponibles para esto,
         para luego tener bases en la toma de decisiones con dichos fundamentos.
       </p>
     </div>
-    <app-precode [code]="CODE3" [LINE_CODE]="LINE_CODE3" [top]="top" [explain]="explain3" [max_line]="max_line3"></app-precode>
+    <app-precode [code]="CODE3" [LINE_CODE]="LINE_CODE3" [top]="top" [explain]="explain3"
+      [max_line]="max_line3"></app-precode>
 
     <div class="col-lg-12 mt-5">
       <p style="text-align: justify">
-        <span style="font-weight: bold;">- Toma De Decisiones:</span> Se analizan los datos acumulados de todos los dispositivos de
+        <span style="font-weight: bold;">- Toma De Decisiones:</span> Se analizan los datos acumulados de todos los
+        dispositivos de
         una red de IoT. Esto brinda información estratégica poderosa para fundamentar acciones y decisiones
         tomando así siempre la decisión más eficiente y óptima en el menor tiempo posible.
       </p>
     </div>
-    <app-precode [code]="CODE4" [LINE_CODE]="LINE_CODE4"  [top]="top" [explain]="explain4" [max_line]="max_line4"></app-precode>
+    <app-precode [code]="CODE4" [LINE_CODE]="LINE_CODE4" [top]="top" [explain]="explain4"
+      [max_line]="max_line4"></app-precode>
 
 
 
@@ -81,7 +125,7 @@
 
   <div class="row mt-5">
     <div class="col-lg-6">
-      <h3>1.3 Para qué sirve?</h3>
+      <h3>1.4 Para qué sirve?</h3>
       <p style="text-align: justify">
         Con lo visto anteriormente podemos concluir que la IoT agiliza en todo sentido la toma de decisiones y procesos
         de su negocio usando sus propios datos y el feedback único de cada proceso. La Internet de las cosas no va
@@ -103,7 +147,7 @@
 
   <div class="row mt-5">
     <div class="col-lg-12">
-      <h3>1.4 Implementación del Iot en la empresa / industria</h3>
+      <h3>1.5 Implementación del Iot en la empresa / industria</h3>
       <p style="text-align: justify">
         Actualmente el mundo gira en torno a la tecnología, la sociedad quiere cada vez estar más conectada, por esto el
         IoT capta la atención de los consumidores, los cuales ya han pasado por experiencias con muchos dispositivos, y
@@ -130,7 +174,7 @@
         <img src="../../../../assets/mod1/mod1.4.png" alt="image.jpg">
       </div>
     </div>
-    
+
     <div class="col-lg-6 top-margin">
       <a [routerLink]="QUESTION_PATH" class="btn d-block w-50 mx-auto mt-5 botonColor">
         Vamos aprender más
