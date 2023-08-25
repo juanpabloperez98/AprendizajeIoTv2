@@ -1,0 +1,112 @@
+<shared-header></shared-header>
+<section class="initial-section maxwidth">
+  <div class="progress mb-5" #progressBar>
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" [style.width.%]="progressValue"></div>
+  </div>
+
+  <div class="row" style="justify-content: center" #questionNum1>
+
+    <div class="col-lg-6 section-1">
+      <h3>¿El IoT puede estar compuesto por?</h3>
+
+      <div class="col-lg-100">
+        <div class="w-75 mx-auto mt-3">
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion1" name="question1" id="question11" checked/>
+            <label class="form-check-label" for="question11">Algun elemento electronico que tenga la capacidad de conectarse a internet</label>
+          </div>
+          <br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion1" name="question1" id="question12"/>
+            <label class="form-check-label" for="question12"> Un elemento electronico que no se pueda conectar a internet</label>
+          </div>
+          <br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion1" name="question1" id="question13"/>
+            <label class="form-check-label" for="question13">Por varios elementos conectados entre si pero que no estan conectados a internet </label>
+          </div>
+
+          <button class="btn btn-success mt-4" (click)="onClick(0)">Seleccionar Respuesta</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row" style="justify-content: center" #questionNum2>
+    <div class="col-lg-6 section-1">
+      <h3>¿Cual es el papael de los sensores en los dispositivos IoT?</h3>
+
+      <div class="col-lg-100">
+        <div class="w-75 mx-auto mt-3">
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion2" name="question2" id="question21" checked/>
+            <label class="form-check-label" for="question21">Almacenar datos que capturan los sensores </label>
+          </div>
+          <br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion2" name="question2" id="question22"/>
+            <label class="form-check-label" for="question22">Tener una comunicación entre si, en el cual comparten datos que capturan los sensores</label>
+          </div>
+
+          <br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion2" name="question2" id="question23"/>
+            <label class="form-check-label" for="question23">Observar su entorno sin una comunicación</label>
+          </div>
+
+          <button class="btn btn-success mt-4" (click)="onClick(1)">Seleccionar Respuesta</button>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="row" style="justify-content: center" #questionNum3>
+    <div class="col-lg-6 section-1">
+      <h3>¿Cuales son los pasos del funcionamiento del IoT? </h3>
+      <div class="col-lg-100">
+        <div class="w-75 mx-auto mt-3">
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion3" name="question3" id="question31" checked/>
+            <label class="form-check-label" for="question31">Migración de datos - Toma de datos - Procesamiento de datos - Toma de decisiones</label>
+          </div>
+          <br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion3" name="question3" id="question32"/>
+            <label class="form-check-label" for="question32">Toma de decisiones - Procesamiento de datos - Toma de datos - Migración de datos</label>
+          </div>
+          <br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion3" name="question3" id="question33"/>
+            <label class="form-check-label" for="question33">Toma de datos - Migración de datos - Procesamiento de datos - Toma de decisiones</label>
+          </div>
+
+          <button class="btn btn-success mt-4" (click)="onClick(2)">Seleccionar Respuesta</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="row" #finalSection>
+    <div class="col-lg-12 section-final">
+      <img [src]="imagePath" alt="correct.png">
+      <h3>{{ titleMsg }}</h3>
+      <p>{{ bodyMsg }}<br>
+        Respuestas correctas: <span style="color: black;">{{ correctAnswer }}</span> <br>
+        Respuestas incorrectas: <span style="color: black;">{{ incorrectAnswer }}</span>
+      </p>
+      <div>
+        <a href="#" class="btn btn-primary">Ir al siguiente módulo</a>
+        <a href="#" class="btn btn-primary ms-3" [routerLink]="ROUTE_PATH_INTRODUCTION" routerLinkActive="router-link-active" >Volver módulo actual</a>
+      </div>
+    </div>
+  </div>
+
+</section>

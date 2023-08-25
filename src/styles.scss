@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~prismjs/plugins/toolbar/prism-toolbar.css";
+@import "~prismjs/plugins/line-numbers/prism-line-numbers.css";
+@import "~prismjs/themes/prism-dark";
+
+
+@font-face {
+  font-family: "EB_Garamond";
+  src: url("./assets/fonts/EB_Garamond/static/EBGaramond-Bold.ttf");
+}
+
+.maxWidth{
+  max-width: 80%;
+}
+
+.btnColor{
+  padding: 10px;
+  background-color: rgb(4, 30, 67);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.initial-section {
+  padding-top: 150px;
+}
+
+.maxwidth {
+  max-width: 80%;
+  margin: auto;
+}
+
+.pass-container{
+  background-color: rgb(209, 209, 209);
+  border-radius: 15px;
+  h4{
+    margin-top: 20px;
+  }
+  p{
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    min-height: 200px;
+  }
+}
+.desactivate{
+  display: none;
+}
+.line-explain{
+  content: '';
+  width: 100%;
+  display: inline-block;
+  background-color: rgba(150, 150, 150, .5);
+  position: absolute;
+  left: 16px;
+}
+
+.container-img{
+  width: 500px;
+
+  img{
+    width: 100%;
+    border-radius: 20px;
+    margin-left: 20px;
+  }
+}
+.top-margin{
+  margin-top: 100px !important;
+}

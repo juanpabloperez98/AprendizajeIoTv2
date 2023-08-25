@@ -1,0 +1,215 @@
+<shared-header></shared-header>
+<section style="max-width:70%; padding-top: 70px" class="initial-section maxwidth">
+  <shared-button-go-back></shared-button-go-back>
+  <br>
+  <br>
+  <article>
+    <div class="ContenedorPadre">
+      <div class="ContenedorInfo">
+        <h3>1.	Dispositivos o Nodos IoT</h3>
+        <p>Son los elementos finales del ecosistema IoT, también conocidos como "dispositivos inteligentes" o "nodos".
+        Son los que recopilan datos del entorno, realizan tareas específicas y se comunican con otros dispositivos o
+        con la infraestructura central. Los dispositivos IoT pueden variar desde sensores y actuadores simples hasta
+        dispositivos más complejos, como cámaras de seguridad, termostatos inteligentes, wearables (dispositivos ponibles)
+        y electrodomésticos conectados, entre otros. Al hablar de nodos, existe una gran variedad de estos dispositivos: un
+        nodo de red puede ser tan simple como un pequeño sensor conectado, o algo más complejo como las pasarelas que funcionan
+        como concentradores de datos de diferentes fuentes de datos o los nodos IoT donde se ejecutan algoritmos más complejos,
+        conocidos como Edge Computing.
+        </p>
+      </div>
+      <div>
+          <img class="Image" src="../../../../assets/mod3/Nodo_Iot.png" alt="image.png">
+      </div>
+    </div>
+    <div>
+      <p>
+        A continuación, se  utilizará un escenario hipotético donde un dispositivo IoT envía datos de temperatura a la pasarela. El
+        lenguaje a utlizar es python ya que Python ofrecen ventajas significativas en el desarrollo de dispositivos IoT debido a
+        su facilidad de aprendizaje, su capacidad para manejar diversos aspectos de la IoT (como recopilación de datos, comunicación y control),
+        y su comunidad activa que crea y mantiene bibliotecas específicas para IoT.
+      </p>
+      <h5>Escenario: Dispositivo IoT que Envía Datos de Temperatura</h5>
+      <p>En este ejemplo, suponemos que hay un dispositivo IoT que mide la temperatura en una ubicación específica.
+        El dispositivo envía datos de temperatura a una pasarela IoT, que luego puede retransmitirlos a un servidor central
+        para su procesamiento.</p>
+        <app-precode [code]="CODE2" [LINE_CODE]="LINE_CODE2"  [top]="top" [explain]="explain2" [max_line]="max_line2"></app-precode>
+
+    </div>
+
+
+  </article>
+  <hr>
+
+  <article>
+    <div class="ContenedorPadre">
+      <div>
+        <img class="Image1" src="../../../../assets/mod3/Router.jpg" alt="image.jpg">
+      </div>
+      <div class="ContenedorInfo">
+        <h3>2.	Gateway o Pasarela IoT</h3>
+        <p>Las pasarelas IoT son elementos intermedios que actúan como intermediarios entre los dispositivos IoT y los sistemas
+          de procesamiento en la nube o en la red central. Estas pasarelas pueden ayudar a realizar tareas como el filtrado de datos,
+          la compresión, el cifrado y la agregación de información antes de enviarla a la nube. También pueden ofrecer funcionalidades adicionales,
+          como almacenamiento en caché local, procesamiento ligero y gestión de dispositivos. Las pasarelas IoT son especialmente útiles cuando hay
+          muchos dispositivos IoT dispersos y es necesario consolidar y transmitir datos de manera eficiente.</p>
+      </div>
+    </div>
+    <div>
+      <p>A continuación se da un ejemplo sencillo de cómo podría funcionar una pasarela o gateway IoT. En este caso, vamos a utilizar un escenario hipotético
+        donde una pasarela recopila datos de sensores y los envía a un servidor central.</p>
+      <h5>Escenario: Pasarela IoT para Monitoreo de Sensores</h5>
+      <p>
+        En este ejemplo, imaginemos que hay varios sensores distribuidos en diferentes ubicaciones. Estos sensores están recolectando datos de
+        temperatura y humedad. Una pasarela IoT se encarga de recopilar los datos de todos estos sensores y enviarlos a un servidor central para su
+        almacenamiento y análisis.
+      </p>
+      <app-precode [code]="CODE1" [LINE_CODE]="LINE_CODE1"  [top]="top" [explain]="explain1" [max_line]="max_line1"></app-precode>
+    </div>
+  </article>
+  <hr>
+  <article style="margin-top: 25px;
+                  margin-bottom: 25px;">
+    <h3>3. Infraestructura en la Nube o Plataforma IoT</h3>
+    <p>Esta es la parte central del ecosistema IoT, donde los datos recopilados por los dispositivos se almacenan, procesan y analizan. Las plataformas
+      IoT ofrecen servicios para administrar y visualizar datos, permiten implementar algoritmos de aprendizaje automático y brindan herramientas para
+      desarrollar aplicaciones y servicios basados en IoT. Además, estas plataformas pueden ofrecer capacidades de seguridad, gestión de dispositivos y
+      escalabilidad para manejar grandes volúmenes de datos y dispositivos conectados.</p>
+      <div style="text-align: center;">
+        <img class="Image2" src="../../../../assets/mod3/IOT.png" alt="image.png">
+      </div>
+      <p>
+         A continuación se muestra un ejemplo sencillo que ilustra cómo podrías usar la infraestructura en la nube para almacenar y procesar datos de
+         dispositivos IoT. En este ejemplo, utilizaremos Amazon Web Services (AWS) como plataforma en la nube para almacenar datos en una base de datos y
+         realizar una operación simple.
+      </p>
+      <h5>Escenario: Almacenamiento de Datos de Sensores en AWS</h5>
+      <p>
+        En este ejemplo hipotético, supongamos que tienes varios dispositivos IoT que recopilan datos de temperatura. Queremos almacenar estos datos en una
+        base de datos en la nube y calcular el promedio de temperatura.
+      </p>
+      <app-precode [code]="CODE3" [LINE_CODE]="LINE_CODE3"  [top]="top" [explain]="explain3" [max_line]="max_line3"></app-precode>
+
+      <article class="ContenerdoPadre2">
+        <div class="box1">
+          <h3 style="text-align: center;
+          margin-top:10px;">Importancia</h3>
+          <p>La infraestructura en la nube y las plataformas IoT juegan un papel fundamental en la gestión de datos y el análisis en el contexto de Internet de
+          las cosas (IoT). Su importancia radica en varios aspectos clave:</p>
+        </div>
+
+        <div>
+          <h5>1. Escalabilidad y Flexibilidad:</h5>
+          <p>La infraestructura en la nube ofrece una capacidad prácticamente ilimitada para almacenar grandes volúmenes de datos generados por dispositivos IoT.
+            Esto permite manejar de manera eficiente la enorme cantidad de información que se genera en proyectos de IoT, especialmente cuando se trata de despliegues
+            a gran escala.</p>
+        </div>
+
+        <div>
+          <h5>2. Procesamiento y Análisis en Tiempo Real: </h5>
+          <p>Las plataformas IoT en la nube permiten procesar y analizar los datos en tiempo real. Esto es crucial en aplicaciones donde las decisiones deben
+             tomarse de forma inmediata, como en la detección de fallas, sistemas de seguridad, o control de procesos industriales. El análisis en tiempo real
+             permite reaccionar rápidamente a eventos y optimizar operaciones en función de los datos más recientes.</p>
+        </div>
+
+        <div>
+          <h5>3. Acceso Remoto y Ubicuo:</h5>
+          <p>La infraestructura en la nube y las plataformas IoT permiten acceder a los datos desde cualquier lugar con conexión a internet. Esto es
+            especialmente valioso para aplicaciones de IoT que requieren monitoreo y gestión remota, como sistemas de seguridad, dispositivos de salud y
+            gestión de activos.</p>
+        </div>
+
+        <div>
+          <h5>4. Facilidad de Integración: </h5>
+          <p>Estas plataformas ofrecen API (Interfaces de Programación de Aplicaciones) y herramientas que facilitan la integración de los datos generados por
+             dispositivos IoT con otras aplicaciones y sistemas empresariales. Esto permite crear soluciones IoT más completas y aprovechar la información en
+             contextos más amplios.</p>
+        </div>
+
+        <div>
+          <h5>5. Análisis y Visualización Avanzados:  </h5>
+          <p>Las plataformas IoT en la nube proporcionan herramientas y servicios para realizar análisis avanzados sobre los datos recopilados. Esto incluye
+            aplicar algoritmos de aprendizaje automático (machine learning) para identificar patrones, predecir tendencias y tomar decisiones más inteligentes
+            y precisas. </p>
+        </div>
+
+        <div>
+          <h5>6. Seguridad y Respaldo de Datos: </h5>
+          <p>La infraestructura en la nube ofrece medidas de seguridad robustas para proteger los datos de los dispositivos IoT y prevenir accesos no
+            autorizados. Además, la redundancia y los sistemas de respaldo garantizan que los datos se mantengan seguros incluso en caso de fallas.</p>
+        </div>
+
+        <div class="box1">
+          <h5>7. Facilidad de Actualización y Mantenimiento: </h5>
+          <p>Las actualizaciones de software y el mantenimiento de las plataformas IoT en la nube se pueden realizar de manera centralizada.
+            Esto permite mantener los sistemas actualizados, mejorar la seguridad y agregar nuevas funcionalidades sin necesidad de modificar
+            los dispositivos IoT en el campo.</p>
+        </div>
+        <div class="box1">
+          <p>En resumen, la infraestructura en la nube y las plataformas IoT son fundamentales para gestionar y analizar los datos generados
+            por los dispositivos conectados. Permiten aprovechar al máximo el potencial de IoT al ofrecer escalabilidad, procesamiento en tiempo
+            real, acceso remoto, análisis avanzados y seguridad de los datos.</p>
+        </div>
+
+      </article>
+  </article>
+  <hr>
+  <article>
+      <h3  style="text-align: center;">Funcionamiento</h3>
+      <p>Las plataformas IoT en la nube permiten el almacenamiento, procesamiento y visualización de datos recopilados de dispositivos IoT de
+        la siguiente manera:</p>
+    <div class="ContenerdoPadre3">
+
+      <img style="height: 700px;
+      margin: auto;" class="box2" src="../../../../assets/mod3/i2t-iot-smartdevice-07.jpg" alt="image.png">
+
+
+      <div>
+        <h5>1. Almacenar datos:</h5>
+        <p>Guardar datos recopilados de dispositivos IoT en la nube de forma segura y organizada.</p>
+        <br>
+        <h5>2. Procesar datos: </h5>
+        <p>Guardar datos recopilados de dispositivos IoT en la nube de forma segura y organizada.</p>
+        <br>
+        <h5>3. Análisis avanzado: </h5>
+        <p>Aplicar aprendizaje automático para descubrir patrones y tomar decisiones inteligentes.</p>
+        <br>
+        <h5>4. Visualización: </h5>
+        <p>Crear gráficos y paneles para interpretar los datos de forma comprensible.</p>
+        <br>
+        <h5>5. Acceso remoto:</h5>
+        <p>Consultar y gestionar datos desde cualquier lugar con conexión a internet</p>
+        <br>
+        <h5>6. Seguridad:</h5>
+        <p>Proteger los datos y garantizar la privacidad de usuarios autorizados.</p>
+        <br>
+        <h5>7. Escalabilidad:</h5>
+        <p>Manejar grandes volúmenes de datos y crecer con el proyecto.</p>
+      </div>
+    </div>
+    <div class="ContenerdoPadre4">
+
+      <p>En resumen, las plataformas IoT en la nube ofrecen una infraestructura sólida para gestionar,
+        procesar y analizar los datos recopilados de dispositivos IoT. Permiten almacenar datos de manera
+        segura, procesarlos en tiempo real o de forma periódica, realizar análisis avanzados con aprendizaje
+        automático y presentar la información de manera visualmente atractiva. Todo esto, combinado con la
+        accesibilidad remota y la seguridad, hace que las plataformas IoT sean una parte esencial para el éxito
+        y la eficiencia de proyectos IoT en diversos campos y aplicaciones.</p>
+
+        <div style="width: 450px;">
+          <a routerLink="/presentationTwo/questions" class="btn d-block w-50 mx-auto mt-5 botonColor">
+            Vamos aprender más
+            <img style="width: 30px;" class="ms-3" src="../../../../assets/icons/questionnaire.png" alt=""></a>
+          <a routerLink="/aplicaciones/main" class="btn d-block w-50 mx-auto mt-3 botonColor">
+            Siguiente módulo
+            <img style="width: 30px;" class="ms-3" src="../../../../assets/icons/next_module.png" alt="">
+          </a>
+        </div>
+
+    </div>
+
+  </article>
+
+
+
+</section>
+<shared-footer></shared-footer>
