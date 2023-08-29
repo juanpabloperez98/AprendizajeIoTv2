@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 
+
 @Component({
   selector: 'app-precode',
   templateUrl: './precode.component.html',
@@ -32,6 +33,7 @@ export class PrecodeComponent implements OnInit {
   ngOnInit(): void {
     this.top_style = `${this.top}px`;
     this.add_explain();
+
   }
 
   add_explain():void {

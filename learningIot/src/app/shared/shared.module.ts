@@ -7,12 +7,14 @@ import { ButtonGoBackComponent } from './components/button-go-back/button-go-bac
 
 
 
+
 @NgModule({
   declarations: [
     FooterComponent,
     HeaderComponent,
     PrecodeComponent,
     ButtonGoBackComponent,
+
   ],
   imports: [
     CommonModule,
@@ -22,6 +24,7 @@ import { ButtonGoBackComponent } from './components/button-go-back/button-go-bac
     HeaderComponent,
     PrecodeComponent,
     ButtonGoBackComponent,
+
   ]
 })
 export class SharedModule { }

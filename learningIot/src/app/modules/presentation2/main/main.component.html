@@ -3,42 +3,73 @@
   <shared-button-go-back></shared-button-go-back>
   <br>
   <br>
-  <article class="ContenedorPadre">
-    <div class="ContenedorInfo">
-      <h3>1.	Dispositivos o Nodos IoT</h3>
-      <p>Son los elementos finales del ecosistema IoT, también conocidos como "dispositivos inteligentes" o "nodos".
-      Son los que recopilan datos del entorno, realizan tareas específicas y se comunican con otros dispositivos o
-      con la infraestructura central. Los dispositivos IoT pueden variar desde sensores y actuadores simples hasta
-      dispositivos más complejos, como cámaras de seguridad, termostatos inteligentes, wearables (dispositivos ponibles)
-      y electrodomésticos conectados, entre otros. Al hablar de nodos, existe una gran variedad de estos dispositivos: un
-      nodo de red puede ser tan simple como un pequeño sensor conectado, o algo más complejo como las pasarelas que funcionan
-      como concentradores de datos de diferentes fuentes de datos o los nodos IoT donde se ejecutan algoritmos más complejos,
-      conocidos como Edge Computing.
-      </p>
+  <article>
+    <div class="ContenedorPadre">
+      <div class="ContenedorInfo">
+        <h3>1.	Dispositivos o Nodos IoT</h3>
+        <p>Son los elementos finales del ecosistema IoT, también conocidos como "dispositivos inteligentes" o "nodos".
+        Son los que recopilan datos del entorno, realizan tareas específicas y se comunican con otros dispositivos o
+        con la infraestructura central. Los dispositivos IoT pueden variar desde sensores y actuadores simples hasta
+        dispositivos más complejos, como cámaras de seguridad, termostatos inteligentes, wearables (dispositivos ponibles)
+        y electrodomésticos conectados, entre otros. Al hablar de nodos, existe una gran variedad de estos dispositivos: un
+        nodo de red puede ser tan simple como un pequeño sensor conectado, o algo más complejo como las pasarelas que funcionan
+        como concentradores de datos de diferentes fuentes de datos o los nodos IoT donde se ejecutan algoritmos más complejos,
+        conocidos como Edge Computing.
+        </p>
+      </div>
+      <div>
+          <img class="Image" src="../../../../assets/mod3/Nodo_Iot.png" alt="image.png">
+      </div>
     </div>
     <div>
-        <img class="Image" src="../../../../assets/mod3/Nodo_Iot.png" alt="image.png">
+      <p>
+        A continuación, se  utilizará un escenario hipotético donde un dispositivo IoT envía datos de temperatura a la pasarela. El
+        lenguaje a utlizar es python ya que Python ofrecen ventajas significativas en el desarrollo de dispositivos IoT debido a
+        su facilidad de aprendizaje, su capacidad para manejar diversos aspectos de la IoT (como recopilación de datos, comunicación y control),
+        y su comunidad activa que crea y mantiene bibliotecas específicas para IoT.
+      </p>
+      <h5>Escenario: Dispositivo IoT que Envía Datos de Temperatura</h5>
+      <p>En este ejemplo, suponemos que hay un dispositivo IoT que mide la temperatura en una ubicación específica.
+        El dispositivo envía datos de temperatura a una pasarela IoT, que luego puede retransmitirlos a un servidor central
+        para su procesamiento.</p>
+        <app-precode [code]="CODE2" [LINE_CODE]="LINE_CODE2"  [top]="top" [explain]="explain2" [max_line]="max_line2"></app-precode>
+
     </div>
+
+
   </article>
   <hr>
 
-  <article class="ContenedorPadre">
-    <div>
-      <img class="Image1" src="../../../../assets/mod3/Router.jpg" alt="image.jpg">
+  <article>
+    <div class="ContenedorPadre">
+      <div>
+        <img class="Image1" src="../../../../assets/mod3/Router.jpg" alt="image.jpg">
+      </div>
+      <div class="ContenedorInfo">
+        <h3>2.	Gateway o Pasarela IoT</h3>
+        <p>Las pasarelas IoT son elementos intermedios que actúan como intermediarios entre los dispositivos IoT y los sistemas
+          de procesamiento en la nube o en la red central. Estas pasarelas pueden ayudar a realizar tareas como el filtrado de datos,
+          la compresión, el cifrado y la agregación de información antes de enviarla a la nube. También pueden ofrecer funcionalidades adicionales,
+          como almacenamiento en caché local, procesamiento ligero y gestión de dispositivos. Las pasarelas IoT son especialmente útiles cuando hay
+          muchos dispositivos IoT dispersos y es necesario consolidar y transmitir datos de manera eficiente.</p>
+      </div>
     </div>
-    <div class="ContenedorInfo">
-      <h3>2.	Gateway o Pasarela IoT</h3>
-      <p>Las pasarelas IoT son elementos intermedios que actúan como intermediarios entre los dispositivos IoT y los sistemas
-        de procesamiento en la nube o en la red central. Estas pasarelas pueden ayudar a realizar tareas como el filtrado de datos,
-        la compresión, el cifrado y la agregación de información antes de enviarla a la nube. También pueden ofrecer funcionalidades adicionales,
-        como almacenamiento en caché local, procesamiento ligero y gestión de dispositivos. Las pasarelas IoT son especialmente útiles cuando hay
-         muchos dispositivos IoT dispersos y es necesario consolidar y transmitir datos de manera eficiente.</p>
+    <div>
+      <p>A continuación se da un ejemplo sencillo de cómo podría funcionar una pasarela o gateway IoT. En este caso, vamos a utilizar un escenario hipotético
+        donde una pasarela recopila datos de sensores y los envía a un servidor central.</p>
+      <h5>Escenario: Pasarela IoT para Monitoreo de Sensores</h5>
+      <p>
+        En este ejemplo, imaginemos que hay varios sensores distribuidos en diferentes ubicaciones. Estos sensores están recolectando datos de
+        temperatura y humedad. Una pasarela IoT se encarga de recopilar los datos de todos estos sensores y enviarlos a un servidor central para su
+        almacenamiento y análisis.
+      </p>
+      <app-precode [code]="CODE1" [LINE_CODE]="LINE_CODE1"  [top]="top" [explain]="explain1" [max_line]="max_line1"></app-precode>
     </div>
   </article>
   <hr>
   <article style="margin-top: 25px;
                   margin-bottom: 25px;">
-    <h3>3. Infraestructura en la Nube o Plataforma IoT</h3>
+    <h3>3. Infraestructura en la Nube o Plataforma IoT </h3>
     <p>Esta es la parte central del ecosistema IoT, donde los datos recopilados por los dispositivos se almacenan, procesan y analizan. Las plataformas
       IoT ofrecen servicios para administrar y visualizar datos, permiten implementar algoritmos de aprendizaje automático y brindan herramientas para
       desarrollar aplicaciones y servicios basados en IoT. Además, estas plataformas pueden ofrecer capacidades de seguridad, gestión de dispositivos y
@@ -46,8 +77,19 @@
       <div style="text-align: center;">
         <img class="Image2" src="../../../../assets/mod3/IOT.png" alt="image.png">
       </div>
-      <article class="ContenerdoPadre2">
+      <p>
+         A continuación se muestra un ejemplo sencillo que ilustra cómo podrías usar la infraestructura en la nube para almacenar y procesar datos de
+         dispositivos IoT. En este ejemplo, utilizaremos Amazon Web Services (AWS) como plataforma en la nube para almacenar datos en una base de datos y
+         realizar una operación simple.
+      </p>
+      <h5>Escenario: Almacenamiento de Datos de Sensores en AWS</h5>
+      <p>
+        En este ejemplo hipotético, supongamos que tienes varios dispositivos IoT que recopilan datos de temperatura. Queremos almacenar estos datos en una
+        base de datos en la nube y calcular el promedio de temperatura.
+      </p>
+      <app-precode [code]="CODE3" [LINE_CODE]="LINE_CODE3"  [top]="top" [explain]="explain3" [max_line]="max_line3"></app-precode>
 
+      <article class="ContenerdoPadre2">
         <div class="box1">
           <h3 style="text-align: center;
           margin-top:10px;">Importancia</h3>
