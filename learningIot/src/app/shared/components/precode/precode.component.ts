@@ -43,6 +43,7 @@ export class PrecodeComponent implements OnInit {
   }
 
   next(): void {
+    console.log(this.max_line);
     if(this.curent_line >= this.max_line){ return; }
     this.top += 24;
     this.top_style = `${this.top}px`;

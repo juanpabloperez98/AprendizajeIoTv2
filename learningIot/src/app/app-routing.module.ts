@@ -44,6 +44,15 @@ export const AppRoutes: Routes = [
     ]
   },
   {
+    path: 'fundamentos',
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./modules/fundamentos-electronica/fundamentos-electronica.module').then( m => m.FundamentosElectronicaModule)
+      }
+    ]
+  },
+  {
     path: '**',
     redirectTo:'',
   },

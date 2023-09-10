@@ -1,0 +1,202 @@
+<shared-header></shared-header>
+<section style="max-width:70%" class="initial-section maxwidth">
+  <div class="row">
+    <shared-button-go-back></shared-button-go-back>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 text-center my-5">
+      <h3>1.1 Introducción a la Electrónica</h3>
+    </div>
+    <div class="col-lg-12">
+      <h3>1.1.1 <span style="font-weight: bold;">Conceptos básicos: Corriente, Voltaje, Resistencia.</span></h3>
+      <hr>
+      <h5>Corriente</h5>
+      <p>
+        La corriente eléctrica es uno de los conceptos fundamentales en la electrónica y la física. La corriente
+        eléctrica
+        se refiere al movimiento de cargas eléctricas a través de un conductor, como un alambre. Esencialmente, es el
+        flujo de electrones.
+      </p>
+      <div class="row">
+        <div class="col-lg-6">
+          <h5>Tipos de corriente</h5>
+          <p>
+            <span style="font-weight: bold;">Corriente Continua (CC o DC, por sus siglas en inglés "Direct
+              Current"):</span> En este tipo de corriente, los
+            electrones fluyen constantemente en una sola dirección. Las baterías producen corriente continua.
+          </p>
+          <p>
+            <span style="font-weight: bold;">Corriente Alterna (CA o AC, por sus siglas en inglés "Alternating
+              Current"):</span> En la corriente alterna, los
+            electrones cambian de dirección de flujo periódicamente. La electricidad que proviene de las tomas de pared
+            en
+            nuestros hogares es corriente alterna. La corriente alterna es preferida para la transmisión de energía en
+            largas distancias, como en redes eléctricas, debido a sus propiedades y la facilidad con la que puede ser
+            transformada en diferentes voltajes utilizando transformadores.
+          </p>
+        </div>
+        <div class="col-lg-6 mt-3">
+          <p>
+            En resumen, la corriente eléctrica es esencial para la mayoría de las tecnologías modernas, desde la
+            iluminación
+            y la calefacción hasta la comunicación y la computación. Entender cómo se genera, se controla y se utiliza
+            es
+            clave en campos como la ingeniería eléctrica y la electrónica.
+          </p>
+          <div>
+            <img class="w-100" src="../../../../assets/fundamentos/corriente_modulo.jpg" alt="corriente_modulo.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 my-3">
+          <h4>Ejemplos practicos de corriente</h4>
+        </div>
+        <div class="col-lg-4">
+          <h5>Baterías de un Control Remoto</h5>
+          <p>
+            Cuando presionas un botón en un control remoto de televisión, las baterías en su interior proporcionan
+            corriente continua (CC) para alimentar el circuito interno. Este circuito, a su vez, envía una señal
+            infrarroja al televisor para ejecutar una acción, como cambiar el canal o ajustar el volumen.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h5>Carga de un Teléfono Móvil</h5>
+          <p>
+            Al conectar tu teléfono móvil a un cargador, el cargador convierte la corriente alterna (CA) de la toma de
+            pared a corriente continua (CC), adecuada para cargar la batería del teléfono. La corriente fluye desde el
+            cargador hacia la batería del teléfono, cargándola.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h5>Tostadora Eléctrica</h5>
+          <p>
+            Al enchufar una tostadora y encenderla, permite que la corriente alterna (CA) del hogar fluya a través de
+            sus resistencias internas. Debido al efecto Joule, esta corriente produce calor, el cual es utilizado para
+            tostar el pan.
+          </p>
+        </div>
+        <div class="col-lg-12 my-3">
+          <h4>Ejemplos código de corriente</h4>
+        </div>
+        <div class="col-lg-12">
+          <h5>Control Remoto con Microcontrolador</h5>
+          <p>
+            Imagina que tienes un control remoto basado en un microcontrolador como Arduino. Este control remoto tiene
+            botones para aumentar y disminuir el volumen de un dispositivo, y cuando se presiona un botón, el
+            microcontrolador envía una señal correspondiente.
+            Aquí hay un ejemplo simplificado de código en el lenguaje de programación Arduino (basado en C++)
+          </p>
+        </div>
+        <div class="col-lg-12">
+          <app-precode [code]="CODE1" [LINE_CODE]="LINE_CODE1" [top]="top" [explain]="explain1"
+            [max_line]="max_line1"></app-precode>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 mt-5">
+      <h5 class="mt-5">Voltaje (o Tensión Eléctrica)</h5>
+      <p>
+        El voltaje, también conocido como diferencia de potencial o tensión eléctrica, es la "fuerza" que impulsa a los
+        electrones a moverse en un circuito eléctrico. Puedes pensar en ello como la "presión" en un sistema hidráulico.
+        Así como el agua se mueve de áreas de alta presión a áreas de baja presión, los electrones, en un circuito
+        eléctrico, tienden a moverse de áreas de alto potencial a áreas de bajo potencial.
+      </p>
+      <div class="row mx-auto">
+        <div class="col-lg-6">
+          <h5>Unidades</h5>
+          <p>
+            El voltaje se mide en voltios, que se representa con la letra "V".
+          </p>
+          <h5>Medición</h5>
+          <p>
+            El voltaje se mide usando un instrumento llamado voltímetro. Para medir la diferencia de potencial (voltaje)
+            entre dos puntos de un circuito, se coloca el voltímetro en paralelo entre esos dos puntos.
+          </p>
+          <h5>Fuentes de Voltaje</h5>
+          <p>
+            Existen diferentes dispositivos que pueden generar una diferencia de potencial. Las baterías, por ejemplo,
+            crean una diferencia de potencial entre sus terminales, lo que impulsa la corriente a fluir en un circuito.
+            Otros ejemplos incluyen generadores, células solares y fuentes de alimentación eléctrica.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <h5>Tipos de Voltaje</h5>
+          <p>
+            <span class="bold">Voltaje Continuo (DC o Direct Current)</span>: Es un voltaje que no cambia con el tiempo,
+            como el proporcionado por una batería.
+            <br>
+            <br>
+            <span class="bold">Voltaje Alterno (AC o Alternating Current)</span>: Es un voltaje que varía periódicamente
+            en magnitud y dirección, como el suministrado por las tomas eléctricas en hogares y empresas.
+          </p>
+          <h5>Relación con otros componentes</h5>
+          <p>
+            <span class="bold">En un resistor (usando la Ley de Ohm):</span> V=I x R donde V es el voltaje, I es la
+            corriente y R es la resistencia.
+          </p>
+          <p>
+            <span class="bold">En un capacitor:</span> La relación entre la carga (Q) almacenada en el capacitor y el
+            voltaje (V) es Q = C X V donde C es la capacitancia del capacitor.
+          </p>
+          <p>
+            <span class="bold">En un inductor:</span> La relación entre la corriente que fluye a través del inductor y
+            el voltaje a través del tiempo es V = L x dI/dT donde L es la inductancia y dI/dT es la tasa de cambio de la
+            corriente con respecto al tiempo.
+          </p>
+        </div>
+        <div class="col-lg-12 mt-5">
+          En resumen, el voltaje es un concepto fundamental en electrónica y eléctrica. Es esencial para el
+          funcionamiento de cualquier dispositivo electrónico y, por lo tanto, es crucial entenderlo para aquellos que
+          trabajan o estudian en estos campos.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 my-3">
+          <h4>Ejemplos practicos de voltaje</h4>
+        </div>
+        <div class="col-lg-4">
+          <h5>Pilas y Baterías</h5>
+          <p>
+            Una pila AA típica tiene un voltaje nominal de 1.5V. Cuando la conectas a un dispositivo, como una linterna,
+            proporciona una diferencia de potencial de 1.5V que impulsa a los electrones a moverse a través del circuito
+            de la linterna, encendiendo el LED o la bombilla.
+            <br>
+            Las baterías recargables de litio-ion que se encuentran en los teléfonos móviles suelen tener un voltaje
+            nominal de 3.7V.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h5>Tomas de Corriente en Hogares</h5>
+          <p>
+            En muchos países, las tomas de corriente domésticas suministran una corriente alterna (AC) con un voltaje
+            nominal de 110V o 220V, dependiendo de la región. Estas tomas se utilizan para alimentar la mayoría de los
+            electrodomésticos y dispositivos electrónicos en el hogar.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h5>Automóviles</h5>
+          <p>
+            La batería estándar de un automóvil tiene un voltaje de 12V. Esta batería es la que arranca el motor y
+            alimenta accesorios como las luces y la radio cuando el motor está apagado.
+          </p>
+        </div>
+        <div class="col-lg-12 my-3">
+          <h4>Ejemplos código de voltaje</h4>
+        </div>
+        <div class="col-lg-12">
+          <p>
+            En términos de programación, no se maneja directamente el voltaje como se hace con componentes electrónicos.
+            Sin embargo, en muchos sistemas embebidos y microcontroladores, es común leer o monitorear voltajes usando
+            convertidores analógico-digitales (ADC) o establecer un voltaje en un pin utilizando modulación por ancho de
+            pulso (PWM). A continuación, te proporciono algunos ejemplos de código relacionados con el voltaje:
+          </p>
+        </div>
+        <div class="col-lg-12">
+          <app-precode [code]="CODE1" [LINE_CODE]="LINE_CODE1" [top]="top" [explain]="explain1"
+            [max_line]="max_line1"></app-precode>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
