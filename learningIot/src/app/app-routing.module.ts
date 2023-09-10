@@ -44,6 +44,15 @@ export const AppRoutes: Routes = [
     ]
   },
   {
+    path: 'redes',
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./modules/redes/redes.module').then( m => m.RedesModule)
+      }
+    ]
+  },
+  {
     path: '**',
     redirectTo:'',
   },
