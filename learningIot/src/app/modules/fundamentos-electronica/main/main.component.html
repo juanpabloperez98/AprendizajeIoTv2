@@ -3,14 +3,16 @@
   <div class="row">
     <shared-button-go-back></shared-button-go-back>
   </div>
-  <div class="row">
-    <div class="col-lg-12 text-center my-5">
-      <h3>1.1 Introducción a la Electrónica</h3>
+  <div class="row mb-5">
+    <div class="col-lg-12 text-left">
+      <h3>1 Introducción a la Electrónica</h3>
     </div>
+  </div>
+  <div class="row">
     <div class="col-lg-12">
-      <h3>1.1.1 <span style="font-weight: bold;">Conceptos básicos: Corriente, Voltaje, Resistencia.</span></h3>
+      <h3>1.1 <span style="font-weight: bold;">Conceptos básicos: Corriente, Voltaje, Resistencia.</span></h3>
       <hr>
-      <h5>Corriente</h5>
+      <h3>Corriente</h3>
       <p>
         La corriente eléctrica es uno de los conceptos fundamentales en la electrónica y la física. La corriente
         eléctrica
@@ -95,7 +97,7 @@
       </div>
     </div>
     <div class="col-lg-12 mt-5">
-      <h5 class="mt-5">Voltaje (o Tensión Eléctrica)</h5>
+      <h3 class="mt-5">Voltaje (o Tensión Eléctrica)</h3>
       <p>
         El voltaje, también conocido como diferencia de potencial o tensión eléctrica, es la "fuerza" que impulsa a los
         electrones a moverse en un circuito eléctrico. Puedes pensar en ello como la "presión" en un sistema hidráulico.
@@ -119,6 +121,9 @@
             crean una diferencia de potencial entre sus terminales, lo que impulsa la corriente a fluir en un circuito.
             Otros ejemplos incluyen generadores, células solares y fuentes de alimentación eléctrica.
           </p>
+          <div>
+            <img class="w-100" src="../../../../assets/fundamentos/voltaje.png" alt="voltaje.png">
+          </div>
         </div>
         <div class="col-lg-6">
           <h5>Tipos de Voltaje</h5>
@@ -145,7 +150,7 @@
             corriente con respecto al tiempo.
           </p>
         </div>
-        <div class="col-lg-12 mt-5">
+        <div class="col-lg-12 my-5">
           En resumen, el voltaje es un concepto fundamental en electrónica y eléctrica. Es esencial para el
           funcionamiento de cualquier dispositivo electrónico y, por lo tanto, es crucial entenderlo para aquellos que
           trabajan o estudian en estos campos.
@@ -191,12 +196,331 @@
             convertidores analógico-digitales (ADC) o establecer un voltaje en un pin utilizando modulación por ancho de
             pulso (PWM). A continuación, te proporciono algunos ejemplos de código relacionados con el voltaje:
           </p>
-        </div>
-        <div class="col-lg-12">
-          <app-precode [code]="CODE1" [LINE_CODE]="LINE_CODE1" [top]="top" [explain]="explain1"
-            [max_line]="max_line1"></app-precode>
+          <h4 class="mt-5">Lectura de Voltaje usando un ADC en Arduino</h4>
+          <p>
+            Supongamos que quieres leer el voltaje en un pin analógico (A0) de un Arduino:
+          </p>
+          <app-precode [code]="CODE2" [LINE_CODE]="LINE_CODE2" [top]="top" [explain]="explain2"
+            [max_line]="max_line2"></app-precode>
+
+          <h4 class="mt-5">Establecer un "voltaje" usando PWM en Arduino</h4>
+          <p>
+            Supongamos que quieres establecer un voltaje de 2.5V (aproximadamente) en un pin digital (D3) de un Arduino
+            usando PWM
+          </p>
+          <app-precode [code]="CODE2" [LINE_CODE]="LINE_CODE2" [top]="top" [explain]="explain2"
+            [max_line]="max_line2"></app-precode>
+
+          <p class="mt-5">
+            Estos ejemplos muestran cómo puedes interactuar con voltajes desde el código, ya sea leyendo un valor de
+            voltaje o estableciendo un "voltaje" mediante PWM. Es importante tener en cuenta que el código solo
+            proporciona una representación digital del voltaje, y el hardware (por ejemplo, el microcontrolador o el
+            ADC) es el que realmente interactúa con el voltaje real.
+          </p>
+
         </div>
       </div>
+    </div>
+    <div class="col-lg-12 mt-5">
+      <h3 class="mt-5">Resistencia</h3>
+      <p>
+        La resistencia es una medida de cuánto se opone un objeto o sustancia al flujo de corriente eléctrica. En
+        términos simples, puede pensarse en la resistencia como la "fricción eléctrica".
+      </p>
+      <div class="row mx-auto">
+        <div class="col-lg-6">
+          <h5>Unidades y Símbolo</h5>
+          <p>
+            La resistencia se mide en ohmios, representado por el símbolo Ω.
+            <br>
+            El símbolo esquemático estándar para una resistencia es una línea en zigzag.
+          </p>
+          <div>
+            <img class="w-100" src="../../../../assets/fundamentos/linea_zigzag.png" alt="linea_zigzag.png">
+          </div>
+          <h5 class="mt-5">Ley de Ohm</h5>
+          <p>
+            La Ley de Ohm establece que la corriente que fluye a través de un conductor entre dos puntos es directamente
+            proporcional al voltaje a través de los dos puntos e inversamente proporcional a la resistencia. Se formula
+            como:
+            <span class="bold">I = V/R</span>
+            <br>
+            Donde:
+            I = Corriente (amperios)
+            V = Voltaje (voltios)
+            R = Resistencia (ohmios)
+          </p>
+          <h5 class="mt-5">Tipos de Resistencias</h5>
+          <p>
+            <span class="bold">Resistencias fijas:</span> Tienen un valor constante de resistencia que no cambia.
+            <br>
+            <span class="bold">Resistencias variables:</span> Permiten cambiar su valor de resistencia, como el
+            potenciómetro.
+            <br>
+            <span class="bold">Resistencias dependientes:</span> Su resistencia cambia basándose en algún parámetro
+            externo, como la temperatura (termistores) o la luz (fotoresistencias).
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <h5>Resistencias en Circuitos</h5>
+          <p>
+            <span class="bold">Serie:</span> Cuando las resistencias se conectan en serie, la resistencia total
+            (equivalente) es simplemente la suma de las resistencias individuales.
+            <br>
+            <span class="bold">Paralelo:</span> Cuando las resistencias se conectan en paralelo, la inversa de la
+            resistencia total es igual a la suma de las inversas de cada resistencia individual.
+          </p>
+          <h5 class="mt-5">Efecto Joule</h5>
+          <p>
+            Cuando la corriente fluye a través de una resistencia, parte de la energía eléctrica se convierte en calor
+            debido a la resistencia del material. Este efecto es descrito por la ecuación:
+            <br>
+            <span class="bold">P = I^2 x R</span>
+            <br>
+            <br>
+            Donde:
+            <br>
+            <br>
+            <span class="bold">P = Potencia (en watts)</span>
+            <br>
+            <span class="bold">I = Corriente (amperios)</span>
+            <br>
+            <span class="bold">R = Resistencia (ohmios)</span>
+            <br>
+            Esta propiedad se explota en dispositivos como calentadores y tostadoras, pero puede ser un efecto no
+            deseado en otros dispositivos, donde el exceso de calor puede dañar componentes.
+          </p>
+          <h5>Aplicaciones y Consideraciones</h5>
+          <p>
+            Las resistencias son esenciales en la electrónica para limitar la corriente, establecer sesgos de voltaje,
+            proteger componentes, entre otras cosas.
+            <br>
+            Al seleccionar una resistencia para una aplicación específica, es crucial considerar no solo su resistencia
+            (valor en ohmios), sino también su potencia nominal <span class="bold">(por ejemplo, 1/4W, 1/2W)</span> y
+            tolerancia (por ejemplo,
+            ±5%).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-lg-12">
+      <h3>1.2 <span style="font-weight: bold;">Ley de Ohm</span></h3>
+    </div>
+    <hr>
+    <div class="row mx-auto">
+      <div class="col-lg-6">
+        <p>
+          La Ley de Ohm, nombrada en honor a Georg Simon Ohm, un físico alemán que la formuló en 1827, es uno de los
+          principios fundamentales en el campo de la electrónica y la electricidad. Esta ley establece una relación
+          entre
+          el voltaje <span class="bold">(V)</span>, la corriente <span class="bold">(I)</span> y la resistencia <span
+            class="bold">(R)</span> en un circuito eléctrico.
+        </p>
+        <h4>Expresión de la Ley</h4>
+        <p>
+          La Ley de Ohm puede expresarse con la sencilla ecuación:
+          V = I x R
+          <br>
+          <br>
+          Donde:
+          <br>
+          <br>
+          <span class="bold">V</span> es el voltaje o diferencia de potencial (medido en voltios).
+          <br>
+          <span class="bold">I</span> es la corriente eléctrica (medida en amperios o amperes).
+          <br>
+          <span class="bold">R</span> es la resistencia (medida en ohmios).
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <div>
+          <img class="w-100" src="../../../../assets/fundamentos/ley_ohm.png" alt="ley_ohm.png">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 mt-5">
+      <h4>Implicaciones</h4>
+      <p>
+        <span class="bold">1 Relación Lineal:</span> La relación entre <span class="bold">V</span> e <span
+          class="bold">I</span> es lineal para un resistor, lo que significa que si duplicas el voltaje aplicado a
+        través de una resistencia (y todo lo demás permanece constante), la corriente también se duplicará.
+        <br>
+        <br>
+        <span class="bold">Resistencia Constante:</span> En muchos materiales, especialmente en los metales, la
+        resistencia
+        <span class="bold">R</span> es aproximadamente constante sobre una amplia gama de voltajes y corrientes. Esto
+        significa que la relación <span class="bold">V/I</span> es constante para estos materiales.
+        <br>
+      </p>
+    </div>
+    <div class="col-lg-6 mt-5">
+      <h4>Aplicaciones de la Ley de Ohm</h4>
+      <p>
+        <span class="bold">Determinación de Componentes:</span> Si se conoce el voltaje y la corriente en un circuito,
+        se puede usar la Ley de Ohm
+        para determinar la resistencia. Del mismo modo, conociendo cualquier dos de las tres variables <span
+          class="bold">(V, I, R)</span>, se
+        puede calcular la tercera.
+      </p>
+      <p>
+        <span class="bold">Diseño de Circuitos:</span> La Ley de Ohm es esencial para diseñar circuitos. Por ejemplo, al
+        conectar un LED a una
+        fuente de alimentación, se puede usar una resistencia para limitar la corriente al LED a un valor seguro. Usando
+        la Ley de Ohm, se puede determinar el valor adecuado de esa resistencia.
+      </p>
+    </div>
+    <div class="col-lg-12 mt-3">
+      <p>
+        La Ley de Ohm es esencialmente una descripción de cómo se comportan los materiales conductores en respuesta a
+        una diferencia de potencial aplicada. Es una de las primeras leyes que los estudiantes de electrónica y
+        electricidad aprenden, y sigue siendo una herramienta valiosa en la caja de herramientas de cualquier ingeniero
+        o técnico. Su simplicidad y universalidad en circuitos resistivos la hacen fundamental en la comprensión y
+        diseño de sistemas eléctricos y electrónicos.
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 my-3">
+        <h4>Ejemplos practicos de ley ohm</h4>
+      </div>
+      <div class="col-lg-4">
+        <h5>LED y Resistencia Limitadora</h5>
+        <p>
+          Imagina que tienes un LED que requiere una corriente de 20 mA (0.02 A) para funcionar correctamente y sabes
+          que su caída de voltaje es de 2V. Si quieres conectar este LED a una fuente de alimentación de 5V,
+          necesitarías una resistencia para limitar la corriente.
+          Usando la Ley de Ohm:
+          <br>
+          Diferencia de voltaje en la resistencia = Voltaje total - Caída de voltaje en el LED = 5V - 2V = 3V
+          <br>
+          <br>
+          R = V/I = 3V/0.02A = 150Ω
+          <br>
+          Necesitarías una resistencia de aproximadamente <span class="bold">150 ohmios</span> para mantener la
+          corriente en el LED cerca de 20
+          mA.
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <h5>Problema con una Tostadora</h5>
+        <p>
+          Supón que tienes una tostadora que, cuando está funcionando correctamente, consume una corriente de 8A desde
+          una toma de corriente de 120V. Un día, notas que no calienta como debería. Decides medir la corriente y
+          descubres que es solo de 4A.
+          Usando la Ley de Ohm:
+          <br>
+          Resistencia original = V/I = 120V/8A = 15Ω
+          <br>
+          <br>
+          Resistencia con el problema = V/I = 120V/4A = 30Ω
+          <br>
+          El aumento en resistencia podría indicar que parte del elemento calefactor de la tostadora se ha dañado o
+          roto, causando que la tostadora no funcione correctamente.
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <h5>Determinando el Voltaje en un Circuito</h5>
+        <p>
+          Imagina que estás construyendo un circuito y usas una resistencia de 220 ohmios. Al medir la corriente que
+          fluye a través de la resistencia, encuentras que es de 50 mA (0.05 A). ¿Cuál es la diferencia de potencial o
+          voltaje a través de la resistencia?
+          <br>
+          Aplicando la Ley de Ohm:
+          <br>
+          <span class="bold">V = I X R = 0.05A x 220Ω = 11V</span>
+          <br>
+          Por lo tanto, la diferencia de potencial a través de la resistencia es de 11 voltios.
+        </p>
+      </div>
+      <div class="col-lg-12">
+        <p>
+          Estos ejemplos muestran cómo la Ley de Ohm se aplica en situaciones prácticas, ya sea para diseñar un
+          circuito, diagnosticar problemas o simplemente entender el comportamiento de un dispositivo eléctrico.
+        </p>
+      </div>
+      <div class="col-lg-12 my-3">
+        <h4>Ejemplos código de la ley de Ohm</h4>
+      </div>
+      <div class="col-lg-12">
+        <div class="row mx-auto">
+          <div class="col-lg-6">
+            <p>
+              la Ley de Ohm se puede representar en código. La Ley de Ohm establece que el voltaje (V) a través de un
+              resistor es igual al producto de la corriente (I) que fluye a través de él y su resistencia (R).
+              Matemáticamente, esto se representa como:
+              <span class="bold">V = I X R</span>
+            </p>
+            Donde: <br>
+            <span class="bold">V</span> es el voltaje (en voltios). <br>
+            <span class="bold">I</span> es la corriente (en amperios). <br>
+            <span class="bold">R</span> es la resistencia (en ohmios).
+          </div>
+          <div class="col-lg-6 text-center">
+            <img style="width:300px; height: 300px;" src="../../../../assets/fundamentos/ley_ohm2.png"
+              alt="ley_ohm2.png">
+          </div>
+        </div>
+        <h4 class="mt-5">Lectura de Voltaje usando un ADC en Arduino</h4>
+        <p>
+          A continuación, te muestro una simple representación en código de la Ley de Ohm en C++:
+        </p>
+        <app-precode [code]="CODE4" [LINE_CODE]="LINE_CODE4" [top]="top" [explain]="explain4"
+          [max_line]="max_line4"></app-precode>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-lg-12">
+      <h3>1.3 <span style="font-weight: bold;">Circuitos básicos y lectura de diagramas.</span></h3>
+      <hr>
+      <h3 class="mt-5">Introducción</h3>
+      <p class="mt-3">
+        Los circuitos eléctricos y electrónicos son combinaciones de componentes interconectados diseñados para realizar
+        funciones específicas, como amplificar una señal, convertir energía, procesar datos o recibir y transmitir
+        información. Entender cómo leer y analizar estos circuitos es esencial para cualquiera que busque trabajar o
+        estudiar en campos relacionados con la electrónica.
+      </p>
+    </div>
+    <div class="col-lg-12">
+      <h3>Circuitos Básicos</h3>
+    </div>
+    <div class="col-lg-6 mt-5">
+      <h4>Circuitos en Serie</h4>
+      <hr>
+      <p>
+        En un circuito en serie, los componentes están conectados uno tras otro, lo que significa que la corriente eléctrica tiene un solo camino para seguir. <br>
+        La resistencia total (Rtotal) en un circuito en serie es la suma de las resistencias individuales: Rtotal = R1 + R2 + ... + Rn <br>
+        Todos los componentes en serie reciben el mismo valor de corriente.
+      </p>
+      <h4>Circuitos Paralelos</h4>
+      <p>
+        En un circuito paralelo, los componentes están conectados en ramas separadas, ofreciendo múltiples caminos para la corriente eléctrica.
+        <br>
+        Para resistencias en paralelo, la inversa de la resistencia total es igual a la suma de las inversas de cada resistencia individual.
+        <br>
+        Todos los componentes en paralelo tienen el mismo valor de voltaje.
+      </p>
+    </div>
+    <div class="col-lg-6 mt-5">
+      <h4>Lectura de Diagramas</h4>
+      <hr>
+      <h5>Símbolos Estándar</h5>
+      <p>
+        Los diagramas de circuitos utilizan símbolos estándar para representar diferentes componentes. Por ejemplo:
+        <br>
+        <br>
+        *Una línea en zigzag representa una resistencia. <br>
+        *Dos líneas paralelas representan un capacitor. <br>
+        *Una bobina representa un inductor. <br>
+        *Otros símbolos comunes incluyen los de diodos, transistores, interruptores y fuentes de alimentación. <br>
+      </p>
+      <h4>Conexiones y Nodos</h4>
+      <p>
+        Un punto donde dos líneas se encuentran en un diagrama indica una conexión.
+        <br>
+        Un nodo es un punto donde tres o más líneas se encuentran. En un análisis de circuito, un nodo a menudo representa un punto de interés donde se pueden establecer relaciones de voltaje o corriente.
+      </p>
     </div>
   </div>
 </section>
