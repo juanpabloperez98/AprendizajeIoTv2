@@ -44,8 +44,16 @@ export const AppRoutes: Routes = [
     ]
   },
   {
-    path: 'fundamentos',
+    path: 'redes',
     children:[
+      {
+        path:'',
+        loadChildren: () => import('./modules/redes/redes.module').then( m => m.RedesModule)
+      }]
+    },
+    {
+      path: 'fundamentos',
+      children:[
       {
         path:'',
         loadChildren: () => import('./modules/fundamentos-electronica/fundamentos-electronica.module').then( m => m.FundamentosElectronicaModule)
