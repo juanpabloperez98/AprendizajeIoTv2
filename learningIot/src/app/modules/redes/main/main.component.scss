@@ -1,0 +1,62 @@
+.image{
+  width: 400px;
+}
+
+.image1{
+  width: 400px;
+}
+p, li{
+  text-align: justify;
+}
+
+.ContenedorPadre{
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:50% 50%;
+  margin-top: 50px;
+  grid-gap: 30px;
+}
+
+.justificado {
+  text-align: justify;
+}
+
+.imagen-grande {
+  width: 200px; /* Define el ancho deseado */
+  height: auto; /* Esto mantiene la relación de aspecto original */
+}
+.ContenedorPadre1{
+  display: grid;
+  grid-template-columns:50% 50%;
+  grid-gap: 10px;
+}
+
+
+.box1{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.Box2{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 8;
+}
+.Box3{
+  background-color: #d1d1d1;
+  height: 600px;
+  width: 400px;
+  border-radius: 3%;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.botonColor{
+  background-color: rgb(4, 30, 67);
+  color: #fff;
+ }
+
+ .botonColor:hover{
+   color: #aca8a8;
+  }
