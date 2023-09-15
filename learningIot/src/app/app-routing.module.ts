@@ -9,60 +9,69 @@ export const AppRoutes: Routes = [
   },
   {
     path: 'introduccion',
-    children:[
+    children: [
       {
-        path:'',
-        loadChildren: () => import('./modules/introduction/introduction.module').then( m => m.IntroductionModule)
+        path: '',
+        loadChildren: () => import('./modules/introduction/introduction.module').then(m => m.IntroductionModule)
       }
     ]
   },
   {
     path: 'presentationOne',
-    children:[
+    children: [
       {
-        path:'',
-        loadChildren: () => import('./modules/presentation1/presentation1.module').then( m => m.Presentation1Module)
+        path: '',
+        loadChildren: () => import('./modules/presentation1/presentation1.module').then(m => m.Presentation1Module)
       }
     ]
   },
   {
     path: 'presentationTwo',
-    children:[
+    children: [
       {
-        path:'',
-        loadChildren: () => import('./modules/presentation2/presentation2.module').then( m => m.Presentation2Module)
+        path: '',
+        loadChildren: () => import('./modules/presentation2/presentation2.module').then(m => m.Presentation2Module)
       }
     ]
   },
   {
     path: 'aplicaciones',
-    children:[
+    children: [
       {
-        path:'',
-        loadChildren: () => import('./modules/aplicaciones/aplicaciones.module').then( m => m.AplicacionesModule)
+        path: '',
+        loadChildren: () => import('./modules/aplicaciones/aplicaciones.module').then(m => m.AplicacionesModule)
       }
     ]
   },
   {
     path: 'redes',
-    children:[
+    children: [
       {
-        path:'',
-        loadChildren: () => import('./modules/redes/redes.module').then( m => m.RedesModule)
+        path: '',
+        loadChildren: () => import('./modules/redes/redes.module').then(m => m.RedesModule)
       }]
-    },
-    {
-      path: 'fundamentos',
-      children:[
+  },
+  {
+    path: 'fundamentos',
+    children: [
       {
-        path:'',
-        loadChildren: () => import('./modules/fundamentos-electronica/fundamentos-electronica.module').then( m => m.FundamentosElectronicaModule)
+        path: '',
+        loadChildren: () => import('./modules/fundamentos-electronica/fundamentos-electronica.module').then(m => m.FundamentosElectronicaModule)
+      }
+    ]
+  },
+  {
+    path: 'plataformas-iot',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./modules/plataformas-iot/plataformas-iot.module').then(m => m.PlataformasIotModule)
       }
     ]
   },
   {
     path: '**',
-    redirectTo:'',
+    redirectTo: '',
   },
 ];
 
