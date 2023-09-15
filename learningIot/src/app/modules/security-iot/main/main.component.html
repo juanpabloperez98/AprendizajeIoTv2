@@ -1,1 +1,118 @@
-<p>main works!</p>
+<shared-header></shared-header>
+<article
+  style="max-width: 70%; padding-top: 70px"
+  class="initial-section maxwidth"
+>
+  <shared-button-go-back></shared-button-go-back>
+  <h3 class="mt-5 mb-5">Seguridad IoT</h3>
+  <div class="row">
+    <p class="col-8">
+      La seguridad en el Internet de las Cosas (IoT, por sus siglas en inglés)
+      es un tema crítico debido a la creciente proliferación de dispositivos
+      conectados a Internet en nuestra vida cotidiana. Estos dispositivos
+      incluyen desde electrodomésticos inteligentes hasta sistemas de
+      monitorización industrial y dispositivos médicos. La falta de seguridad
+      adecuada en estos dispositivos puede tener consecuencias graves,
+      incluyendo la exposición de datos sensibles, la manipulación de
+      dispositivos o incluso la interrupción de servicios críticos. Aquí hay
+      algunos aspectos clave de la seguridad en IoT:
+    </p>
+    <img class="col-4" src="./assets/security/securityIoT.jpg" alt="" />
+  </div>
+  <ol class="mt-3">
+    <li>
+      <span class="fw-bold">Autenticación y autorización:</span>
+      Asegurarse de que solo los usuarios o dispositivos autorizados puedan
+      acceder y controlar los dispositivos IoT. Esto se logra mediante la
+      implementación de mecanismos de autenticación sólidos, como contraseñas
+      fuertes o autenticación multifactor (MFA).
+    </li>
+    <li>
+      <span class="fw-bold">Actualizaciones de firmware:</span>
+      Los dispositivos IoT deben recibir actualizaciones periódicas de firmware
+      para corregir vulnerabilidades de seguridad conocidas. Esto requiere una
+      forma segura de entregar y aplicar estas actualizaciones.
+    </li>
+    <li>
+      <span class="fw-bold">Cifrado de datos: </span>
+      Los datos transmitidos entre dispositivos IoT y servidores deben estar
+      cifrados para protegerlos de la interceptación no autorizada.
+    </li>
+    <li>
+      <span class="fw-bold">Gestión de claves:</span>
+      La gestión adecuada de las claves de cifrado es esencial para garantizar
+      la confidencialidad de los datos. Las claves deben almacenarse de forma
+      segura y rotarse regularmente.
+    </li>
+    <li>
+      <span class="fw-bold">Firewalls y Seguridad de red:</span>
+      Utilizar firewalls y medidas de seguridad de red para proteger los
+      dispositivos IoT de ataques externos. Segmentar las redes para evitar que
+      un dispositivo comprometido acceda a otros sistemas críticos.
+    </li>
+    <li>
+      <span class="fw-bold">Monitoreo y detección de intrusiones:</span>
+      Implementar sistemas de monitoreo que puedan detectar actividades
+      sospechosas o intentos de acceso no autorizados y responder de manera
+      adecuada.
+    </li>
+    <li>
+      <span class="fw-bold">Gestión de identidad:</span>
+      Tener un sistema robusto de gestión de identidades para dispositivos y
+      usuarios que permita revocar el acceso cuando sea necesario.
+    </li>
+    <li>
+      <span class="fw-bold">Privacidad del usuario:</span>
+      Proteger la privacidad de los datos de los usuarios y proporcionar
+      transparencia sobre cómo se recopilan, almacenan y utilizan los datos de
+      los dispositivos IoT.
+    </li>
+    <li>
+      <span class="fw-bold">Pruebas de seguridad:</span>
+      Realizar pruebas de seguridad periódicas, como pruebas de penetración,
+      para identificar posibles vulnerabilidades en los dispositivos y en la
+      infraestructura IoT.
+    </li>
+    <li>
+      <span class="fw-bold">Educación y concienciación: </span>
+      Tanto los fabricantes como los usuarios deben estar educados sobre las
+      mejores prácticas de seguridad en IoT y cómo mantener sus dispositivos
+      seguros.
+    </li>
+  </ol>
+  <hr />
+  <p>
+    La implementación de seguridad en dispositivos IoT requiere una combinación
+    de prácticas de seguridad a nivel de software y hardware. Aquí te
+    proporcionaré un ejemplo muy básico de código en Python que demuestra cómo
+    podrías comenzar a abordar la seguridad en un dispositivo IoT. Ten en cuenta
+    que esto es solo un punto de partida y que la seguridad en IoT es un tema
+    amplio y complejo que requiere consideraciones adicionales.
+  </p>
+  <app-precode
+    [code]="CODE"
+    [LINE_CODE]="LINE_CODE"
+    [top]="top"
+    [explain]="EXPLAIN"
+    [max_line]="max_line"
+  ></app-precode>
+  <div class="row mt-4">
+    <p class="col">
+      Este código muestra cómo se puede usar un HMAC (Código de Autenticación de
+      Mensajes Hash) para verificar la autenticidad de los datos enviados desde
+      un dispositivo IoT al servidor. El secret_key debe ser conocido tanto por
+      el dispositivo como por el servidor. Si los datos se manipulan en el
+      camino, el HMAC no coincidirá y se sabrá que los datos no son auténticos.
+    </p>
+    <p class="col">
+      Recuerda que esto es solo una pequeña parte de las prácticas de seguridad
+      que deberías implementar en un dispositivo IoT. También debes considerar
+      la autenticación segura, el cifrado de datos, la gestión de claves, las
+      actualizaciones de firmware seguras y otras medidas de seguridad
+      relevantes para tu aplicación específica. Además, la seguridad en IoT debe
+      ser implementada de manera cuidadosa y adaptada a las necesidades y
+      amenazas específicas de tu proyecto.
+    </p>
+  </div>
+</article>
+<shared-footer></shared-footer>
