@@ -6,25 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
-  CODE: string = `
-  
-    #include <xc.h> 
-    #pragma config FOSC = INTRCIO
-    #pragma config WDTE = OFF
-    #pragma config PWRTE = OFF
-    #pragma config MCLRE = OFF
-    #pragma config CP = OFF
-    #define _XTAL_FREQ 4000000
-    void main() {
-        TRISAbits.TRISA0 = 0;
-        while(1) {
-            PORTAbits.RA0 = 1;
-            __delay_ms(1000);
-            PORTAbits.RA0 = 0;
-            __delay_ms(1000);
-        }
+  CODE: string = `#include <xc.h> 
+  #pragma config FOSC = INTRCIO
+  #pragma config WDTE = OFF
+  #pragma config PWRTE = OFF
+  #pragma config MCLRE = OFF
+  #pragma config CP = OFF
+  #define _XTAL_FREQ 4000000
+  void main() {
+    TRISAbits.TRISA0 = 0;
+    while(1) {
+      PORTAbits.RA0 = 1;
+      __delay_ms(1000);
+      PORTAbits.RA0 = 0;
+      __delay_ms(1000);
     }
-  `;
+  }
+`;
 
   LINE_CODE: string[] = [
     '#include <xc.h>',
