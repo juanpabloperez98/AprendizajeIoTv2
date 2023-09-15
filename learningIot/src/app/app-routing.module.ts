@@ -85,6 +85,13 @@ export const AppRoutes: Routes = [
       ),
   },
   {
+    path: 'security',
+    loadChildren: () =>
+      import('./modules/security-iot/security-iot.module').then(
+        (m) => m.SecurityIotModule
+      ),
+  },
+  {
     path: '**',
     redirectTo: '',
   },
