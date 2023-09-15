@@ -1,0 +1,135 @@
+<shared-header></shared-header>
+<article
+  style="max-width: 70%; padding-top: 70px"
+  class="initial-section maxwidth"
+>
+  <shared-button-go-back></shared-button-go-back>
+  <h3 class="mt-5 mb-5">
+    Introducción a la programación de microcontroladores
+  </h3>
+  <div class="row">
+    <div class="col">
+      <h4>¿Qué es un microcontrolador?</h4>
+      <p>
+        Un microcontrolador es un chip o un conjunto de chips que incluye un
+        procesador central, memoria, puertos de entrada/salida y periféricos
+        integrados. Estos dispositivos están diseñados para realizar tareas
+        específicas de control en sistemas embebidos. A diferencia de una
+        computadora personal, que generalmente ejecuta una variedad de
+        aplicaciones, un microcontrolador está dedicado a una única función o
+        conjunto de funciones.
+      </p>
+    </div>
+    <div class="col">
+      <h4>Entorno de desarrollo integrado (IDE)</h4>
+      <p>
+        Para escribir, compilar y cargar el código en un microcontrolador, debes
+        utilizar un Entorno de Desarrollo Integrado o IDE. Los IDE proporcionan
+        herramientas para escribir código, depurar y administrar proyectos.
+        Algunos ejemplos populares de IDE para microcontroladores incluyen MPLAB
+        X para microcontroladores PIC, Arduino IDE para placas Arduino y
+        STM32CubeIDE para microcontroladores STM32.
+      </p>
+    </div>
+    <h4>Lenguajes de programación</h4>
+    <p>
+      Para programar un microcontrolador, necesitas utilizar un lenguaje de
+      programación adecuado. Los lenguajes de programación más comunes para
+      microcontroladores son C y C++, aunque también se utilizan otros lenguajes
+      específicos para ciertos modelos de microcontroladores.
+    </p>
+    <app-precode
+      [code]="CODE"
+      [LINE_CODE]="LINE_CODE"
+      [top]="top"
+      [explain]="EXPLAIN"
+      [max_line]="max_line"
+    ></app-precode>
+  </div>
+  <hr />
+  <h4>Programación en microcontroladores</h4>
+  <p>
+    La programación de microcontroladores implica escribir código que controle
+    el comportamiento del microcontrolador y, por ende, del sistema en el que se
+    encuentra. Aquí hay algunas tareas comunes en la programación de
+    microcontroladores:
+  </p>
+  <ol>
+    <li>
+      <span class="fw-bold">Configuración de pines:</span>
+      Debes configurar los pines del microcontrolador para que funcionen como
+      entradas o salidas, y establecer sus propiedades, como el nivel de voltaje
+      y la resistencia de pull-up o pull-down.
+    </li>
+    <li>
+      <span class="fw-bold">Gestión de periféricos:</span>
+      Los microcontroladores suelen tener periféricos integrados como
+      temporizadores, UART, SPI e I2C que se utilizan para interactuar con otros
+      dispositivos. Debes configurar y utilizar estos periféricos según sea
+      necesario.
+    </li>
+    <li>
+      <span class="fw-bold">Manejo de interrupciones:</span>
+      Las interrupciones son eventos que pueden detener momentáneamente la
+      ejecución normal del programa para atender una tarea importante. Debes
+      programar el manejo de interrupciones para eventos como entradas de
+      sensores o temporizadores.
+    </li>
+    <li>
+      <span class="fw-bold">Comunicación:</span>
+      Puedes utilizar protocolos de comunicación como UART, SPI o I2C para
+      intercambiar datos con otros dispositivos, como sensores, pantallas o
+      módulos de comunicación.
+    </li>
+    <li>
+      <span class="fw-bold">Depuración:</span>
+      Los IDE proporcionan herramientas de depuración que te permiten
+      identificar y solucionar problemas en tu código.
+    </li>
+    <li>
+      <span class="fw-bold">Optimización:</span>
+      La programación eficiente es esencial en microcontroladores debido a sus
+      limitaciones de recursos. Debes optimizar el uso de la memoria y la
+      velocidad de ejecución del código.
+    </li>
+    <li>
+      <span class="fw-bold">Control de energía:</span>
+      En aplicaciones con restricciones de energía, como dispositivos
+      portátiles, es importante gestionar cuidadosamente el consumo de energía
+      del microcontrolador.
+    </li>
+  </ol>
+  <hr />
+  <div class="row">
+    <div class="col-8">
+      <h4>Ejemplos de microcontroladores populares</h4>
+      <p>
+        Algunos ejemplos de microcontroladores populares son los
+        microcontroladores PIC de Microchip, las placas Arduino basadas en
+        microcontroladores AVR o ARM, y los microcontroladores STM32 de
+        STMicroelectronics. Cada uno de ellos tiene sus propias características
+        y ventajas, por lo que la elección de un microcontrolador dependerá de
+        las necesidades específicas de tu proyecto.
+      </p>
+      <p>
+        En resumen, la programación de microcontroladores es una habilidad
+        valiosa para aquellos que deseen trabajar en el mundo de la electrónica
+        y la informática embebida. Requiere un enfoque específico debido a las
+        limitaciones de recursos de estos dispositivos, pero también ofrece
+        oportunidades emocionantes para crear sistemas embebidos personalizados
+        y controlar dispositivos de la vida cotidiana. Con la práctica y el
+        estudio, puedes dominar la programación de microcontroladores y
+        desarrollar soluciones innovadoras en una amplia variedad de
+        aplicaciones.
+      </p>
+    </div>
+    <figure class="col-4 d-flex flex-column justify-content-center">
+      <img
+        class="img-fluid"
+        src="./assets/microcontroller/micropop.webp"
+        alt=""
+      />
+    </figure>
+  </div>
+</article>
+<shared-footer></shared-footer>
