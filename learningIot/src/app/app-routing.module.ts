@@ -92,6 +92,13 @@ export const AppRoutes: Routes = [
       ),
   },
   {
+    path: 'data-analysis',
+    loadChildren: () =>
+      import('./modules/data-analysis/data-analysis.module').then(
+        (m) => m.DataAnalysisModule
+      ),
+  },
+  {
     path: '**',
     redirectTo: '',
   },
