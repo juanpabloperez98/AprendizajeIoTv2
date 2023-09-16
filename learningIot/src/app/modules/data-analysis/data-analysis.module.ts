@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MainComponent } from './main/main.component';
-import { dataAnalysisRoutes } from './microcontroller.routing';
+import { dataAnalysisRoutes } from './data-analysis.routing';
 
 @NgModule({
   declarations: [MainComponent],
