@@ -78,6 +78,18 @@ export const AppRoutes: Routes = [
     ],
   },
   {
+    path: 'plataformas-iot',
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import(
+            './modules/plataformas-iot/plataformas-iot.module'
+          ).then((m) => m.PlataformasIotModule),
+      },
+    ],
+  },
+  {
     path: 'microcontroller',
     loadChildren: () =>
       import('./modules/microcontroller/microcontroller.module').then(
