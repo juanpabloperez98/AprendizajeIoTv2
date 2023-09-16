@@ -233,7 +233,7 @@ export class MainComponent implements OnInit {
 
   //-------------------------------------------------------------------------------------------------
 
-  // CODIGO 4
+  // CODIGO 5
   CODE5:string = `void setup() {
     pinMode(13, OUTPUT);
   }

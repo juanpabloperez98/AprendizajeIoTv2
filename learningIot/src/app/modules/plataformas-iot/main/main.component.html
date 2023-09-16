@@ -8,9 +8,9 @@
       <h3>5. Plataformas IoT</h3>
     </div>
   </div>
-  <div class="row">
+  <div class="row mb-5">
     <div class="col-lg-12">
-      <h3>1.1 <span style="font-weight: bold;">Definición de plataformas IoT</span></h3>
+      <h3>5.1 <span style="font-weight: bold;">Definición de plataformas IoT</span></h3>
       <hr>
       <div class="row mx-auto">
         <div class="col-lg-6">
@@ -218,8 +218,106 @@
               <app-precode [code]="CODE1" [LINE_CODE]="LINE_CODE1" [top]="top" [explain]="explain1"
                 [max_line]="max_line1"></app-precode>
             </div>
+            <div class="col-lg-12 mt-5">
+              <h5>Sistema de Agricultura Inteligente</h5>
+              <p>
+                Una aplicación que recibe datos de humedad del suelo de un sensor y decide si es necesario activar el
+                riego.
+              </p>
+            </div>
+            <div class="col-lg-12">
+              <app-precode [code]="CODE2" [LINE_CODE]="LINE_CODE2" [top]="top" [explain]="explain2"
+                [max_line]="max_line2"></app-precode>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-lg-12">
+      <h3>5.2 <span style="font-weight: bold;">Funcionalidades Básicas de las Plataformas IoT</span></h3>
+      <hr>
+      <div class="row mx-auto">
+        <div class="col-lg-12 mb-5">
+          <p>
+            Las plataformas IoT están diseñadas para facilitar la implementación y gestión de soluciones basadas en el
+            Internet de las Cosas. Estas soluciones involucran una amplia variedad de dispositivos y necesidades, por lo
+            que las plataformas IoT suelen ofrecer un conjunto de funcionalidades esenciales que permiten desarrollar,
+            desplegar y gestionar aplicaciones IoT de manera eficiente.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h4>Conectividad</h4>
+          <p>
+            La capacidad de conectar una multitud de dispositivos es fundamental para cualquier plataforma IoT.
+          </p>
+          <ul>
+            <li><span class="bold">Protocolos Múltiples:</span> Las plataformas deben soportar diferentes protocolos de
+              comunicación, desde HTTP/HTTPS, MQTT, CoAP, hasta WebSockets y otros.</li>
+            <li><span class="bold">Gateway y </span>Bridge: Estas herramientas facilitan la comunicación entre
+              dispositivos y la plataforma, traduciendo y reenviando mensajes según sea necesario.</li>
+            <li><span class="bold">Conexión Segura:</span> Es vital que la comunicación entre dispositivos y la
+              plataforma se realice de forma segura mediante técnicas como la encriptación y la autenticación.</li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h4>Gestión de Dispositivos</h4>
+          <p>
+            Una vez conectados, los dispositivos necesitan ser gestionados y monitoreados.
+          </p>
+          <ul>
+            <li><span class="bold">Registro y Autenticación:</span> La plataforma debe ser capaz de registrar nuevos
+              dispositivos y autenticarlos antes de permitirles enviar o recibir datos.</li>
+            <li><span class="bold">Configuración Remota:</span> La capacidad de cambiar configuraciones o actualizar
+              firmware a distancia.</li>
+            <li><span class="bold">Monitoreo:</span> Supervisar el estado, la actividad y la salud de los dispositivos
+              en tiempo real.</li>
+            <li><span class="bold">Alertas:</span> Notificaciones automáticas ante eventos o anomalías, como un
+              dispositivo desconectado o un fallo de hardware.</li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h4>Procesamiento y Acción</h4>
+          <p>
+            La capacidad de procesar y actuar sobre los datos recopilados es lo que realmente permite que las soluciones
+            IoT sean "inteligentes".
+          </p>
+          <ul>
+            <li><span class="bold">Event Stream Processing:</span> Procesamiento en tiempo real de flujos de datos para
+              tomar decisiones instantáneas basadas en la información entrante.</li>
+            <li><span class="bold">Automatización y Actuación:</span> La plataforma puede desencadenar acciones basadas
+              en ciertas condiciones, como encender una luz cuando un sensor detecta que es de noche.</li>
+          </ul>
+        </div>
+        <div class="col-lg-12 mt-5">
+          <p>
+            Estas funcionalidades son el núcleo de muchas plataformas IoT y proporcionan las capacidades esenciales que
+            las empresas y desarrolladores necesitan para crear soluciones conectadas. Sin embargo, dependiendo del
+            proveedor y de las necesidades específicas del proyecto, puede haber funcionalidades adicionales o
+            variaciones en las mencionadas.
+          </p>
+        </div>
+        <div class="col-lg-12 mt-5">
+          <h4>Ejemplos código plataformas IoT</h4>
+        </div>
+        <div class="col-lg-12 mt-5">
+          <h5>Conectividad y Registro de Dispositivos</h5>
+          <p>
+            Un dispositivo IoT desea registrarse en una plataforma. Utilizará HTTP para enviar una solicitud de registro.
+          </p>
+          <app-precode [code]="CODE3" [LINE_CODE]="LINE_CODE3" [top]="top" [explain]="explain3"
+                [max_line]="max_line3"></app-precode>
+        </div>
+        <div class="col-lg-12 mt-5">
+          <h5>Procesamiento y Acción</h5>
+          <p>
+            Una plataforma IoT recibe datos de temperatura de un sensor y decide si es necesario activar un sistema de enfriamiento.
+          </p>
+          <app-precode [code]="CODE3" [LINE_CODE]="LINE_CODE3" [top]="top" [explain]="explain3"
+                [max_line]="max_line3"></app-precode>
+        </div>
+
       </div>
     </div>
   </div>
