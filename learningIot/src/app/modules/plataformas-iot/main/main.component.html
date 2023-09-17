@@ -304,21 +304,239 @@
         <div class="col-lg-12 mt-5">
           <h5>Conectividad y Registro de Dispositivos</h5>
           <p>
-            Un dispositivo IoT desea registrarse en una plataforma. Utilizará HTTP para enviar una solicitud de registro.
+            Un dispositivo IoT desea registrarse en una plataforma. Utilizará HTTP para enviar una solicitud de
+            registro.
           </p>
           <app-precode [code]="CODE3" [LINE_CODE]="LINE_CODE3" [top]="top" [explain]="explain3"
-                [max_line]="max_line3"></app-precode>
+            [max_line]="max_line3"></app-precode>
         </div>
         <div class="col-lg-12 mt-5">
           <h5>Procesamiento y Acción</h5>
           <p>
-            Una plataforma IoT recibe datos de temperatura de un sensor y decide si es necesario activar un sistema de enfriamiento.
+            Una plataforma IoT recibe datos de temperatura de un sensor y decide si es necesario activar un sistema de
+            enfriamiento.
           </p>
           <app-precode [code]="CODE3" [LINE_CODE]="LINE_CODE3" [top]="top" [explain]="explain3"
-                [max_line]="max_line3"></app-precode>
+            [max_line]="max_line3"></app-precode>
         </div>
 
       </div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-lg-12">
+      <h3>5.3 Tipos de Plataformas IoT</h3>
+      <hr>
+      <div class="row mx-auto">
+        <div class="col-lg-12">
+          <p>
+            <span class="bold">Plataformas de Infraestructura como Servicio (IaaS):</span> Estas ofrecen la
+            infraestructura básica en la nube
+            para ejecutar aplicaciones y almacenar datos, pero no necesariamente herramientas específicas para IoT.
+            Ejemplos incluyen Amazon Web Services, Google Cloud Platform y Microsoft Azure.
+          </p>
+          <p>
+            <span class="bold">Plataformas de Software como Servicio (SaaS):</span> Ofrecen soluciones más completas y
+            específicas para IoT, desde
+            la conectividad hasta las interfaces de usuario. Ejemplos serían PTC ThingWorx, Cisco IoT Cloud Connect y GE
+            Predix.
+          </p>
+          <p>
+            <span class="bold">Plataformas de Plataforma como Servicio (PaaS):</span> Están entre IaaS y SaaS,
+            ofreciendo herramientas y servicios
+            para desarrollar aplicaciones de IoT sin gestionar la infraestructura subyacente. Ejemplos incluyen IBM
+            Watson IoT y Particle.
+          </p>
+        </div>
+        <hr>
+        <div class="col-lg-4">
+          <h4>Interoperabilidad</h4>
+          <p>
+            Uno de los mayores desafíos del IoT es la vasta cantidad de dispositivos y estándares. Las plataformas IoT
+            juegan un papel crucial en la integración y traducción entre diferentes dispositivos y sistemas para que
+            puedan trabajar juntos de manera efectiva.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h4>Escalabilidad</h4>
+          <p>
+            A medida que el número de dispositivos conectados crece exponencialmente, las plataformas deben ser capaces
+            de manejar millones, o incluso miles de millones, de dispositivos conectados simultáneamente, procesando
+            terabytes o petabytes de datos.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h4>Costo</h4>
+          <p>
+            La estructura de costos de las plataformas IoT varía. Algunas plataformas cobran por volumen de datos,
+            número de dispositivos conectados, transacciones realizadas, o una combinación de estos y otros factores. Es
+            esencial considerar el modelo de precios al seleccionar una plataforma.
+          </p>
+        </div>
+        <hr>
+        <div class="col-lg-4">
+          <h4>Modelo de Desarrollo</h4>
+          <p>
+            Algunas plataformas IoT están diseñadas específicamente para desarrolladores y ofrecen una amplia variedad
+            de herramientas y flexibilidad. Otras están destinadas a usuarios empresariales y se centran más en
+            soluciones predefinidas y configuración en lugar de desarrollo desde cero.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h4>Seguridad</h4>
+          <p>
+            Más allá de las funcionalidades básicas, las plataformas deben ofrecer soluciones avanzadas de seguridad,
+            incluyendo detección de intrusiones, prevención de ataques, gestión de identidad y acceso, y más.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h4>Integración con Otros Sistemas</h4>
+          <p>
+            El valor real de IoT a menudo proviene de la integración con otros sistemas empresariales, como ERPs,
+            sistemas de CRM o soluciones de análisis de datos. Las plataformas IoT deben ofrecer capacidades robustas de
+            integración.
+          </p>
+        </div>
+        <div class="col-lg-12 mt-5">
+          <p>
+            Estos aspectos reflejan la complejidad y diversidad de las plataformas IoT en el mercado actual. Al
+            seleccionar una plataforma, es crucial considerar no solo sus características y capacidades, sino también
+            cómo se alinea con las necesidades y objetivos específicos del proyecto o empresa.
+          </p>
+        </div>
+      </div>
+      <div class="row mx-auto">
+        <div class="col-lg-12 my-5">
+          <h4>Ejemplos practicos de tipos de Plataformas IoT</h4>
+        </div>
+        <div class="col-lg-4">
+          <h5>Interoperabilidad en un Hospital Inteligente</h5>
+          <p>
+            <span class="bold">Contexto:</span> Un hospital ha implementado un sistema IoT para mejorar el monitoreo de
+            pacientes y la gestión de
+            activos. Sin embargo, el equipo médico proviene de múltiples fabricantes, cada uno con sus propios
+            estándares y protocolos.
+          </p>
+          <p>
+            <span class="bold">Solución:</span> La plataforma IoT elegida tiene una amplia gama de adaptadores y
+            conectores preconstruidos. Puede
+            traducir y normalizar datos de diferentes dispositivos, desde monitores cardíacos hasta rastreadores de
+            camas y equipamiento médico. Esta interoperabilidad permite al personal del hospital tener una única
+            interfaz para monitorear a todos los pacientes y gestionar todos los activos, independientemente de los
+            fabricantes del equipo.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h5>Escalabilidad en una Ciudad Inteligente</h5>
+          <p>
+            <span class="bold">Contexto:</span> Una ciudad ha decidido adoptar soluciones IoT para gestionar y
+            monitorear todo, desde el tráfico y
+            las luces de la calle hasta los servicios públicos y los sistemas de seguridad. Sin embargo, la
+            infraestructura inicial no estaba preparada para la enorme cantidad de dispositivos que se añadieron con el
+            tiempo.
+          </p>
+          <p>
+            <span class="bold">Solución:</span> Se optó por una plataforma IoT basada en la nube con un modelo PaaS que
+            ofrece alta escalabilidad.
+            A medida que la ciudad continuaba añadiendo miles de nuevos dispositivos, desde cámaras de tráfico hasta
+            sensores de calidad del aire, la plataforma podía escalar automáticamente para gestionar la creciente carga
+            de datos y demanda de procesamiento, sin interrupciones ni degradaciones en el servicio.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <h5>Integración con Otros Sistemas en Agricultura</h5>
+          <p>
+            <span class="bold">Contexto:</span> Una granja ha implementado una variedad de soluciones IoT para
+            monitorear y optimizar la
+            producción. Desde sensores de humedad y temperatura hasta sistemas automatizados de riego y alimentación.
+            Sin embargo, la verdadera eficiencia vendría de integrar estos datos con su software de gestión de granjas.
+          </p>
+          <p>
+            <span class="bold">Solución:</span> La plataforma IoT seleccionada ofrece APIs abiertas y herramientas de
+            integración. Estas
+            capacidades permitieron que la granja integre datos en tiempo real de sus dispositivos IoT con su sistema de
+            gestión agrícola. Ahora, cuando un sensor detecta que un campo específico necesita riego, no sólo se activa
+            el sistema de riego automáticamente, sino que también se registra en el software de gestión, permitiendo un
+            seguimiento detallado y una planificación más precisa.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <p>
+            Las plataformas IoT, en su esencia, son un crisol de tecnologías y soluciones integradas diseñadas para
+            fusionar el mundo digital con el físico, un puente entre dispositivos y sistemas que, a primera vista,
+            podrían parecer dispares. La verdadera belleza y el poder de estas plataformas radican en su capacidad para
+            desentrañar, procesar y traducir vastas cantidades de datos en acciones significativas.
+            <br>
+            <br>
+            En el <span class="bold">Hospital Inteligente</span>, por ejemplo, estamos observando una revolución en la
+            atención al paciente y la
+            administración hospitalaria. Lo que una vez fue un sistema de vigilancia manual, a menudo propenso a errores
+            humanos, ahora se ha transformado en un ecosistema interconectado. Cada dispositivo, desde monitores
+            cardíacos hasta rastreadores de camas, comunica datos en tiempo real. Esta constante corriente de
+            información permite a los profesionales médicos tomar decisiones informadas más rápidamente, lo que puede
+            ser la diferencia entre la vida y la muerte en situaciones críticas.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <img class="w-100" src="../../../../assets/plataformas-iot/smart-hospitals.jpg" alt="smart-hospitals.jpg">
+        </div>
+      </div>
+      <div class="row mx-auto">
+        <div class="col-lg-12 my-5">
+          <h4>Ejemplos código tipos de Plataformas IoT</h4>
+        </div>
+        <div class="col-lg-12">
+          <h5>Hospital Inteligente</h5>
+          <p>
+            Contexto: Registro automático de dispositivos médicos en la plataforma IoT cuando se conectan a la red del
+            hospital.
+          </p>
+          <app-precode [code]="CODE5" [LINE_CODE]="LINE_CODE5" [top]="top" [explain]="explain5"
+            [max_line]="max_line5"></app-precode>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-lg-12">
+      <h3>5.4 Conclusión sobre plataformas IoT</h3>
+    </div>
+    <hr>
+    <div class="col-lg-6">
+      <p>
+        El Internet de las Cosas (IoT) ha irrumpido en nuestra era digital como una de las revoluciones tecnológicas más
+        significativas. Mediante la conexión de objetos cotidianos a redes digitales, se ha abierto un abanico de
+        posibilidades en términos de recopilación de datos, automatización, inteligencia y mejor toma de decisiones. Sin
+        embargo, la verdadera esencia de esta revolución no reside simplemente en los dispositivos individuales, sino en
+        cómo se conectan, se comunican y se gestionan. Aquí es donde las plataformas IoT entran en juego.
+        <br>
+        <br>
+        Una plataforma IoT actúa como el nexo central y el cerebro detrás de este vasto ecosistema de dispositivos.
+        Facilita la comunicación entre dispositivos, proporciona herramientas para procesar y analizar datos, y ofrece
+        interfaces para que los humanos interactúen y tomen decisiones basadas en la información recopilada. Más que
+        cualquier otro componente, las plataformas IoT son esenciales para extraer valor real de las redes de
+        dispositivos interconectados.
+        <br>
+        <br>
+        La diversidad de aplicaciones y escenarios en los que el IoT puede desempeñar un papel es asombrosa: desde
+        hospitales inteligentes y granjas automatizadas hasta ciudades conectadas y hogares intuitivos. Esta diversidad
+        plantea desafíos únicos en términos de escalabilidad, interoperabilidad, seguridad y gestión. Una plataforma IoT
+        adecuada no sólo aborda estos desafíos, sino que también proporciona las herramientas para innovar y mejorar
+        constantemente.
+      </p>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <img class="w-100" src="../../../../assets/plataformas-iot/final_section.jpg" alt="final_section.jpg">
+      </div>
+      <a class="btn d-block w-50 mx-auto mt-5 botonColor">
+        Vamos aprender más
+        <img style="width: 30px;" class="ms-3" src="../../../../assets/icons/questionnaire.png" alt=""></a>
+      <a routerLink="/presentationOne/main" class="btn d-block w-50 mx-auto mt-3 botonColor">
+        Siguiente módulo
+        <img style="width: 30px;" class="ms-3" src="../../../../assets/icons/next_module.png" alt="">
+      </a>
     </div>
   </div>
 </section>

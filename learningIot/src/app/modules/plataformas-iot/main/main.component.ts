@@ -197,6 +197,53 @@ export class MainComponent implements OnInit {
   ];
   max_line4:number = 14;
 
+
+  //--------------------------------------------------------------------------------------------------
+
+  // CODIGO 5
+  CODE5:string = `import requests
+  API_ENDPOINT = "http://direccion_api_hospital/registrar_dispositivo"
+  def registrar_dispositivo(device_id, device_type):
+      response = requests.post(API_ENDPOINT, json={
+          'device_id': device_id,
+          'device_type': device_type
+      })
+      if response.status_code == 200:
+          print(f"Dispositivo {device_type} con ID {device_id} registrado con éxito.")
+      else:
+          print(f"Error al registrar el dispositivo: {response.content}")
+  registrar_dispositivo("monitor_4567", "monitor_cardiaco")`
+  LINE_CODE5:string[]= [
+    "import requests",
+    "API_ENDPOINT = 'http://direccion_api_hospital/registrar_dispositivo'",
+    "def registrar_dispositivo(device_id, device_type):",
+    "    response = requests.post(API_ENDPOINT, json={",
+    "        'device_id': device_id,",
+    "        'device_type': device_type",
+    "    })",
+    "    if response.status_code == 200:",
+    "        print(f'Dispositivo {device_type} con ID {device_id} registrado con éxito.')",
+    "    else:",
+    "        print(f'Error al registrar el dispositivo: {response.content}')",
+    "registrar_dispositivo('monitor_4567', 'monitor_cardiaco')",
+  ];
+  explain5:string[] = [
+    "Importa el módulo requests, que es una biblioteca de Python para realizar solicitudes HTTP.",
+    "Establece una constante API_ENDPOINT con la dirección URL de la API del hospital para registrar dispositivos.",
+    "Define una función llamada registrar_dispositivo que toma dos parámetros: device_id y device_type.",
+    "Realiza una solicitud POST a la dirección URL especificada en API_ENDPOINT con los datos device_id y device_type en formato JSON.",
+    "En el cuerpo JSON de la solicitud, crea una clave llamada device_id y le asigna el valor del argumento device_id de la función, Esto significa que, cuando llames a la función, el valor que proporciones para device_id se enviará en la solicitud POST como device_id.",
+    "En el cuerpo JSON, crea una clave llamada device_type y le asigna el valor del argumento device_type de la función, Similar al punto anterior, esta línea se asegura de que el tipo de dispositivo proporcionado al llamar a la función se incluya en la solicitud POST.",
+    "Cierra el diccionario y la función requests.post",
+    "Esta línea finaliza el cuerpo del mensaje JSON y termina la llamada a requests.post, cuyo resultado (la respuesta del servidor) se almacenará en la variable response.",
+    "Comprueba si el código de estado (status code) de la respuesta HTTP es 200, Un código de estado 200 generalmente indica éxito en operaciones HTTP.",
+    "Si el código de estado es 200, imprime un mensaje de éxito, La función print muestra el mensaje en la consola. {device_type} y {device_id} son interpolaciones de cadenas que se reemplazarán por los valores de las variables correspondientes.",
+    "ndica el comienzo de un bloque alternativo de código si la condición del if anterior no se cumple (es decir, si el código de estado no es 200), Cualquier código que se escriba después de este else se ejecutará solo si la respuesta no tiene un código de estado 200.",
+    "Si no se obtuvo una respuesta con código 200, imprime un mensaje de error junto con el contenido de la respuesta, extraerá y mostrará el contenido de la respuesta HTTP, que podría contener información adicional sobre el error.",
+    "Cierra el bloque de código de la función registrar_dispositivo. Todo el código después de esta línea no formará parte de la función registrar_dispositivo."
+  ];
+  max_line5:number = 12;
+
   constructor(
     private highlightService: HighlightService,
   ) { }
