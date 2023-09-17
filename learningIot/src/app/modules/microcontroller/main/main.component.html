@@ -55,25 +55,46 @@
     microcontroladores:
   </p>
   <ol>
-    <li>
+    <li class="mb-3">
       <span class="fw-bold">Configuración de pines:</span>
       Debes configurar los pines del microcontrolador para que funcionen como
       entradas o salidas, y establecer sus propiedades, como el nivel de voltaje
       y la resistencia de pull-up o pull-down.
+      <app-precode
+        [code]="CODE1"
+        [LINE_CODE]="LINE_CODE1"
+        [top]="top"
+        [explain]="EXPLAIN1"
+        [max_line]="max_line1"
+      ></app-precode>
     </li>
-    <li>
+    <li class="mb-3">
       <span class="fw-bold">Gestión de periféricos:</span>
       Los microcontroladores suelen tener periféricos integrados como
       temporizadores, UART, SPI e I2C que se utilizan para interactuar con otros
       dispositivos. Debes configurar y utilizar estos periféricos según sea
       necesario.
+      <app-precode
+        [code]="CODE2"
+        [LINE_CODE]="LINE_CODE2"
+        [top]="top"
+        [explain]="EXPLAIN2"
+        [max_line]="max_line2"
+      ></app-precode>
     </li>
-    <li>
+    <li class="mb-3">
       <span class="fw-bold">Manejo de interrupciones:</span>
       Las interrupciones son eventos que pueden detener momentáneamente la
       ejecución normal del programa para atender una tarea importante. Debes
       programar el manejo de interrupciones para eventos como entradas de
       sensores o temporizadores.
+      <app-precode
+        [code]="CODE3"
+        [LINE_CODE]="LINE_CODE3"
+        [top]="top"
+        [explain]="EXPLAIN3"
+        [max_line]="max_line3"
+      ></app-precode>
     </li>
     <li>
       <span class="fw-bold">Comunicación:</span>
@@ -81,10 +102,17 @@
       intercambiar datos con otros dispositivos, como sensores, pantallas o
       módulos de comunicación.
     </li>
-    <li>
+    <li class="mb-3">
       <span class="fw-bold">Depuración:</span>
       Los IDE proporcionan herramientas de depuración que te permiten
       identificar y solucionar problemas en tu código.
+      <app-precode
+        [code]="CODE4"
+        [LINE_CODE]="LINE_CODE4"
+        [top]="top"
+        [explain]="EXPLAIN4"
+        [max_line]="max_line4"
+      ></app-precode>
     </li>
     <li>
       <span class="fw-bold">Optimización:</span>
