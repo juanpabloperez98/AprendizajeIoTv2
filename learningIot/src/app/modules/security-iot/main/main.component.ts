@@ -153,6 +153,7 @@ export class MainComponent implements OnInit {
     'printf("Autenticación fallida. Dispositivo no autorizado.\\n");',
     '}',
     'return 0;',
+    '}',
   ];
 
   EXPLAIN1: string[] = [
@@ -195,6 +196,7 @@ export class MainComponent implements OnInit {
     'Se muestra un mensaje indicando que la autenticación ha fallado y el dispositivo no está autorizado.',
     'Finaliza el condicional else',
     'Finalmente, el programa retorna 0 para indicar una terminación exitosa.',
+    'Finaliza la función main',
   ];
 
   max_line1: number = this.LINE_CODE1.length;
@@ -273,7 +275,8 @@ export class MainComponent implements OnInit {
     'Imprime en la consola el texto cifrado.',
     'Llama a la función encryptDecryptAES para descifrar los datos cifrados utilizando la misma clave. El tercer parámetro, 0, indica que se está realizando un descifrado.',
     'Imprime en la consola el texto descifrado.',
-    'Indica que la función main ha finalizado y devuelve el valor 0, indicando que el programa ha finalizado correctamente.',
+    'Devuelve el valor 0, indicando que el programa ha finalizado correctamente.',
+    'Finaliza la función main',
   ];
 
   max_line2: number = this.LINE_CODE2.length;
@@ -356,6 +359,7 @@ export class MainComponent implements OnInit {
     'Llama a la función decryptData para descifrar la cadena userData.',
     'Imprime la cadena descifrada después de aplicar la función de descifrado.',
     'Indica que el programa ha finalizado con éxito y sale de la función main.',
+    'Finaliza la función main',
   ];
 
   max_line3: number = this.LINE_CODE3.length;
@@ -411,6 +415,7 @@ export class MainComponent implements OnInit {
     'printf("Acceso denegado. Credenciales incorrectas.\\n");',
     '}',
     'return 0;',
+    '}',
   ];
 
   EXPLAIN4: string[] = [
@@ -437,6 +442,7 @@ export class MainComponent implements OnInit {
     'Dentro del bloque else, se imprime en la consola el mensaje "Acceso denegado. Credenciales incorrectas." utilizando printf',
     'Finaliza el condicional else',
     'Finalmente, el programa llega a esta línea que devuelve el valor 0 al sistema operativo',
+    'Finaliza la función main',
   ];
 
   max_line4: number = this.LINE_CODE4.length;
