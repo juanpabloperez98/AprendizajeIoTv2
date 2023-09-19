@@ -99,6 +99,7 @@ export class MainComponent implements OnInit {
     'PORTB ^= (1 << PB5);',
     '}',
     'return 0;',
+    '}',
   ];
 
   EXPLAIN1: string[] = [
@@ -116,6 +117,7 @@ export class MainComponent implements OnInit {
     'Cambiar el estado del Pin 5 del Puerto B',
     'Retardo o espera (dependiendo de la velocidad del microcontrolador)',
     'Termina la función principal y devuelve un valor de 0 para indicar una salida exitosa.',
+    'Finaliza la función main',
   ];
 
   max_line1: number = this.LINE_CODE1.length;
@@ -159,6 +161,7 @@ export class MainComponent implements OnInit {
     '// El programa principal continúa aquí',
     '}',
     'return;',
+    '}',
   ];
 
   EXPLAIN2: string[] = [
@@ -179,6 +182,7 @@ export class MainComponent implements OnInit {
     'Puede realizar otras tareas o simplemente esperar a que ocurra la interrupción externa',
     'Finaliza el ciclo',
     'Finaliza la ejecución del programa',
+    'Finaliza la función main',
   ];
 
   max_line2: number = this.LINE_CODE2.length;
@@ -216,6 +220,7 @@ export class MainComponent implements OnInit {
     '// Tu código principal aquí',
     '}',
     'return 0;',
+    '}',
   ];
 
   EXPLAIN3: string[] = [
@@ -233,6 +238,7 @@ export class MainComponent implements OnInit {
     'Se indica que esta parte del código es donde debes colocar tu código principal',
     'Finaliza el ciclo while',
     'Esta línea es el punto final del programa',
+    'Finaliza la función main',
   ];
 
   max_line3: number = this.LINE_CODE3.length;
@@ -288,6 +294,7 @@ export class MainComponent implements OnInit {
     '// Aquí puedes colocar tu código',
     '}',
     'return 0;',
+    '}',
   ];
 
   EXPLAIN4: string[] = [
@@ -314,6 +321,7 @@ export class MainComponent implements OnInit {
     'Se indica que esta parte del código es donde debes colocar tu código principal',
     'Finaliza el ciclo while',
     'Esta línea es el punto final del programa',
+    'Finaliza la función main',
   ];
 
   max_line4: number = this.LINE_CODE4.length;
