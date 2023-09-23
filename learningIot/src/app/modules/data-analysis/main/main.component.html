@@ -91,13 +91,6 @@
         paso. A continuación, te presento un enfoque general para la
         recopilación de datos:
       </p>
-      <app-precode
-        [code]="CODE"
-        [LINE_CODE]="LINE_CODE"
-        [top]="top"
-        [explain]="EXPLAIN"
-        [max_line]="max_line"
-      ></app-precode>
     </div>
     <img
       class="col-4"
@@ -105,7 +98,14 @@
       alt=""
     />
   </div>
-  <div class="row">
+  <app-precode
+    [code]="CODE"
+    [LINE_CODE]="LINE_CODE"
+    [top]="top"
+    [explain]="EXPLAIN"
+    [max_line]="max_line"
+  ></app-precode>
+  <div class="row mt-3">
     <div class="col-4">
       <span class="fw-bold">Identificación de fuentes de datos: </span>
       <p>
@@ -196,13 +196,6 @@
         análisis. Aquí tienes un procedimiento general para la limpieza de
         datos:
       </p>
-      <app-precode
-        [code]="CODE1"
-        [LINE_CODE]="LINE_CODE1"
-        [top]="top"
-        [explain]="EXPLAIN1"
-        [max_line]="max_line1"
-      ></app-precode>
     </div>
     <img
       class="col-4"
@@ -210,7 +203,14 @@
       alt=""
     />
   </div>
-  <div class="row">
+  <app-precode
+    [code]="CODE1"
+    [LINE_CODE]="LINE_CODE1"
+    [top]="top"
+    [explain]="EXPLAIN1"
+    [max_line]="max_line1"
+  ></app-precode>
+  <div class="row mt-3">
     <div class="col-4">
       <span class="fw-bold">Inspección inicial de los datos:</span>
       <p>
@@ -321,7 +321,7 @@
     [explain]="EXPLAIN2"
     [max_line]="max_line2"
   ></app-precode>
-  <div class="row">
+  <div class="row mt-3">
     <div class="col-4">
       <span class="fw-bold">Resumen estadístico inicial:</span>
       <p>
@@ -439,7 +439,7 @@
     [explain]="EXPLAIN3"
     [max_line]="max_line3"
   ></app-precode>
-  <div class="row">
+  <div class="row mt-3">
     <div class="col-4">
       <span class="fw-bold">Selección de técnicas estadísticas:</span>
       <p>
@@ -675,7 +675,7 @@
     [explain]="EXPLAIN4"
     [max_line]="max_line4"
   ></app-precode>
-  <div class="row">
+  <div class="row mt-3">
     <div class="col-4">
       <span class="fw-bold">Evalúa las implicaciones:</span>
       <p>
