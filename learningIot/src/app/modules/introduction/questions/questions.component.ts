@@ -90,7 +90,7 @@ export class QuestionsComponent implements OnInit {
       this.titleMsg,
       this.bodyMsg,
       'success'
-    ).then()
+    )
   }
 
   onClick = (): void => {

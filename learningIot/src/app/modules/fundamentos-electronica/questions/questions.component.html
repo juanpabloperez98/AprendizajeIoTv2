@@ -1,0 +1,31 @@
+<shared-header></shared-header>
+<section class="initial-section w-50 mx-auto">
+  <div class="row mx-auto add_border">
+    <div class="col-lg-12 mt-2">
+      <h3>Cuestionario fundamentos de electrónica básica</h3>
+      <p>
+        Tu tarea es emparejar cada término o frase con su correspondiente descripción o
+        característica. Por ejemplo, si consideras que la descripción "Flujo de electrones a través de
+        un conductor" se corresponde con "Corriente eléctrica", debes emparejar el término "Corriente eléctrica" a dicha descripción.
+        <br>
+        Tómate tu tiempo para leer cuidadosamente cada término y descripción antes de hacer tus selecciones. Una vez que
+        hayas emparejado todos los términos con las descripciones, procede a enviar tus
+        respuestas.
+      </p>
+    </div>
+  </div>
+  <hr>
+  <div class="row mx-auto">
+    <div *ngFor="let pregunta of preguntas; let i = index" class="col-lg-12 card-question">
+      {{ pregunta.pregunta }}
+      <select class="mt-3 d-block" [(ngModel)]="respuestasSeleccionadas[i]">
+        <option *ngFor="let opcion of opciones" [value]="opcion.id">{{ opcion.opcion }}</option>
+      </select>
+    </div>
+    <div class="col-lg-12 my-5">
+      <button (click)="comprobarRespuestas()" class="btn btn-success mt-2">Evaluar cuestionario</button>
+    </div>
+  </div>
+</section>
+
+<shared-footer></shared-footer>
