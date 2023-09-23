@@ -1,5 +1,5 @@
 .section-1{
-  background-color: rgba(128, 128, 128, .6);
+  // background-color: rgba(128, 128, 128, .6);
   padding: 20px;
   border-radius: 20px;
 }
@@ -25,4 +25,10 @@ h3{
     margin: auto;
   }
 
+}
+
+.card-question{
+  background-color: rgb(4, 30, 67);
+  color: white;
+  border-radius: 15px;
 }

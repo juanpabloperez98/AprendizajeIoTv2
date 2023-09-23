@@ -1,5 +1,127 @@
 <shared-header></shared-header>
-<section class="initial-section maxwidth">
+
+<section class="initial-section w-50 mx-auto">
+  <div class="row mx-auto add_border">
+    <div class="col-lg-12 mt-2">
+      <h3>Cuestionario introducción a IoT</h3>
+      <p>
+        Bienvenido a la sección de cuestionarios de "Aprendiendo IoT con ejemplos del mundo real". Aquí, no solo pondrás
+        a
+        prueba tus conocimientos adquiridos, sino que también te sumergirás en una experiencia interactiva y dinámica
+        diseñada para reforzar y consolidar tu aprendizaje.
+      </p>
+    </div>
+  </div>
+  <hr>
+  <div class="row mx-auto">
+    <div class="col-lg-12">
+      <div class="row mx-auto">
+        <div class="col-lg-12 p-5 card-question">
+          <h4>¿Qué es IoT?</h4>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion1" name="question1" id="question11" checked/>
+            <label class="form-check-label" for="question11">Una técnica avanzada de programación.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion1" name="question1" id="question12"/>
+            <label class="form-check-label" for="question12">El proceso de conectarse a internet usando un cable Ethernet.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion1" name="question1" id="question13"/>
+            <label class="form-check-label" for="question13">Cualquier cosa u objeto que tenga la capacidad de conectarse a internet para recibir o enviar datos.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion1" name="question1" id="question14"/>
+            <label class="form-check-label" for="question14">Una técnica de análisis de grandes datasets.</label>
+          </div>
+        </div>
+        <div class="col-lg-12 p-5 card-question mt-3">
+          <h4>¿Cuál es el propósito principal de IoT?</h4>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion2" name="question2" id="question21" checked/>
+            <label class="form-check-label" for="question21">Solo recopilar datos.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion2" name="question2" id="question22"/>
+            <label class="form-check-label" for="question22">Usar datos recopilados para la toma de decisiones automatizadas o hacer predicciones más eficientes.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion2" name="question2" id="question23"/>
+            <label class="form-check-label" for="question23">Simplificar la programación.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion2" name="question2" id="question24"/>
+            <label class="form-check-label" for="question24">Hacer más atractivos los dispositivos.</label>
+          </div>
+        </div>
+        <div class="col-lg-12 p-5 card-question mt-3">
+          <h4>¿Cómo se podría describir el funcionamiento básico de los dispositivos de IoT?</h4>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion3" name="question3" id="question31" checked/>
+            <label class="form-check-label" for="question31">Capturan y comparten datos, que luego se analizan para fundamentar acciones o decisiones.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion3" name="question3" id="question32"/>
+            <label class="form-check-label" for="question32">Solo capturan datos y los almacenan.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion3" name="question3" id="question33"/>
+            <label class="form-check-label" for="question33">Producen datos pero no los comparten.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion3" name="question3" id="question34"/>
+            <label class="form-check-label" for="question34">Requieren intervención humana constante.</label>
+          </div>
+        </div>
+        <div class="col-lg-12 p-5 card-question mt-3">
+          <h4>En la implementación de IoT en empresas, ¿cuál es uno de los desafíos mencionados?</h4>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion4" name="question4" id="question41" checked/>
+            <label class="form-check-label" for="question41">Falta de interés del público.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion4" name="question4" id="question42"/>
+            <label class="form-check-label" for="question42">Falta de dispositivos en el mercado.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion4" name="question4" id="question43"/>
+            <label class="form-check-label" for="question43">El volumen de datos o big data puede volverse abrumador.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion4" name="question4" id="question44"/>
+            <label class="form-check-label" for="question44">La tecnología IoT es demasiado cara.</label>
+          </div>
+        </div>
+        <div class="col-lg-12 p-5 card-question mt-3">
+          <h4>¿Cuál es uno de los beneficios de la implementación de IoT en la empresa/industria?</h4>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion5" name="question5" id="question51" checked/>
+            <label class="form-check-label" for="question51">Solo para hacer la empresa más atractiva.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion5" name="question5" id="question52"/>
+            <label class="form-check-label" for="question52">Mejorar los modelos comerciales actuales y entablar nuevas relaciones con clientes.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion5" name="question5" id="question53"/>
+            <label class="form-check-label" for="question53">Solo para competir con otras empresas.</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion5" name="question5" id="question54"/>
+            <label class="form-check-label" for="question54">Hacer que los dispositivos sean más pesados.</label>
+          </div>
+        </div>
+        <div class="col-lg-12 p-5 ">
+          <button class="btn btn-success mt-2" (click)="onClick()">Evaluar cuestionario</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <section class="initial-section maxwidth">
   <div class="progress mb-5" #progressBar>
     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" [style.width.%]="progressValue"></div>
   </div>
@@ -11,7 +133,6 @@
 
       <div class="col-lg-100">
         <div class="w-75 mx-auto mt-3">
-
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion1" name="question1" id="question11" checked/>
             <label class="form-check-label" for="question11">Algun elemento electronico que tenga la capacidad de conectarse a internet</label>
@@ -109,4 +230,4 @@
     </div>
   </div>
 
-</section>
+</section> -->
