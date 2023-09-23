@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { Location } from '@angular/common';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-questions',
@@ -7,6 +11,8 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   styleUrls: ['./questions.component.scss']
 })
 export class QuestionsComponent implements OnInit {
+
+  flag: boolean = true;
 
   public pasos: string[] = [
     'Manejo de interrupciones (si es necesario)',
@@ -30,6 +36,17 @@ export class QuestionsComponent implements OnInit {
     'Gestión de errores y depuración',
   ]
 
+  public correct: boolean[] = [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ]
+
   public pasos2: string[] = [
     'Optimización y eficiencia',
     'Lectura y escritura de datos',
@@ -48,6 +65,16 @@ export class QuestionsComponent implements OnInit {
     'Manejo de interrupciones',
     'Optimización y eficiencia',
     'Documentación',
+  ]
+
+  public correct2: boolean[] = [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
   ]
 
   public pasos3: string[] = [
@@ -76,6 +103,19 @@ export class QuestionsComponent implements OnInit {
     'Documentación',
   ]
 
+  public correct3: boolean[] = [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]
+
   public pasos4: string[] = [
     'Selección del microcontrolador',
     'Determinación del protocolo de comunicación (SPI, UART, I2C)',
@@ -102,7 +142,22 @@ export class QuestionsComponent implements OnInit {
     'Documentación',
   ]
 
-  constructor() { }
+  public correct4: boolean[] = [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]
+
+  constructor(
+    private location: Location,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -121,6 +176,83 @@ export class QuestionsComponent implements OnInit {
 
   onDrop4(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.pasos4, event.previousIndex, event.currentIndex);
+  }
+
+  comprobarRespuestas() {
+    var corrects1 = 0, corrects2 = 0, corrects3 = 0, corrects4 = 0;
+
+    //Validamos el tema 1
+    for (let i = 0; i < this.pasos.length; i++) {
+      const element1 = this.pasos[i],
+            element2 = this.response[i];
+      if(element1 === element2){
+        corrects1++;
+        this.correct[i] = true;
+      }else{
+        this.correct[i] = false;
+      }
+    }
+
+    //Validamos el tema 2
+    for (let i = 0; i < this.pasos2.length; i++) {
+      const element1 = this.pasos2[i],
+            element2 = this.response2[i];
+      if(element1 === element2){
+        corrects2++;
+        this.correct2[i] = true;
+      }else{
+        this.correct2[i] = false;
+      }
+    }
+
+    //Validamos el tema 3
+    for (let i = 0; i < this.pasos3.length; i++) {
+      const element1 = this.pasos3[i],
+            element2 = this.response3[i];
+      if(element1 === element2){
+        corrects3++;
+        this.correct3[i] = true;
+      }else{
+        this.correct3[i] = false;
+      }
+    }
+
+    //Validamos el tema 4
+    for (let i = 0; i < this.pasos4.length; i++) {
+      const element1 = this.pasos4[i],
+            element2 = this.response4[i];
+      if(element1 === element2){
+        corrects4++;
+        this.correct4[i] = true;
+      }else{
+        this.correct4[i] = false;
+      }
+    }
+
+    if(corrects1 == 8 && corrects2 == 7 && corrects3 == 10 && corrects4 == 10){
+      Swal.fire(
+        "Felicidades haz aprobado las preguntas",
+        "¡Felicitaciones! Has respondido correctamente a la mayoría de las preguntas",
+        'success'
+      ).then((result) => {
+        if (result.isConfirmed) {
+          this.router.navigate(['/redes/main']);
+        }
+      });
+    }else{
+      Swal.fire(
+        "Lo sentimos no haz aprobado el cuestionario",
+        `Aun hay respuestas incorrectas.
+        ¡No te desanimes! Sigue practicando y mejorarás
+        `,
+        'error'
+      )
+    }
+
+  }
+
+  back = (): void => {
+    this.location.back();
   }
 
 }

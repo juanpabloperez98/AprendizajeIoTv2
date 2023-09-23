@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Pregunta, Opcion } from './quiz.model';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
-
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -19,29 +19,29 @@ export class QuestionsComponent implements OnInit {
 
 
   preguntas: Pregunta[] = [
-    { pregunta: 'Fluctúa en dirección y magnitud con el tiempo.', respuesta: 'Corriente Alterna', id: 3 },
-    { pregunta: 'Representado por una línea en zigzag.', respuesta: 'Símbolo para resistencia en un diagrama', id: 7 },
-    { pregunta: 'Flujo de electrones a través de un conductor.', respuesta: 'Corriente eléctrica', id: 1 },
-    { pregunta: 'Suma de todas las resistencias individuales.', respuesta: 'Resistencias en serie', id: 8 },
-    { pregunta: 'Medido en voltios.', respuesta: 'Unidad para medir el voltaje', id: 5 },
-    { pregunta: 'Medida de oposición al flujo de corriente eléctrica.', respuesta: 'Resistencia', id: 6 },
-    { pregunta: 'Punto de referencia en un circuito.', respuesta: 'Símbolo de tierra en diagramas', id: 10 },
-    { pregunta: 'Componentes conectados en ramas separadas.', respuesta: 'Circuitos en paralelo', id: 9 },
-    { pregunta: 'Fluye constantemente en una sola dirección.', respuesta: 'Corriente Continua', id: 2 },
-    { pregunta: '"Fuerza" que impulsa a los electrones en un circuito.', respuesta: 'Voltaje', id: 4 },
+    { pregunta: '1. Fluctúa en dirección y magnitud con el tiempo.', respuesta: 'Corriente Alterna', id: 3 },
+    { pregunta: '2. Representado por una línea en zigzag.', respuesta: 'Símbolo para resistencia en un diagrama', id: 7 },
+    { pregunta: '3. Flujo de electrones a través de un conductor.', respuesta: 'Corriente eléctrica', id: 1 },
+    { pregunta: '4. Suma de todas las resistencias individuales.', respuesta: 'Resistencias en serie', id: 8 },
+    { pregunta: '5. Medido en voltios.', respuesta: 'Unidad para medir el voltaje', id: 5 },
+    { pregunta: '6. Medida de oposición al flujo de corriente eléctrica.', respuesta: 'Resistencia', id: 6 },
+    { pregunta: '7. Punto de referencia en un circuito.', respuesta: 'Símbolo de tierra en diagramas', id: 10 },
+    { pregunta: '8. Componentes conectados en ramas separadas.', respuesta: 'Circuitos en paralelo', id: 9 },
+    { pregunta: '9. Fluye constantemente en una sola dirección.', respuesta: 'Corriente Continua', id: 2 },
+    { pregunta: '10. "Fuerza" que impulsa a los electrones en un circuito.', respuesta: 'Voltaje', id: 4 },
   ]
 
   opciones: Opcion[] = [
-    { opcion: 'Corriente eléctrica', id: 1 },
-    { opcion: 'Corriente Continua.', id: 2 },
-    { opcion: 'Corriente Alterna.', id: 3 },
-    { opcion: 'Voltaje.', id: 4 },
-    { opcion: 'Unidad para medir el voltaje.', id: 5 },
-    { opcion: 'Resistencia.', id: 6 },
-    { opcion: 'Símbolo para resistencia en un diagrama', id: 7 },
-    { opcion: 'Resistencias en serie', id: 8 },
-    { opcion: 'Circuitos en paralelo', id: 9 },
-    { opcion: 'Símbolo de tierra en diagramas', id: 10 },
+    { opcion: 'a. Corriente eléctrica', id: 1 },
+    { opcion: 'b. Corriente Continua.', id: 2 },
+    { opcion: 'c. Corriente Alterna.', id: 3 },
+    { opcion: 'd. Voltaje.', id: 4 },
+    { opcion: 'e. Unidad para medir el voltaje.', id: 5 },
+    { opcion: 'f. Resistencia.', id: 6 },
+    { opcion: 'g. Símbolo para resistencia en un diagrama', id: 7 },
+    { opcion: 'h. Resistencias en serie', id: 8 },
+    { opcion: 'i. Circuitos en paralelo', id: 9 },
+    { opcion: 'j. Símbolo de tierra en diagramas', id: 10 },
   ]
 
   respuestasSeleccionadas :{ [key: number]: string } = {};
@@ -55,7 +55,6 @@ export class QuestionsComponent implements OnInit {
       )
       return;
     };
-    console.log(this.respuestasSeleccionadas);
     for (let i = 0; i < this.preguntas.length; i++) {
       if (this.preguntas[i].id === parseInt(this.respuestasSeleccionadas[i])) {
         this.num_correctas ++;
@@ -73,7 +72,7 @@ export class QuestionsComponent implements OnInit {
         'error'
       ).then((result) => {
         if (result.isConfirmed) {
-          window.location.reload();
+          this.location.back();
         }
       })
       return;
@@ -90,7 +89,13 @@ export class QuestionsComponent implements OnInit {
     }
   }
 
-  constructor(private router: Router) { }
+  back = (): void => {
+    this.location.back();
+  }
+
+  constructor(
+    private router: Router,
+    private location: Location) { }
 
   ngOnInit(): void {
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 
 
@@ -44,7 +45,9 @@ export class QuestionsComponent implements OnInit {
 
 
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private location: Location) { }
 
 
   /* ngAfterViewInit() {
@@ -125,6 +128,10 @@ export class QuestionsComponent implements OnInit {
     this.selectedQuestion4 === this.selectedAnswer[3] ? this.correctAnswer ++ : this.incorrectAnswer++;
     this.selectedQuestion5 === this.selectedAnswer[4] ? this.correctAnswer ++ : this.incorrectAnswer++;
     this.showMessage();
+  }
+
+  back = (): void => {
+    this.location.back();
   }
 
 }

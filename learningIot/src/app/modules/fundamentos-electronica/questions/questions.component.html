@@ -22,8 +22,9 @@
         <option *ngFor="let opcion of opciones" [value]="opcion.id">{{ opcion.opcion }}</option>
       </select>
     </div>
-    <div class="col-lg-12 my-5">
-      <button (click)="comprobarRespuestas()" class="btn btn-success mt-2">Evaluar cuestionario</button>
+    <div class="col-lg-12 py-5">
+      <button class="btn btn-success mt-2" (click)="comprobarRespuestas()">Evaluar cuestionario</button>
+      <button class="btn btn-warning mt-2 ms-3" (click)="back()">Volver</button>
     </div>
   </div>
 </section>
