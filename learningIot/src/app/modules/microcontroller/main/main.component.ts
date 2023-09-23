@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
-  CODE: string = `#include <xc.h> 
+
+  public url: string = '/microcontroller/questions'
+
+
+  CODE: string = `#include <xc.h>
   #pragma config FOSC = INTRCIO
   #pragma config WDTE = OFF
   #pragma config PWRTE = OFF
@@ -67,7 +71,7 @@ export class MainComponent implements OnInit {
   top: number = 16;
 
   CODE1: string = `
-  #include <avr/io.h> 
+  #include <avr/io.h>
   int main(void) {
       DDRB |= (1 << PB5);
       DDRC &= ~(1 << PC2);
@@ -134,7 +138,7 @@ export class MainComponent implements OnInit {
       TRISB0 = 1;
       INTEDG = 0;
       INTF = 0;
-      INTE = 1; 
+      INTE = 1;
       GIE = 1;
       while (1) {
           // El programa principal continúa aquí
