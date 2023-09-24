@@ -6,10 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./learn-more.component.scss'],
 })
 export class LearnMoreComponent implements OnInit {
-  constructor() {}
+  @Input() url: string = '';
 
-  @Input()
-  public url: string = '';
+  constructor() {}
 
   ngOnInit(): void {}
 }

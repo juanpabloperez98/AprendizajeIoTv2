@@ -1,0 +1,17 @@
+<div class="card-question col-lg-12 p-5">
+  <h4>{{ titleQuestion }}</h4>
+  <form class="row gap-1 ms-0" [formGroup]="formCard">
+    <div *ngFor="let question of listQuestion" class="form-check col-lg-12">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        [id]="question.control"
+        [formControlName]="question.control"
+      />
+      <label class="form-check-label" [for]="question.control">
+        {{ question.text }}
+      </label>
+    </div>
+  </form>
+</div>
