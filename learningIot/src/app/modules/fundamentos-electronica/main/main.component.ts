@@ -231,6 +231,43 @@ export class MainComponent implements OnInit {
   max_line4:number = 14;
 
 
+  //-------------------------------------------------------------------------------------------------
+
+  // CODIGO 5
+  CODE5:string = `void setup() {
+    pinMode(13, OUTPUT);
+  }
+  void loop() {
+    digitalWrite(13, HIGH);
+    delay(1000);
+    digitalWrite(13, LOW);
+    delay(1000);
+  }`
+  LINE_CODE5:string[]= [
+    "void setup() {",
+    "  pinMode(13, OUTPUT);",
+    "}",
+    "void loop() {",
+    "  digitalWrite(13, HIGH);",
+    "  delay(1000);",
+    "  digitalWrite(13, LOW);",
+    "  delay(1000);",
+    "}",
+  ];
+  explain5:string[] = [
+    "void setup() {: Declara la función setup(). En los programas de Arduino, la función setup() se ejecuta una vez al inicio del programa. Es comúnmente usada para inicializar variables, configurar modos de pins, iniciar bibliotecas, etc.",
+    "pinMode(13, OUTPUT);: Esta línea configura el pin digital 13 como salida (OUTPUT). Es decir, podemos controlar si el pin entrega voltaje (HIGH) o no (LOW).",
+    "}: Finaliza el bloque de la función setup()",
+    "void loop() {: Declara la función loop(). En los programas de Arduino, después de que setup() se ejecuta una vez, la función loop() se ejecuta de forma repetida hasta que el dispositivo se apaga o se reinicia.",
+    "digitalWrite(13, HIGH);: Establece el estado del pin digital 13 a HIGH, lo que significa que entregará voltaje. Si tienes un LED conectado a este pin, se encenderá.",
+    "delay(1000);: Esta función hace que el programa se detenga durante 1000 milisegundos, es decir, 1 segundo. Durante este tiempo, el LED (u otro dispositivo conectado al pin 13) permanecerá encendido.",
+    "digitalWrite(13, LOW);: Establece el estado del pin digital 13 a LOW, lo que significa que no entregará voltaje. Si tienes un LED conectado a este pin, se apagará.",
+    "delay(1000);: Al igual que la línea 6, esta función pausa el programa durante 1 segundo. Durante este tiempo, el LED (u otro dispositivo conectado al pin 13) permanecerá apagado.",
+    "}: Finaliza el bloque de la función loop()",
+  ];
+  max_line5:number = 9;
+
+
 
   constructor(
     private highlightService: HighlightService,

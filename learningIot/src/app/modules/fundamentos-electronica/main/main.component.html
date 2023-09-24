@@ -1,5 +1,5 @@
 <shared-header></shared-header>
-<section style="max-width:70%" class="initial-section maxwidth">
+<section style="max-width:70%; margin-bottom: 50px;" class="initial-section maxwidth">
   <div class="row">
     <shared-button-go-back></shared-button-go-back>
   </div>
@@ -489,17 +489,26 @@
       <h4>Circuitos en Serie</h4>
       <hr>
       <p>
-        En un circuito en serie, los componentes están conectados uno tras otro, lo que significa que la corriente eléctrica tiene un solo camino para seguir. <br>
-        La resistencia total (Rtotal) en un circuito en serie es la suma de las resistencias individuales: Rtotal = R1 + R2 + ... + Rn <br>
+        En un circuito en serie, los componentes están conectados uno tras otro, lo que significa que la corriente
+        eléctrica tiene un solo camino para seguir. <br>
+        La resistencia total (Rtotal) en un circuito en serie es la suma de las resistencias individuales: Rtotal = R1 +
+        R2 + ... + Rn <br>
         Todos los componentes en serie reciben el mismo valor de corriente.
       </p>
       <h4>Circuitos Paralelos</h4>
       <p>
-        En un circuito paralelo, los componentes están conectados en ramas separadas, ofreciendo múltiples caminos para la corriente eléctrica.
+        En un circuito paralelo, los componentes están conectados en ramas separadas, ofreciendo múltiples caminos para
+        la corriente eléctrica.
         <br>
-        Para resistencias en paralelo, la inversa de la resistencia total es igual a la suma de las inversas de cada resistencia individual.
+        Para resistencias en paralelo, la inversa de la resistencia total es igual a la suma de las inversas de cada
+        resistencia individual.
         <br>
         Todos los componentes en paralelo tienen el mismo valor de voltaje.
+      </p>
+      <h4>Combinaciones</h4>
+      <p>
+        Los circuitos reales a menudo tienen componentes tanto en serie como en paralelo. El análisis de estos circuitos
+        mixtos puede requerir combinar técnicas y leyes, como la Ley de Ohm o las Leyes de Kirchhoff.
       </p>
     </div>
     <div class="col-lg-6 mt-5">
@@ -519,8 +528,153 @@
       <p>
         Un punto donde dos líneas se encuentran en un diagrama indica una conexión.
         <br>
-        Un nodo es un punto donde tres o más líneas se encuentran. En un análisis de circuito, un nodo a menudo representa un punto de interés donde se pueden establecer relaciones de voltaje o corriente.
+        Un nodo es un punto donde tres o más líneas se encuentran. En un análisis de circuito, un nodo a menudo
+        representa un punto de interés donde se pueden establecer relaciones de voltaje o corriente.
       </p>
+      <h4>Referencia de Tierra</h4>
+      <p>
+        Muchos diagramas muestran un símbolo de tierra, que sirve como punto de referencia para las mediciones de
+        voltaje.
+      </p>
+    </div>
+    <div class="col-lg-6 mt-3">
+      <div class="text-center">
+        <img style="width:300px; height: 300px;" src="../../../../assets/fundamentos/circuito_simple.png"
+          alt="circuito_simple.png">
+      </div>
+    </div>
+    <div class="col-lg-6 mt-3 mb-5">
+      <div>
+        <h4>Conclusión</h4>
+        <p>
+          La capacidad de interpretar y analizar diagramas de circuitos es un aspecto crucial de la electrónica. Permite
+          a ingenieros, técnicos y entusiastas comprender, diseñar, modificar y reparar circuitos. Una comprensión
+          sólida de los circuitos básicos, combinada con habilidades en la lectura de diagramas, proporciona una base
+          sólida para aventurarse en proyectos más complejos y avanzados en el mundo de la electrónica.
+        </p>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-12 my-3">
+        <h4>Ejemplos practicos de circuitos basicos y lectura de diagramas</h4>
+      </div>
+      <div class="col-lg-4">
+        <h5>Circuito con una Resistencia y una Fuente de Alimentación</h5>
+        <p>
+          <span class="bold">Descripción:</span> Es el circuito más básico que uno puede encontrar. Compuesto
+          simplemente por una fuente de
+          alimentación (como una batería) y una resistencia.
+        </p>
+        <img class="mt-4" style="width:300px; height: 300px;" src="../../../../assets/fundamentos/ejemplo1.jpg"
+          alt="ejemplo1.jpg">
+        <p class="mt-5">
+          <span class="bold">Interpretación:</span> La batería está representada por las líneas paralelas (| |), donde
+          el lado más largo indica el
+          polo positivo y el lado más corto indica el negativo. La resistencia (R) está representada por el símbolo en
+          zigzag (//).
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <h5>Circuito con un LED y una Resistencia</h5>
+        <p>
+          <span class="bold">Descripción:</span> Un circuito que utiliza una resistencia para limitar la corriente que
+          fluye a través de un LED.
+        </p>
+        <img class="mt-4" style="width:300px; height: 300px;" src="../../../../assets/fundamentos/ejemplo2.jpg"
+          alt="ejemplo2.jpg">
+        <p class="mt-5">
+          <span class="bold">Interpretación:</span> Después de la batería, la corriente pasa a través de la resistencia
+          (R) y luego al LED. El LED
+          está representado por el símbolo |>|, donde la flecha indica la dirección en la que se espera que fluya la
+          corriente (y, por lo tanto, la dirección en la que se encenderá el LED).
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <h5>Circuito con una Resistencia en Paralelo</h5>
+        <p>
+          <span class="bold">Descripción:</span>: Un circuito donde hay dos resistencias en paralelo, conectadas a una
+          fuente de alimentación.
+        </p>
+        <img class="mt-4" style="width:300px; height: 300px;" src="../../../../assets/fundamentos/ejemplo3.png"
+          alt="ejemplo3.png">
+        <p class="mt-5">
+          <span class="bold">Interpretación:</span> La batería alimenta el circuito, que se bifurca en dos caminos en
+          paralelo, cada uno con una resistencia (R1 y R2). La corriente se divide entre los dos caminos.
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-12 mt-3">
+      <p>
+        Estos ejemplos prácticos ilustran cómo se representan los componentes en un diagrama y cómo se conectan entre
+        sí. Interpretar correctamente estos diagramas es esencial para entender, diseñar y solucionar problemas en
+        circuitos electrónicos.
+      </p>
+    </div>
+    <div class="col-lg-12 mt-3 text-center">
+      <h4>Ejemplos código de circuito en serie</h4>
+    </div>
+    <div class="col-lg-12">
+      <div class="row mx-auto mt-2">
+        <div class="col-lg-6">
+          <p>
+            Para un circuito en serie con dos LED: <br>
+          </p>
+          <ul>
+            <li>2 LEDs</li>
+            <li>2 resistencias de 220Ω (para proteger los LEDs)</li>
+            <li>Arduino (por ejemplo, Arduino Uno)</li>
+            <li>Cables de conexión</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <p>
+            Conexión
+          </p>
+          <ul>
+            <li>Conecta una resistencia al pin 13 del Arduino.</li>
+            <li>Conecta el ánodo (la pata más larga) del primer LED a la resistencia.</li>
+            <li>Conecta el cátodo (pata más corta) del primer LED al ánodo del segundo LED.</li>
+            <li>Conecta el cátodo del segundo LED a GND (tierra) del Arduino.</li>
+          </ul>
+        </div>
+      </div>
+      <app-precode class="mt-4" [code]="CODE5" [LINE_CODE]="LINE_CODE5" [top]="top" [explain]="explain5"
+        [max_line]="max_line5"></app-precode>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-lg-12">
+      <h3>1.4 Conclusión del Módulo: Fundamentos de Electrónica Básica</h3>
+      <hr>
+      <p>
+        Al concluir este módulo sobre Fundamentos de Electrónica Básica, hemos trazado el camino inicial en el
+        fascinante mundo de la electrónica. Hemos explorado los componentes fundamentales, desde resistencias hasta
+        transistores, comprendiendo su función y su papel en los circuitos. Además, hemos aprendido a utilizar
+        herramientas esenciales, como multímetros y osciloscopios, que nos permiten diagnosticar y analizar circuitos
+        electrónicos. <br>
+        Cada concepto y habilidad adquirida en este módulo sienta las bases para aventuras más complejas en la
+        electrónica. Así como el dominio de las letras y palabras es esencial para leer y escribir textos complejos, el
+        conocimiento de los fundamentos de la electrónica nos prepara para diseñar, construir y comprender dispositivos
+        y sistemas electrónicos más avanzados. <br>
+        Esperamos que este viaje inicial haya despertado una curiosidad y pasión por la electrónica que te motive a
+        seguir explorando, experimentando y creando. La electrónica es una ciencia y un arte, y ahora cuentas con las
+        herramientas básicas para ser parte de esta emocionante disciplina.
+      </p>
+    </div>
+    <div class="col-lg-6 mt-5">
+      <div class="container-img">
+        <img src="../../../../assets/fundamentos/final_image.jpg" alt="final_image.jpg">
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <a class="btn d-block w-50 mx-auto mt-5 botonColor">
+        Vamos aprender más
+        <img style="width: 30px;" class="ms-3" src="../../../../assets/icons/questionnaire.png" alt=""></a>
+      <a routerLink="/presentationOne/main" class="btn d-block w-50 mx-auto mt-3 botonColor">
+        Siguiente módulo
+        <img style="width: 30px;" class="ms-3" src="../../../../assets/icons/next_module.png" alt="">
+      </a>
     </div>
   </div>
 </section>
+<shared-footer></shared-footer>
