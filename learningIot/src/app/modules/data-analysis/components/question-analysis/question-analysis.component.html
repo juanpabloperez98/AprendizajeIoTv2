@@ -1,0 +1,27 @@
+<shared-header></shared-header>
+<article class="initial-section w-50 mx-auto mb-5">
+  <div class="row mx-auto add_border">
+    <div class="col-lg-12 mt-2">
+      <h3>Cuestionario Análisis y procedimiento de Datos</h3>
+      <p>
+        Bienvenido a la sección de cuestionarios de "Análisis y procedimiento de
+        Datos con ejemplos del mundo real". Aquí, no solo pondrás a prueba tus
+        conocimientos adquiridos, sino que también te sumergirás en una
+        experiencia interactiva y dinámica diseñada para reforzar y consolidar
+        tu aprendizaje.
+      </p>
+    </div>
+  </div>
+  <form class="row gap-3 mt-4" [formGroup]="formQuestion" #formQ="ngForm">
+    <app-card-question
+      *ngFor="let questions of QUESTION_DATA; let i = index"
+      class="col-lg-12"
+      [id]="i"
+      [titleQuestion]="questions.title"
+      [listQuestion]="questions.listQuestion"
+    ></app-card-question>
+    <button class="btn btn-success mt-2 w-25" (click)="validateAnswers()">
+      Evaluar cuestionario
+    </button>
+  </form>
+</article>
