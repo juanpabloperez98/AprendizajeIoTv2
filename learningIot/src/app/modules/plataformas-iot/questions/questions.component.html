@@ -1,0 +1,36 @@
+<shared-header></shared-header>
+<section class="initial-section w-50 mx-auto">
+  <div class="row mx-auto add_border">
+    <div class="col-lg-12 mt-2">
+      <h3>Cuestionario plataformas iot</h3>
+      <p>
+        ¡Bienvenido/a al cuestionario sobre Plataformas IoT! Este cuestionario ha sido diseñado para evaluar tu
+        comprensión y conocimientos adquiridos sobre las plataformas del Internet de las Cosas. A continuación,
+        encontrarás una serie de afirmaciones con espacios en blanco. Tu tarea es seleccionar la opción correcta de las
+        alternativas proporcionadas para completar cada afirmación.
+        <br>
+        <br>
+        Por favor, lee cada pregunta con atención y asegúrate de elegir la respuesta que consideres más adecuada. No hay
+        límite de tiempo, pero te recomendamos que no busques las respuestas en tus notas o en la web para obtener una
+        medida real de tu conocimiento.
+      </p>
+    </div>
+  </div>
+  <hr>
+  <div class="row mx-auto mb-5">
+    <div *ngFor="let question of questions; let i = index" class="col-lg-12 card-question" [ngClass]="{'correct': questions[i].correct}">
+      <p>
+        {{ question.sentence.split('__')[0] }}
+        <select [(ngModel)]="userAnswers[i]" [disabled]="question.correct">
+          <option *ngFor="let option of question.options; let j = index" [value]="j">{{ option }}</option>
+        </select>
+        {{ question.sentence.split('__')[1] }}
+      </p>
+    </div>
+    <div class="col-lg-12 py-5">
+      <button class="btn btn-success mt-2" (click)="checkAnswers()">Evaluar cuestionario</button>
+      <button class="btn btn-warning mt-2 ms-3">Volver</button>
+    </div>
+  </div>
+</section>
+<shared-footer></shared-footer>
