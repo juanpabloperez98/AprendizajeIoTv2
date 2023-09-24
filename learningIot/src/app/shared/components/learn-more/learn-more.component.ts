@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./learn-more.component.scss'],
 })
 export class LearnMoreComponent implements OnInit {
-  @Input() route: string = '';
+  @Input() url: string = '';
 
   constructor() {}
 
