@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { MonacoEditorModule } from 'ngx-monaco-editor';
+
 
 
 import { AppRoutes } from './app-routing.module';
@@ -16,10 +18,11 @@ import { HighlightService } from './services/highlight.service';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
+    MonacoEditorModule.forRoot(),
     RouterModule.forRoot(AppRoutes),
     SharedModule,
   ],
