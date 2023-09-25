@@ -12,13 +12,6 @@ import { Location } from '@angular/common';
 })
 export class QuestionsComponent implements OnInit {
 
-
-  /* @ViewChild('questionNum1', { static: false }) questionNum1!: ElementRef;
-  @ViewChild('questionNum2', { static: false }) questionNum2!: ElementRef;
-  @ViewChild('questionNum3', { static: false }) questionNum3!: ElementRef;
-  @ViewChild('finalSection', { static: false }) finalSection!: ElementRef;
-  @ViewChild('progressBar', { static: false }) progressBar!: ElementRef; */
-
   questionsAnswer: string[] = [
     "answer1",
     "answer2",
