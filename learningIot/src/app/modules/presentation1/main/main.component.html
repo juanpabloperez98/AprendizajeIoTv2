@@ -226,8 +226,394 @@
         <h3>6.3 Primeros pasos con Arduino IoT Cloud</h3>
       </div>
       <hr>
+      <div class="col-lg-12">
+        <p>
+          Una vez que has entendido qué es Arduino IoT Cloud y cuáles son sus características, es momento de sumergirte
+          en la práctica. Aquí veremos cómo configurar tu cuenta y comenzar a trabajar con la plataforma.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <h4>Registro</h4>
+        <ul>
+          <li>Ve al sitio web oficial de Arduino IoT Cloud y haz clic en "Registrarse" o "Iniciar sesión".</li>
+          <li>Si eres nuevo, necesitarás proporcionar una dirección de correo electrónico, crear una contraseña y seguir
+            los pasos de verificación.</li>
+          <li>Tras confirmar tu dirección de correo electrónico, tendrás acceso al dashboard de Arduino IoT Cloud.</li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <h4>Configuración</h4>
+        <ul>
+          <li>Una vez registrado, puedes configurar detalles adicionales de tu perfil, como nombre, foto de perfil y
+            preferencias de notificación.</li>
+          <li>También es recomendable revisar la sección de seguridad para establecer medidas adicionales, como la
+            autenticación en dos pasos.</li>
+        </ul>
+      </div>
+      <div class="col-lg-12 mt-5 mb-3">
+        <h4>Interfaz de usuario: un recorrido por el dashboard</h4>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          <span class="bold">1 Dashboard principal:</span> Al iniciar sesión, verás un resumen de tus proyectos
+          actuales, dispositivos conectados y
+          otras estadísticas relevantes.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          <span class="bold">2 Menú lateral:</span> Aquí puedes navegar entre diferentes secciones, como "Mis
+          dispositivos", "Mis proyectos",
+          "Integraciones" y "Configuración".
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          <span class="bold">3 Sección de dispositivos:</span> Te permite ver todos tus dispositivos conectados, su
+          estado actual (en línea/fuera de
+          línea), y acceder a configuraciones específicas de cada dispositivo.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          <span class="bold">4 Sección de proyectos:</span> Aquí puedes crear nuevos proyectos o modificar proyectos
+          existentes. Un proyecto agrupa
+          a uno o más dispositivos y define cómo interactúan entre ellos y con la nube.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          <span class="bold">5 Ajustes:</span> Una sección donde puedes gestionar aspectos de tu cuenta, como cambiar la
+          contraseña, establecer
+          preferencias de notificación y gestionar planes de suscripción.
+        </p>
+      </div>
+      <div class="col-lg-12 mt-5 mb-3">
+        <h4>Creación de un nuevo proyecto: pasos y recomendaciones</h4>
+      </div>
+      <div class="col-lg-6">
+        <span class="bold">Inicia un proyecto:</span> Desde el dashboard, haz clic en "Crear nuevo proyecto". Esto
+        abrirá un asistente para
+        guiarte a través del proceso.
+      </div>
+      <div class="col-lg-6">
+        <span class="bold">Define tu proyecto:</span> Proporciona un nombre descriptivo para tu proyecto y una breve
+        descripción.
+      </div>
+      <div class="col-lg-6">
+        <span class="bold">Añade dispositivos:</span> Selecciona de tu lista de dispositivos aquellos que formarán parte
+        de este proyecto. Si no
+        tienes dispositivos configurados, el sistema te guiará para agregarlos.
+      </div>
+      <div class="col-lg-6">
+        <span class="bold">Configura propiedades:</span> Define propiedades (como sensores o actuadores) para tu
+        proyecto. Estas propiedades
+        determinan qué datos se recopilan y cómo se actúa sobre ellos.
+      </div>
+      <div class="col-lg-6">
+        <span class="bold">Establece reglas:</span> Puedes definir reglas que determinen cómo se comportará tu proyecto
+        en función de los datos
+        recibidos. Por ejemplo, encender una luz cuando un sensor detecta que está oscuro.
+      </div>
+      <div class="col-lg-6">
+        <span class="bold">Guarda y despliega:</span> Una vez que todo esté configurado, guarda tu proyecto. Después,
+        puedes desplegarlo para que
+        comience a funcionar en tiempo real.
+      </div>
+      <div class="col-lg-12 mt-5 mb-3">
+        <h4>Recomendaciones</h4>
+        <ul>
+          <li>Mantén un enfoque claro para cada proyecto. Si tienes diferentes objetivos, considera crear múltiples
+            proyectos en lugar de combinar todo en uno solo.</li>
+          <li>Revisa regularmente la documentación y las actualizaciones de Arduino IoT Cloud. La plataforma puede
+            añadir nuevas características o hacer cambios que pueden beneficiar a tu proyecto.</li>
+          <li>Siempre realiza pruebas en un entorno controlado antes de desplegar cambios o nuevos proyectos. Esto te
+            ayudará a identificar problemas antes de que afecten tu implementación en vivo.</li>
+        </ul>
+      </div>
     </div>
+    <div class="row mx-auto">
+      <div class="col-lg-12">
+        <h3>6.4 Trabajando con dispositivos</h3>
+      </div>
+      <hr>
+      <div class="col-lg-12">
+        <p>
+          Los dispositivos en un entorno IoT son cruciales, ya que actúan como los puntos de contacto físicos que
+          interactúan con el mundo real, recopilando datos y ejecutando acciones basadas en instrucciones recibidas.
+          Trabajar con dispositivos en un entorno de nube, como el Arduino IoT Cloud, requiere una comprensión de cómo
+          añadir, configurar y gestionar estos dispositivos para asegurar una comunicación eficiente y segura.
+        </p>
+      </div>
+      <div class="col-lg-12">
+        <h4>Cómo añadir un nuevo dispositivo (ej. Arduino MKR WiFi 1010)</h4>
+        <div class="row mx-auto">
+          <div class="col-lg-6">
+            <p>
+              <span class="bold">Preparación del Dispositivo:</span> Antes de poder añadir un nuevo dispositivo como el
+              Arduino MKR WiFi 1010, es
+              necesario asegurarse de que tenga la última versión del firmware. Esto se puede hacer a través del IDE de
+              Arduino, conectando el dispositivo a la computadora y utilizando el gestor de placas para actualizarlo.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <p>
+              <span class="bold">Ingreso a la Plataforma:</span> Una vez que hayas iniciado sesión en Arduino IoT Cloud,
+              dirígete a la sección
+              "Dispositivos" y haz clic en "Añadir dispositivo".
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <p>
+              <span class="bold">Selección del Dispositivo:</span> En la lista de dispositivos disponibles, selecciona
+              "Arduino MKR WiFi 1010". La
+              plataforma te guiará a través de un proceso de configuración que incluirá la selección de tu red WiFi y la
+              introducción de las credenciales de tu red.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <p>
+              <span class="bold">Finalización:</span> Una vez configurado, el dispositivo aparecerá en tu lista de
+              dispositivos en la plataforma,
+              listo para ser utilizado en proyectos.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 mt-5">
+        <h4>Configuración y asociación de dispositivos</h4>
+        <div class="row mx-auto">
+          <div class="col-lg-6">
+            <p>
+              <span class="bold">Etiquetas y Descripción:</span> Después de añadir el dispositivo, puedes añadir
+              etiquetas descriptivas y una
+              breve descripción. Esto es útil para gestionar múltiples dispositivos, especialmente en proyectos grandes.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <p>
+              <span class="bold">Asociación con Proyectos:</span> Los dispositivos se pueden asociar con proyectos
+              específicos. Por ejemplo, si
+              tienes un proyecto para monitorear el clima, puedes asociar sensores y actuadores específicos a ese
+              proyecto.
+            </p>
+          </div>
+          <div class="col-lg-12">
+            <p>
+              <span class="bold">Variables de Configuración:</span> Establece variables específicas del dispositivo,
+              como la frecuencia de envío
+              de datos o umbrales específicos para la activación de alertas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 mt-5">
+        <h4>Actualizaciones y manejo de firmware</h4>
+        <div class="row mx-auto">
+          <div class="col-lg-6">
+            <p>
+              <span class="bold">Verificación de Actualizaciones:</span> Regularmente, las actualizaciones de firmware
+              se lanzan para abordar
+              problemas de seguridad, añadir características o mejorar la eficiencia del dispositivo. Es vital comprobar
+              regularmente las actualizaciones disponibles.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <p>
+              <span class="bold">Backup y Restauración:</span> Antes de actualizar el firmware, es una buena práctica
+              realizar una copia de
+              seguridad de la configuración y los datos actuales del dispositivo. En caso de problemas durante la
+              actualización, esto te permite restaurar el dispositivo a su estado anterior.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <p>
+              <span class="bold">Actualización:</span> Con el dispositivo conectado a tu computadora, utiliza el IDE de
+              Arduino o la plataforma
+              Arduino IoT Cloud para iniciar el proceso de actualización. Sigue las instrucciones en pantalla para
+              completar la actualización.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <p>
+              <span class="bold">Verificación Post-Actualización:</span> Una vez actualizado el firmware, verifica que
+              el dispositivo funcione
+              correctamente y que todas las características y funciones estén operativas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 mt-5">
+        <h4>Conexión al WiFi con Arduino MKR WiFi 1010</h4>
+        <app-precode [code]="CODE1" [LINE_CODE]="LINE_CODE1" [top]="top" [explain]="explain1"
+          [max_line]="max_line1"></app-precode>
+      </div>
+      <div class="col-lg-12 mt-5">
+        <h4>Enviar datos a la nube (por ejemplo, a través de MQTT)</h4>
+        <app-precode [code]="CODE2" [LINE_CODE]="LINE_CODE2" [top]="top" [explain]="explain2"
+          [max_line]="max_line2"></app-precode>
+        <p class="mt-5">
+          Este código conecta una placa Arduino a una red WiFi y luego al servidor MQTT especificado. Una vez conectado,
+          continuamente lee un valor del pin analógico A0, lo formatea en una cadena y lo publica en un tema del
+          servidor MQTT. También está preparado para manejar los mensajes recibidos del servidor, aunque la función de
+          callback está vacía.
+        </p>
+      </div>
 
+    </div>
+    <div class="row mx-auto">
+      <div class="col-lg-12">
+        <h3>6.5 Integraciones y Servicios de Terceros</h3>
+      </div>
+      <hr>
+      <div class="col-lg-12">
+        <p>
+          La verdadera potencia del Internet de las Cosas (IoT) radica en la capacidad de interconectar diferentes
+          dispositivos y plataformas. Arduino IoT Cloud no es una excepción y, al integrarse con otros servicios,
+          potencia
+          su utilidad al máximo.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <h4>Conectar Arduino IoT Cloud con otros servicios</h4>
+        <ul>
+          <li>
+            <p>
+              IFTTT (If This Then That): IFTTT es un servicio que permite a los usuarios crear cadenas de simples
+              declaraciones condicionales, llamadas "applets". Por ejemplo, podrías configurar una applet de IFTTT que,
+              cuando tu Arduino detecte una cierta condición (ej., una planta necesita agua), envíe una notificación a
+              tu
+              teléfono. Arduino IoT Cloud y IFTTT se pueden conectar para lograr esto.
+            </p>
+          </li>
+          <li>
+            <p>
+              Webhooks: Los webhooks son una forma de que las aplicaciones se comuniquen entre sí automáticamente. Por
+              ejemplo, cuando un evento sucede en Arduino (un sensor detecta movimiento), podría activar un webhook que
+              luego realiza una acción en otra plataforma, como enviar un mensaje a través de Slack o actualizar una
+              base
+              de datos.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <h4>Posibilidades y ejemplos prácticos de integración</h4>
+        <ul>
+          <li>
+            <p>
+              Notificaciones: Utiliza IFTTT para recibir una notificación en tu teléfono si una lectura de sensor excede
+              un valor específico.
+            </p>
+          </li>
+          <li>
+            <p>
+              Automatización del hogar: Si un sensor Arduino detecta que la temperatura cae por debajo de un cierto
+              nivel,
+              a través de IFTTT, podrías encender automáticamente un termostato inteligente en tu casa.
+            </p>
+          </li>
+          <li>
+            <p>
+              Actualizaciones en tiempo real: Usa webhooks para enviar datos de sensores en tiempo real a una base de
+              datos o plataforma de análisis.
+            </p>
+          </li>
+          <li>
+            <p>
+              Integración con plataformas de medios sociales: Por ejemplo, puedes configurar tu sistema para que, cuando
+              un sensor detecte algo, automáticamente publique un tweet a través de IFTTT.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-12">
+        <h4>Limitaciones y consideraciones</h4>
+        <ul>
+          <li>
+            <p>
+              Latencia: Al depender de servicios externos, especialmente en la cadena Arduino > IoT Cloud > Servicio de
+              terceros, se puede introducir latencia.
+            </p>
+          </li>
+          <li>
+            <p>
+              Seguridad: Cada vez que se conecta con un servicio externo, hay que considerar las implicaciones de
+              seguridad. Asegúrate de que las integraciones estén protegidas adecuadamente y no expongan datos
+              sensibles.
+            </p>
+          </li>
+          <li>
+            <p>
+              Dependencia de servicios: El estado operativo y la evolución de los servicios de terceros están fuera de
+              tu
+              control. Si un servicio como IFTTT cambia su API o sus términos de servicio, podría afectar tu
+              integración.
+            </p>
+          </li>
+          <li>
+            <p>
+              Costo: Algunas integraciones, especialmente aquellas que manejan grandes cantidades de datos o requieren
+              procesamiento en tiempo real, podrían incurrir en costos adicionales.
+            </p>
+          </li>
+          <li>
+            <p>
+              Complejidad: A medida que se agregan más servicios y la cadena de integración se expande, también lo hace
+              la
+              complejidad. Es importante documentar y comprender bien las integraciones para poder solucionar problemas
+              y
+              hacer cambios en el futuro.
+            </p>
+          </li>
+        </ul>
+        <p class="mt-5">
+          En resumen, integrar Arduino IoT Cloud con servicios de terceros puede ampliar enormemente las capacidades y
+          aplicaciones de tus proyectos de IoT. Sin embargo, es crucial abordar estas integraciones con una comprensión
+          clara de las ventajas, limitaciones y desafíos potenciales.
+        </p>
+      </div>
+      <div class="col-lg-12 mt-5">
+        <h4>Integración con IFTTT</h4>
+        <p>
+          Para este ejemplo, supongamos que tienes un Arduino con un sensor de temperatura y deseas recibir una
+          notificación en tu teléfono si la temperatura excede un cierto umbral.
+        </p>
+        <p>
+          Paso 1: En Arduino IoT Cloud
+        </p>
+        <ul>
+          <li>Configura tu dispositivo y sensor en Arduino IoT Cloud.</li>
+          <li>Crea un evento que se active cuando la temperatura exceda el umbral deseado.</li>
+        </ul>
+        <p>
+          Paso 2: En IFTTT
+        </p>
+        <ul>
+          <li>Crea una nueva Applet.</li>
+          <li>Para el servicio "this", selecciona "Webhooks".</li>
+          <li>Define el trigger para recibir datos del Arduino IoT Cloud.</li>
+          <li>Para el servicio "that", elige el servicio de notificaciones de tu teléfono y configura el mensaje que
+            deseas recibir.</li>
+        </ul>
+
+        <app-precode [code]="CODE1" [LINE_CODE]="LINE_CODE1" [top]="top" [explain]="explain1"
+          [max_line]="max_line1"></app-precode>
+      </div>
+      <div class="col-lg-12 mt-5">
+        <h4>Integración con Webhooks</h4>
+        <p>
+          Supongamos que deseas enviar datos de un sensor en tiempo real a una base de datos mediante webhooks.
+        </p>
+        <app-precode [code]="CODE4" [LINE_CODE]="LINE_CODE4" [top]="top" [explain]="explain4"
+          [max_line]="max_line4"></app-precode>
+        <p>
+          Este código está diseñado para conectarse a una red WiFi, leer un valor de un sensor conectado al pin A0, y
+          luego enviar ese valor a un servidor a través de una solicitud HTTP POST. Luego, muestra el código de
+          respuesta HTTP en el monitor serial.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
