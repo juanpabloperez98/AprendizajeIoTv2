@@ -7,136 +7,225 @@
     </div>
     <div class="row mb-5">
       <div class="col-lg-12 text-left">
-        <h3>3 Presentación de la plataforma gratuita Arduino Iot cloud</h3>
+        <h3>6 Presentación de la plataforma gratuita Arduino Iot cloud</h3>
       </div>
     </div>
-    <div class="row mx-auto">
+    <div class="row mx-auto mb-5">
       <div class="col-lg-12">
-        <h3>3.1 Que es una plataforma IoT?</h3>
+        <h3>6.1 Introducción</h3>
       </div>
       <hr>
       <div class="col-lg-6">
         <p>
-          Las plataformas de IoT son el punto de arranque para lograr la interconexión entre todos nuestros dispositivos
-          electrónicos o inteligentes. De cierta forma, permiten la creación de entornos digitales, capaces de
-          interactuar con grandes cantidades de datos.Estos ambientes de comunicación multicanal y multidispositivo han
-          hecho de las plataformas de IoT uno de los recursos de mayor auge en la actualidad.
+          <span class="bold">Arduino</span> es una plataforma de hardware y software de código abierto que se originó en
+          Italia en 2005, concebida
+          para hacer que la electrónica y la programación sean más accesibles para artistas, diseñadores y aficionados.
+          La
+          idea detrás de <span class="bold">Arduino</span> surgió de la necesidad de proporcionar a los estudiantes de
+          diseño con herramientas de
+          bajo costo para la creación de prototipos digitales interactivos.
         </p>
       </div>
       <div class="col-lg-6">
         <p>
-          Y su aplicación, antes de parecer lejana, es hoy inminente en ambientes de trabajo y domésticos. En otras
-          palabras, es un servicio que le ayuda a poner los objetos físicos en línea. Esta plataforma le proporcionará
-          los servicios para conectar los dispositivos de una máquina a la comunicación de la máquina.
-        </p>
-      </div>
-      <p class="mt-5"><b>Para ser considerada una plataforma IOT debe interactuar con estos 4 factores: </b></p>
-      <div class="col-lg-6 mt-5 mx-auto">
-        <h3>- Hardware:</h3>
-        <p class="mt-3">
-          Dispositivos que pueden obtener información o con el cual se pueda interactuar con el entorno físico, como lo
-          haría un sensor, motores o iluminación.
-        </p>
-
-        <p class="mt-2">
-          Empezando por el corazón de estos dispositivos, nos encontramos con los microcontroladores o MCU, se trata de
-          un semiconductor que contiene entre otras cosas, CPU, Memoria, tanto RAM como memoria persistente, módulos de
-          interfaz como de entradas y salidas analógicas y/o digitales, interfaces UART, I2C y toda la electrónica
-          necesaria para que funcione (reloj, multiplexores, etc.).
-        </p>
-        <p class="mt-2">
-          Un paso más arriba se encuentran los Sistems on chip o SoC, digamos que un SoC es un microcontrolador con todo
-          lo necesario para que pueda funcionar de manera autónoma como si fuera un ordenador, dependiendo del
-          fabricante puede hasta incluir memora masiva para almacenamiento de programas en el propio chip, conectividad
-          Wifi, bluetooth, etc.
+          El ecosistema <span class="bold">Arduino</span> ha crecido considerablemente desde su creación. Lo que comenzó
+          como una simple placa ha
+          evolucionado para incluir una variedad de placas con diferentes capacidades y características. El software de
+          <span class="bold">Arduino</span>, conocido como IDE de <span class="bold">Arduino</span>, es el ambiente
+          donde se escriben y cargan los programas (conocidos como
+          sketches) en las placas <span class="bold">Arduino</span>.
         </p>
       </div>
       <div class="col-lg-6">
-        <div class="content-img text-center">
-          <img src="../../../../assets/mod2/Hardware_IoT.png" alt="img">
-        </div>
-      </div>
-      <div class="col-lg-6 mt-5 mx-auto">
-        <h3>- Software:</h3>
-        <p class="mt-3">
-          El sistema virtual que interpretará esos datos que ya fueron recolectados y decidirá cómo interactuar en todo
-          momento con el hardware.
+        <p>
+          El éxito de Arduino se debe en gran medida a su comunidad. La naturaleza de código abierto de Arduino
+          significa que cualquier persona puede contribuir con el diseño de nuevas placas, desarrollar bibliotecas de
+          software y compartir sus proyectos con el mundo.
         </p>
-        <p class="mt-2">
-          El software IoT tradicional ayuda a las empresas a orquestar el diseño, la producción y el soporte de los
-          productos. Proveedores como Dassault Systemes, PTC y Siemens se asociaron con plataformas de software de IoT o
-          las adquirieron para facilitar el desarrollo de productos conectados mediante la combinación de materiales
-          mecánicos, eléctricos y de software y para iterar diseños de forma interactiva entre las partes interesadas.
+      </div>
+      <div class="col-lg-6 content-img text-center">
+        <img src="../../../../assets/mod2/Interfaz_IoT.png" alt="img">
+      </div>
+      <div class="col-lg-12 mt-5">
+        <h4>¿Qué es el IoT y por qué es relevante?</h4>
+      </div>
+      <div class="col-lg-6">
+        <p>
+          IoT, o "Internet de las Cosas", se refiere al creciente número de dispositivos que están conectados a Internet
+          y que comunican datos a la nube o entre sí. Estos dispositivos pueden ser desde sensores simples hasta
+          electrodomésticos, automóviles y maquinaria industrial.
         </p>
       </div>
       <div class="col-lg-6">
-        <div class="content-img text-center">
-          <img src="../../../../assets/mod2/Software_IoT.png" alt="img">
-        </div>
-      </div>
-
-      <p class="mt-2">
-        A continuación, se muestra un código que está escrito en el lenguaje de programación MicroPython y se
-        utiliza para interactuar con un sensor de temperatura y humedad llamado DHT11. El objetivo principal
-        del código es medir la temperatura y la humedad ambiente utilizando el sensor y luego mostrar estos
-        valores en la consola de la placa o dispositivo en el que se está ejecutando.
-      </p>
-      <app-precode style="margin-bottom: 30px;" [code]="CODE1" [LINE_CODE]="LINE_CODE1" [top]="top" [explain]="explain1"
-        [max_line]="max_line1"></app-precode>
-
-      <div class="col-lg-6 mt-5 mx-auto">
-        <h3>- Conectividad:</h3>
-        <p class="mt-3">
-          El medio/vía de comunicación en el que ocurre la transmisión de lo que ha recolectado el dispositivo y
-          necesita compartir a la base que interpretará la información.
+        <p>
+          La relevancia del IoT radica en su capacidad para transformar la forma en que vivimos y trabajamos. Por
+          ejemplo, con IoT, una nevera puede detectar que falta leche y enviar un recordatorio al teléfono del
+          propietario. A nivel industrial, los sensores pueden monitorizar maquinarias y predecir cuándo necesitarán
+          mantenimiento, ahorrando costes y evitando tiempos muertos.
         </p>
-        <p class="mt-2">
-          Al hacer referencia a la conectividad IoT se describe la red específica de soluciones que pueden activar este
-          tipo de conectividad. Puede ser wifi, móvil o LPWAN, por mencionar algunas. A la hora de elegir la mejor
-          opción de conectividad IoT para ti o para tu negocio, puedes contemplar tres aspectos: capacidad de ancho de
-          banda (velocidad), rango de cobertura y consumo de energía. Puede ser difícil encontrar una opción que
-          priorice estos tres factores, por lo que es importante entender cuáles son tus requisitos de cara al IoT antes
-          de decantarte por una solución concreta.
+      </div>
+      <div class="col-lg-12">
+        <p>
+          El potencial del IoT es vasto y aún está emergiendo, pero ya está claro que tiene el potencial de revolucionar
+          industrias enteras, mejorar la eficiencia, y facilitar la vida cotidiana.
+        </p>
+      </div>
+      <div class="col-lg-12">
+        <h4>Ventajas de combinar Arduino con IoT</h4>
+        <ul class="mt-5">
+          <li><span class="bold">Facilidad de Uso:</span> Arduino es conocido por su simplicidad, lo que lo hace
+            perfecto para principiantes que desean experimentar con IoT.</li>
+          <li><span class="bold">Coste Efectivo:</span> Las placas Arduino son relativamente baratas, lo que permite a
+            los aficionados y profesionales crear prototipos sin una gran inversión inicial.</li>
+          <li><span class="bold">Comunidad Activa:</span> Dada la amplia comunidad de Arduino, es fácil encontrar
+            soluciones, bibliotecas y ejemplos de otros proyectos de IoT que pueden ser de inspiración o ayuda.</li>
+          <li><span class="bold">Flexibilidad:</span> Arduino puede interactuar con una amplia variedad de sensores y
+            actuadores, lo que lo hace adecuado para una amplia gama de aplicaciones IoT.</li>
+          <li><span class="bold">Integración con Otros Sistemas:</span> Con las bibliotecas y herramientas adecuadas,
+            las placas Arduino pueden comunicarse fácilmente con bases de datos, servicios en la nube y otras
+            plataformas, facilitando la creación de soluciones IoT completas.</li>
+          <li><span class="bold">Desarrollo Rápido:</span> Arduino permite un rápido prototipado, lo que significa que
+            puedes tener un proyecto funcional en un tiempo relativamente corto.</li>
+        </ul>
+        <p class="mt-5">
+          Combinar Arduino con IoT abre un mundo de posibilidades para desarrolladores, estudiantes y aficionados. Desde
+          proyectos domésticos hasta soluciones industriales, las herramientas y la flexibilidad que ofrece Arduino lo
+          convierten en una elección popular para aquellos que buscan sumergirse en el mundo del Internet de las Cosas.
+        </p>
+      </div>
+    </div>
+    <div class="row mx-auto">
+      <div class="col-lg-12">
+        <h3>6.2 ¿Qué es Arduino IoT Cloud?</h3>
+      </div>
+      <hr>
+      <div class="col-lg-12">
+        <p>
+          Arduino IoT Cloud es una plataforma que facilita la construcción de aplicaciones IoT. Es un servicio ofrecido
+          por Arduino para conectar dispositivos al Internet de las Cosas de manera sencilla y segura, sin necesidad de
+          ser un experto en redes o seguridad. <br>
         </p>
       </div>
       <div class="col-lg-6">
-        <div class="content-img text-center">
-          <img src="../../../../assets/mod2/Conectividad_IoT.png" alt="img">
-        </div>
-      </div>
-      <div class="col-lg-6 mt-5 mx-auto">
-        <h3>- Interfaz:</h3>
-        <p class="mt-3">
-          También conocida como DASHBOARD son los tableros o interfaz de control con la que se encuentra el usuario en
-          el momento de interactuar con el sistema; Que le permite a los usuarios monitorear e interactuar con
-          dispositivos conectados a través de gráficos, cuadros y otras herramientas y elementos de la interfaz de
-          usuario. Los paneles le permiten administrar todos los aspectos de sus dispositivos conectados, así como
-          obtener una perspectiva de su entorno a través de la visualización de los datos de su dispositivo.
-        </p>
-        <p class="mt-2">
-          Dado que los paneles de IoT se ubican sobre la funcionalidad central proporcionada por una plataforma de IoT,
-          los usuarios pueden personalizar fácilmente sus paneles sin causar interrupciones en el procesamiento de datos
-          del dispositivo. Además de usar tableros, también pueden enviar datos de IoT a sus propias herramientas para
-          la representación gráfica de datos, informes, análisis, CRM, etc.
+        <p>
+          <span class="bold">Definición:</span> Arduino IoT Cloud es un entorno basado en la nube diseñado para
+          simplificar y acelerar el
+          desarrollo de proyectos IoT usando la familia Arduino. Es una herramienta que automatiza gran parte del
+          proceso de conectividad, dejando al desarrollador más tiempo para centrarse en la lógica y funcionalidad del
+          proyecto.
         </p>
       </div>
       <div class="col-lg-6">
-        <div class="content-img text-center">
-          <img src="../../../../assets/mod2/Interfaz_IoT.png" alt="img">
-        </div>
-
-        <div style="width: 600px;">
-          <a routerLink="/presentationOne/questions" class="btn d-block w-50 mx-auto mt-5 botonColor">
-            Vamos aprender más
-            <img style="width: 30px;" class="ms-3" src="../../../../assets/icons/questionnaire.png" alt=""></a>
-          <a routerLink="/presentationTwo/main" class="btn d-block w-50 mx-auto mt-3 botonColor">
-            Siguiente módulo
-            <img style="width: 30px;" class="ms-3" src="../../../../assets/icons/next_module.png" alt="">
-          </a>
-        </div>
-
+        <p>
+          <span class="bold">Propósito:</span> El principal objetivo de Arduino IoT Cloud es ofrecer una solución
+          completa y fácil de usar que
+          permita a usuarios, tanto experimentados como novatos, conectarse al IoT. Se busca proporcionar herramientas
+          que faciliten el monitoreo y control remoto de dispositivos Arduino desde cualquier lugar a través de
+          Internet.
+        </p>
       </div>
-
+      <div class="col-lg-12 mt-5 mb-5">
+        <h4>Características principales</h4>
+        <hr>
+        <ol>
+          <li>
+            <p>
+              Conectividad simplificada: Con solo unos pocos clics, puedes conectar tus dispositivos Arduino a la nube y
+              empezar a enviar y recibir datos.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Dashboard personalizable:</span> Arduino IoT Cloud incluye un dashboard visual donde
+              puedes diseñar tu propia
+              interfaz de usuario para monitorear y controlar tus dispositivos.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Seguridad:</span> La plataforma está diseñada con seguridad en mente, ofreciendo
+              comunicación cifrada y
+              almacenamiento seguro para tus datos.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Integración con otros servicios:</span> Arduino IoT Cloud puede integrarse con otros
+              servicios populares, lo que
+              permite enviar datos a otras plataformas o recibir instrucciones de ellas.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Soporte para múltiples dispositivos:</span> Aunque está optimizado para dispositivos
+              Arduino, también ofrece
+              compatibilidad con otros dispositivos y sensores populares.
+            </p>
+          </li>
+        </ol>
+      </div>
+      <div class="col-lg-12 mt-2 mb-5">
+        <h4>Diferencias entre la versión gratuita y las versiones de pago</h4>
+        <hr>
+        <ol>
+          <li>
+            <p>
+              <span class="bold">Número de dispositivos:</span> Mientras que la versión gratuita puede tener un límite
+              en el número de
+              dispositivos que puedes conectar, las versiones de pago te permiten conectar más o incluso un número
+              ilimitado de dispositivos, dependiendo del plan.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Historial de datos:</span> Las versiones de pago suelen ofrecer un historial de datos
+              más prolongado, permitiendo
+              rastrear y analizar datos por un período más extenso que en la versión gratuita.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Velocidad de actualización:</span> Las versiones de pago pueden ofrecer tiempos de
+              actualización más rápidos,
+              permitiendo una comunicación más fluida y en tiempo real con tus dispositivos.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Soporte técnico:</span> Las versiones de pago suelen incluir un nivel de soporte
+              técnico superior, proporcionando
+              respuestas más rápidas y soluciones personalizadas a problemas específicos.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Integraciones avanzadas:</span> Algunas funciones, como la integración con servicios
+              externos o herramientas
+              avanzadas de análisis, pueden estar reservadas para los usuarios de las versiones de pago.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Seguridad avanzada:</span> Las características adicionales de seguridad, como
+              autenticación de dos factores o
+              certificados de seguridad personalizados, pueden estar disponibles en versiones de pago.
+            </p>
+          </li>
+        </ol>
+      </div>
+      <div class="col-lg-12">
+        <p>
+          Eligiendo la versión adecuada depende de las necesidades del proyecto. Para pequeños experimentos o proyectos
+          personales, la versión gratuita puede ser suficiente. Sin embargo, para aplicaciones más extensas o de misión
+          crítica, vale la pena considerar las versiones de pago.
+        </p>
+      </div>
+    </div>
+    <div class="row mx-auto">
+      <div class="col-lg-12">
+        <h3>6.3 Primeros pasos con Arduino IoT Cloud</h3>
+      </div>
+      <hr>
     </div>
 
   </div>
