@@ -5,12 +5,14 @@ import { RouterModule } from '@angular/router';
 import { plataformasIotRoutes } from './plataformas-iot.routing';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { QuestionsComponent } from './questions/questions.component';
 
 
 
 @NgModule({
   declarations: [
-    MainComponent
+    MainComponent,
+    QuestionsComponent
   ],
   imports: [
     CommonModule,

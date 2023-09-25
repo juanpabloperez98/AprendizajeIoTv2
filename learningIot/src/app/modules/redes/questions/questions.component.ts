@@ -10,6 +10,14 @@ import { Location } from '@angular/common';
 })
 export class QuestionsComponent implements OnInit {
 
+  questionsAnswer: string[] = [
+    "answer1",
+    "answer2",
+    "answer3",
+    "answer4",
+    "answer1",
+  ]
+
   selectedAnswer: string[] = ['answer1','answer3','answer2','answer1','answer3'];
   selectedQuestion1: string = 'answer1';
   selectedQuestion2: string = 'answer1';
@@ -27,12 +35,26 @@ export class QuestionsComponent implements OnInit {
   incorrectAnswer = 0;
   ROUTE_PATH_INTRODUCTION = "/introduccion/main";
 
+
+
   constructor(
     private router: Router,
     private location: Location
   ) { }
 
   ngOnInit(): void {
+  }
+
+  getAnswers = (): void => {
+    this.selectedAnswer.forEach( (item, index) => {
+      let elem1 = item,
+          elem2 = this.questionsAnswer[index];
+      if(elem1 == elem2){
+        this.correctAnswer ++;
+      }else{
+        this.incorrectAnswer ++;
+      }
+    })
   }
 
   showMessage = (): void => {
