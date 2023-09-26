@@ -1,7 +1,8 @@
 <div class="drag-question col-lg-12">
   <h4>{{ title }}</h4>
   <div class="drop" cdkDropList (cdkDropListDropped)="onDrop($event)">
-    <div *ngFor="let question of questions; let i = index" cdkDrag>
+    <div *ngFor="let question of orderList.question; let i = index"
+      [class.correct]="this.orderList.response[i] === question && isFirstLoad" cdkDrag>
       {{ i + 1 }} - {{ question }}
     </div>
   </div>
