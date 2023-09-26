@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { OrderList } from '../../interfaces/question.interface';
 
 @Component({
   selector: 'app-drag-question',
@@ -9,13 +10,15 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 export class DragQuestionComponent implements OnInit {
   @Input() title: string = '';
 
-  @Input() questions: string[] = [];
+  @Input() orderList!: OrderList;
 
-  constructor() {}
+  @Input() isFirstLoad: boolean = false;
 
-  ngOnInit(): void {}
+  constructor() { }
+
+  ngOnInit(): void { }
 
   onDrop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.questions, event.previousIndex, event.currentIndex);
+    moveItemInArray(this.orderList.question, event.previousIndex, event.currentIndex);
   }
 }
