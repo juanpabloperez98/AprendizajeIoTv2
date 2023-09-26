@@ -597,8 +597,8 @@
             deseas recibir.</li>
         </ul>
 
-        <app-precode [code]="CODE1" [LINE_CODE]="LINE_CODE1" [top]="top" [explain]="explain1"
-          [max_line]="max_line1"></app-precode>
+        <app-precode [code]="CODE3" [LINE_CODE]="LINE_CODE3" [top]="top" [explain]="explain3"
+          [max_line]="max_line3"></app-precode>
       </div>
       <div class="col-lg-12 mt-5">
         <h4>Integración con Webhooks</h4>
@@ -612,6 +612,153 @@
           luego enviar ese valor a un servidor a través de una solicitud HTTP POST. Luego, muestra el código de
           respuesta HTTP en el monitor serial.
         </p>
+      </div>
+    </div>
+    <div class="row mx-auto mt-3">
+      <div class="col-lg-12">
+        <h3>6.6 Seguridad en Arduino IoT Cloud</h3>
+      </div>
+      <hr>
+      <div class="col-lg-12">
+        <p>
+          El auge del Internet de las Cosas (IoT) ha llevado a un incremento en la cantidad de dispositivos conectados a
+          Internet. Mientras que esto ofrece un sinfín de posibilidades en cuanto a conectividad y automatización,
+          también presenta riesgos significativos en términos de seguridad. Las vulnerabilidades en dispositivos IoT
+          pueden ser explotadas para realizar ataques, robar datos, o incluso tomar control de dispositivos.
+        </p>
+      </div>
+      <div class="col-lg-12">
+        <h4>Importancia de la seguridad en IoT</h4>
+        <ul>
+          <li>
+            Integridad de Datos: Con un flujo constante de datos entre dispositivos y la nube, es crucial garantizar que
+            estos datos no sean alterados en tránsito.
+          </li>
+          <li>
+            Privacidad: Los dispositivos IoT pueden recolectar información sensible, desde patrones de consumo eléctrico
+            en una casa hasta datos de salud personal. Proteger esta información es esencial.
+          </li>
+          <li>
+            Disponibilidad: Los ataques, como los de Denegación de Servicio (DoS), pueden hacer que los dispositivos IoT
+            dejen de funcionar, con potenciales consecuencias catastróficas si se trata, por ejemplo, de sistemas de
+            monitoreo médico.
+          </li>
+          <li>
+            Confianza del Usuario: Para que el IoT sea ampliamente adoptado, los usuarios necesitan confiar en que sus
+            dispositivos y los datos que generan están seguros.
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-12  mt-5">
+        <h4>Características de seguridad ofrecidas por Arduino IoT Cloud</h4>
+        <ul>
+          <li>
+            <p>
+              <span class="bold">Autenticación de Dos Factores (2FA):</span> Esta función añade una capa adicional de
+              seguridad al requerir no
+              solo una contraseña, sino también un segundo factor (generalmente un código temporal) para acceder a la
+              cuenta.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Comunicación Encriptada:</span> Arduino IoT Cloud utiliza protocolos de encriptación
+              para garantizar que los
+              datos transmitidos entre el dispositivo y la nube estén protegidos.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Actualizaciones Regulares:</span> La plataforma ofrece actualizaciones periódicas para
+              abordar vulnerabilidades
+              conocidas y mejorar la seguridad.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Gestión Segura de Dispositivos:</span> Proporciona herramientas para gestionar
+              dispositivos de forma segura,
+              permitiendo a los usuarios configurar, monitorizar y, si es necesario, revocar el acceso a dispositivos
+              individuales.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-12 mt-5">
+        <h4>Buenas prácticas para mantener tus dispositivos y datos seguros</h4>
+        <ul>
+          <li>
+            <p>
+              <span class="bold">Contraseñas Fuertes:</span> Siempre usa contraseñas robustas y únicas para tu cuenta en
+              Arduino IoT Cloud y
+              cualquier otro servicio relacionado.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Actualizaciones:</span> Asegúrate de mantener todos tus dispositivos y la plataforma
+              Arduino actualizados con el
+              software más reciente.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Limitar Accesos:</span> No todos los usuarios necesitan acceso completo a todos los
+              aspectos de tu sistema IoT.
+              Otorga permisos basados en roles y necesidades.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Red Segura:</span> Utiliza redes protegidas con firewalls y considera la posibilidad de
+              establecer una red
+              separada solo para tus dispositivos IoT.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Monitorización:</span> Mantén un registro y monitoriza regularmente la actividad en tu
+              Arduino IoT Cloud para
+              detectar cualquier comportamiento inusual.
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="bold">Desactiva Características No Esenciales:</span> Si hay funciones en tu dispositivo o en
+              la plataforma que no
+              estás utilizando, considera desactivarlas para reducir posibles puntos de entrada para atacantes.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-12 mt-2">
+        <p>
+          En resumen, mientras que Arduino IoT Cloud ofrece múltiples características para garantizar la seguridad de
+          los dispositivos y datos, es esencial que los usuarios también adopten prácticas seguras para maximizar la
+          protección de sus sistemas IoT.
+        </p>
+      </div>
+    </div>
+    <div class="row mx-auto mt-3">
+      <div class="col-lg-12 mt-5">
+        <h4>Autenticación de Dispositivos</h4>
+        <p>
+          Para asegurarse de que sólo los dispositivos confiables se conecten a tu red o plataforma, puedes establecer
+          claves de autenticación únicas
+        </p>
+        <app-precode [code]="CODE5" [LINE_CODE]="LINE_CODE5" [top]="top" [explain]="explain5"
+          [max_line]="max_line5"></app-precode>
+      </div>
+    </div>
+    <div class="row mx-auto mt-3">
+      <div class="col-lg-12 mt-5">
+        <h4>Transmisión Encriptada de Datos</h4>
+        <p>
+          Para transmitir datos encriptados, podrías usar una librería de encriptación como AES (por ejemplo, la
+          librería Arduino Cryptographic Library)
+        </p>
+        <app-precode [code]="CODE6" [LINE_CODE]="LINE_CODE6" [top]="top" [explain]="explain6"
+          [max_line]="max_line1"></app-precode>
       </div>
     </div>
   </div>
