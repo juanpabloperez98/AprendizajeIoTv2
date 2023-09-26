@@ -163,4 +163,8 @@ export class QuestionsComponent implements OnInit {
     }
   }
 
+  back = (): void => {
+    this.router.navigate(['/plataformas-iot/main']);
+  }
+
 }

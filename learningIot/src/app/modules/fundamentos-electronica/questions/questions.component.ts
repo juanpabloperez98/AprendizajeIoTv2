@@ -13,22 +13,18 @@ import { Location } from '@angular/common';
 export class QuestionsComponent implements OnInit {
 
 
-  num_correctas: number = 0;
-  num_incorrectas: number = 0;
-
-
 
   preguntas: Pregunta[] = [
-    { pregunta: '1. Fluctúa en dirección y magnitud con el tiempo.', respuesta: 'Corriente Alterna', id: 3 },
-    { pregunta: '2. Representado por una línea en zigzag.', respuesta: 'Símbolo para resistencia en un diagrama', id: 7 },
-    { pregunta: '3. Flujo de electrones a través de un conductor.', respuesta: 'Corriente eléctrica', id: 1 },
-    { pregunta: '4. Suma de todas las resistencias individuales.', respuesta: 'Resistencias en serie', id: 8 },
-    { pregunta: '5. Medido en voltios.', respuesta: 'Unidad para medir el voltaje', id: 5 },
-    { pregunta: '6. Medida de oposición al flujo de corriente eléctrica.', respuesta: 'Resistencia', id: 6 },
-    { pregunta: '7. Punto de referencia en un circuito.', respuesta: 'Símbolo de tierra en diagramas', id: 10 },
-    { pregunta: '8. Componentes conectados en ramas separadas.', respuesta: 'Circuitos en paralelo', id: 9 },
-    { pregunta: '9. Fluye constantemente en una sola dirección.', respuesta: 'Corriente Continua', id: 2 },
-    { pregunta: '10. "Fuerza" que impulsa a los electrones en un circuito.', respuesta: 'Voltaje', id: 4 },
+    { pregunta: '1. Fluctúa en dirección y magnitud con el tiempo.', respuesta: 'Corriente Alterna', id: 3, status: false },
+    { pregunta: '2. Representado por una línea en zigzag.', respuesta: 'Símbolo para resistencia en un diagrama', id: 7, status: false },
+    { pregunta: '3. Flujo de electrones a través de un conductor.', respuesta: 'Corriente eléctrica', id: 1, status: false },
+    { pregunta: '4. Suma de todas las resistencias individuales.', respuesta: 'Resistencias en serie', id: 8, status: false },
+    { pregunta: '5. Medido en voltios.', respuesta: 'Unidad para medir el voltaje', id: 5, status: false },
+    { pregunta: '6. Medida de oposición al flujo de corriente eléctrica.', respuesta: 'Resistencia', id: 6, status: false },
+    { pregunta: '7. Punto de referencia en un circuito.', respuesta: 'Símbolo de tierra en diagramas', id: 10, status: false },
+    { pregunta: '8. Componentes conectados en ramas separadas.', respuesta: 'Circuitos en paralelo', id: 9, status: false },
+    { pregunta: '9. Fluye constantemente en una sola dirección.', respuesta: 'Corriente Continua', id: 2, status: false },
+    { pregunta: '10. "Fuerza" que impulsa a los electrones en un circuito.', respuesta: 'Voltaje', id: 4, status: false },
   ]
 
   opciones: Opcion[] = [
@@ -47,6 +43,8 @@ export class QuestionsComponent implements OnInit {
   respuestasSeleccionadas :{ [key: number]: string } = {};
 
   comprobarRespuestas() {
+    let num_correctas = 0,
+    num_incorrectas = 0;
     if(Object.keys(this.respuestasSeleccionadas).length < this.preguntas.length){
       Swal.fire(
         "Cuestionario incompleto",
@@ -57,24 +55,26 @@ export class QuestionsComponent implements OnInit {
     };
     for (let i = 0; i < this.preguntas.length; i++) {
       if (this.preguntas[i].id === parseInt(this.respuestasSeleccionadas[i])) {
-        this.num_correctas ++;
+        num_correctas ++;
+        this.preguntas[i].status = true;
       } else {
-        this.num_incorrectas ++;
+        num_incorrectas ++;
       }
     }
-    if(this.num_correctas < this.num_incorrectas){
+    if(num_correctas != this.preguntas.length){
       Swal.fire(
         "Lo sentimos no haz aprobado el cuestionario",
-        `Haz obtenido ${this.num_correctas} respuestas correctas
-          y ${this.num_incorrectas} respuestas incorrectas.
+        `Haz obtenido ${num_correctas} respuestas correctas
+          y ${num_incorrectas} respuestas incorrectas.
           ¡No te desanimes! Sigue practicando y mejorarás
         `,
         'error'
-      ).then((result) => {
-        if (result.isConfirmed) {
-          this.location.back();
-        }
-      })
+      )
+      // ).then((result) => {
+      //   if (result.isConfirmed) {
+      //     this.location.back();
+      //   }
+      // })
       return;
     }else{
       Swal.fire(

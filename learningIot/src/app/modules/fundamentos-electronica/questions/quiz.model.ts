@@ -1,4 +1,5 @@
 export interface Pregunta {
+  status: boolean,
   pregunta: string;
   respuesta: string;
   id: number;
