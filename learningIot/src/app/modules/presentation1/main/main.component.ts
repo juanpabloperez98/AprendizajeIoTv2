@@ -296,7 +296,6 @@ export class MainComponent implements OnInit {
     delay(60000);
   }
   `;
-
   LINE_CODE4:string[]= [
     "#include <WiFi.h>",
     "#include <HTTPClient.h>",
@@ -364,6 +363,80 @@ export class MainComponent implements OnInit {
     "Cierra la función loop().",
   ];
   max_line4:number = 22;
+
+
+  CODE5:string=`const char DEVICE_KEY[] = "YOUR_UNIQUE_DEVICE_KEY";
+  void setup() {
+    ArduinoCloud.begin(DEVICE_KEY);
+    // ... resto de configuración
+  }
+  void loop() {
+    ArduinoCloud.update();
+    // ... lógica principal del programa
+  }`;
+  LINE_CODE5:string[]= [
+    "const char DEVICE_KEY[] = 'YOUR_UNIQUE_DEVICE_KEY';",
+    "void setup() {",
+    "  ArduinoCloud.begin(DEVICE_KEY); ",
+    "  // ... resto de configuración",
+    "}",
+    "void loop() {",
+    "  ArduinoCloud.update(); ",
+    "  // ... lógica principal del programa",
+    "}",
+  ];
+  explain5:string[] = [
+    "Declara un arreglo constante de caracteres llamado DEVICE_KEY. Este contiene una clave única para tu dispositivo. Las constantes son, por definición, inmutables, lo que significa que su valor no puede cambiar una vez que se ha establecido.",
+    "Define la función setup(). Esta función se utiliza en el entorno de Arduino para inicializar variables, configuración de pins, iniciar bibliotecas, etc. Se ejecuta una vez cuando reinicias o enciendes la placa.",
+    "Llama a la función begin() de la clase ArduinoCloud y le pasa el DEVICE_KEY como parámetro. Esto inicializa la conexión con el Arduino Cloud usando la clave del dispositivo proporcionada.",
+    "Un comentario indicativo que puedes agregar más configuraciones o inicializaciones después de la inicialización de Arduino Cloud en la función setup().",
+    "Cierra el bloque de código de la función setup().",
+    "Define la función loop(). En el entorno de Arduino, esta función se ejecuta continuamente después de la función setup(). Es el núcleo de la mayoría de los programas de Arduino y donde ocurre la lógica principal.",
+    "Llama a la función update() de la clase ArduinoCloud. Esta función se utiliza para mantener la comunicación con Arduino Cloud y para manejar las operaciones internas de la biblioteca, como enviar y recibir datos.",
+    "Un comentario indicativo que puedes agregar la lógica principal de tu programa después de la actualización de Arduino Cloud en la función loop().",
+    "Cierra el bloque de código de la función loop().",
+  ];
+  max_line5:number = 9;
+
+
+  CODE6:string=`#include <AESLib.h>
+  const char AES_KEY[] = "YOUR_AES_SECRET_KEY";
+  String encryptData(String data) {
+    char encryptedData[150];
+    aes_encrypt(AES_KEY, data.c_str(), encryptedData);
+    return String(encryptedData);
+  }
+  void sendData(String data) {
+    String encrypted = encryptData(data);
+    // Ahora envía 'encrypted' a Arduino IoT Cloud
+  }`;
+  LINE_CODE6:string[]= [
+    "#include <AESLib.h>",
+    "const char AES_KEY[] = 'YOUR_AES_SECRET_KEY';",
+    "String encryptData(String data) {",
+    "  char encryptedData[150];",
+    "  aes_encrypt(AES_KEY, data.c_str(), encryptedData);",
+    "  return String(encryptedData);",
+    "}",
+    "void sendData(String data) {",
+    "  String encrypted = encryptData(data);",
+    "  // Ahora envía `encrypted` a Arduino IoT Cloud",
+    "}",
+  ];
+  explain6:string[] = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ];
+  max_line6:number = 11;
 
 
 
