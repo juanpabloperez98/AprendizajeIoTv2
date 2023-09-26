@@ -23,7 +23,9 @@ import { HighlightService } from './services/highlight.service';
   imports: [
     BrowserModule,
     MonacoEditorModule.forRoot(),
-    RouterModule.forRoot(AppRoutes),
+    RouterModule.forRoot(AppRoutes,{
+      scrollPositionRestoration: 'top',
+    }),
     SharedModule,
   ],
   providers: [
