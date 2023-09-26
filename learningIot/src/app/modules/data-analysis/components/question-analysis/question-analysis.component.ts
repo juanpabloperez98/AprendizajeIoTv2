@@ -34,6 +34,7 @@ export class QuestionAnalysisComponent implements OnInit {
 
   validateAnswers(): void {
     let responseCorrect = 0;
+    let responseError = 0;
     Object.keys(this.formQuestion.value).forEach((group) => {
       const listQuestion = (this.formQuestion as any).value[group];
       Object.keys(listQuestion).forEach((question) => {
@@ -42,11 +43,13 @@ export class QuestionAnalysisComponent implements OnInit {
           this.controlNameCorrect.includes(question)
         )
           responseCorrect++;
-        else if (listQuestion[question]) responseCorrect--;
+        else if (listQuestion[question])
+          responseError++;
+
       });
     });
 
-    if (responseCorrect >= this.controlNameCorrect.length) {
+    if (responseError <= 0) {
       Swal.fire(
         'Felicidades haz aprobado las preguntas',
         '¡Felicitaciones! Has respondido correctamente a la mayoría de las preguntas',
@@ -57,7 +60,7 @@ export class QuestionAnalysisComponent implements OnInit {
 
     Swal.fire(
       'Lo sentimos no haz aprobado las preguntas',
-      `Tienes ${responseCorrect} respuestas buenas y ${this.controlNameCorrect.length - responseCorrect} respuestas incorrectas <br>
+      `Tienes ${responseCorrect >= 0 ? responseCorrect : 0} respuestas buenas y ${responseError} respuestas incorrectas <br>
       ¡No te desanimes! Sigue practicando y mejorarás
       `,
       'error'
