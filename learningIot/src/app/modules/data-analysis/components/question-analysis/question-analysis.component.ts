@@ -26,7 +26,7 @@ export class QuestionAnalysisComponent implements OnInit {
     'clustering5',
   ];
 
-  constructor(private readonly formBuilder: FormBuilder) {}
+  constructor(private readonly formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.formQuestion = this.formBuilder.group({});
@@ -54,9 +54,12 @@ export class QuestionAnalysisComponent implements OnInit {
       );
       return;
     }
+
     Swal.fire(
       'Lo sentimos no haz aprobado las preguntas',
-      '¡No te desanimes! Sigue practicando y mejorarás',
+      `Tienes ${responseCorrect} respuestas buenas y ${this.controlNameCorrect.length - responseCorrect} respuestas incorrectas <br>
+      ¡No te desanimes! Sigue practicando y mejorarás
+      `,
       'error'
     );
   }
