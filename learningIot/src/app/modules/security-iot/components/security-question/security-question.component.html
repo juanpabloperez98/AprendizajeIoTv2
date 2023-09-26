@@ -19,11 +19,8 @@
     </div>
   </div>
   <div class="row gap-3 mt-4">
-    <app-drag-question
-      *ngFor="let drag of LIST_DRAG_SECURITY"
-      [title]="drag.title"
-      [questions]="drag.orderList.question"
-    ></app-drag-question>
+    <app-drag-question *ngFor="let drag of LIST_DRAG_SECURITY" [title]="drag.title" [orderList]="drag.orderList"
+      [isFirstLoad]="isFirstLoad"></app-drag-question>
     <div>
       <button class="btn btn-success mt-2" (click)="validateAnswers()">
         Evaluar cuestionario
