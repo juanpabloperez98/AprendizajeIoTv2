@@ -33,6 +33,7 @@ export class QuestionsComponent implements OnInit {
   correctAnswer = 0;
   incorrectAnswer = 0;
   ROUTE_PATH_INTRODUCTION = "/aplicaciones/main";
+  
 
 
 
