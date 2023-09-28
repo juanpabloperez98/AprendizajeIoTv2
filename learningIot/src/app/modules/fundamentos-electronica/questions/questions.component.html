@@ -16,9 +16,9 @@
   </div>
   <hr>
   <div class="row mx-auto">
-    <div *ngFor="let pregunta of preguntas; let i = index" class="col-lg-12 card-question">
+    <div *ngFor="let pregunta of preguntas; let i = index" class="col-lg-12 card-question" [ngClass]="{'correct': pregunta.status} ">
       {{ pregunta.pregunta }}
-      <select class="mt-3 d-block" [(ngModel)]="respuestasSeleccionadas[i]">
+      <select class="mt-3 d-block" [(ngModel)]="respuestasSeleccionadas[i]" [disabled]="pregunta.status">
         <option *ngFor="let opcion of opciones" [value]="opcion.id">{{ opcion.opcion }}</option>
       </select>
     </div>

@@ -12,19 +12,20 @@ import { Location } from '@angular/common';
 })
 export class QuestionsComponent implements OnInit {
 
-  questionsAnswer: string[] = [
-    "answer1",
-    "answer2",
-    "answer3",
-    "answer4",
-    "answer1",
-  ]
-  selectedAnswer: string[] = ['answer3','answer2','answer1','answer3','answer2'];
+  selectedAnswer: string[] = ['answer3','answer2','answer3','answer3','answer2'];
   selectedQuestion1: string = 'answer1';
   selectedQuestion2: string = 'answer1';
   selectedQuestion3: string = 'answer1';
   selectedQuestion4: string = 'answer1';
   selectedQuestion5: string = 'answer1';
+
+  list_correct: boolean[] = [
+    false,
+    false,
+    false,
+    false,
+    false
+  ]
 
   // progressValue: number = 33;
 
@@ -42,39 +43,17 @@ export class QuestionsComponent implements OnInit {
     private router: Router,
     private location: Location) { }
 
-
-  /* ngAfterViewInit() {
-    // this.questionNum1.nativeElement.style.display = 'none';
-    this.progressBar.nativeElement.style.display = 'none';
-    this.finalSection.nativeElement.style.display = 'none';
-    this.questionNum2.nativeElement.style.display = 'none';
-    this.questionNum3.nativeElement.style.display = 'none';
-  } */
-
   ngOnInit(): void {
   }
 
-  getAnswers = (): void => {
-    this.selectedAnswer.forEach( (item, index) => {
-      let elem1 = item,
-          elem2 = this.questionsAnswer[index];
-      if(elem1 == elem2){
-        this.correctAnswer ++;
-      }else{
-        this.incorrectAnswer ++;
-      }
-    })
-  }
-
-  showMessage = (): void => {
-    console.log(this.correctAnswer);
-    console.log(this.incorrectAnswer);
-
-    if(this.correctAnswer < this.incorrectAnswer){
+  showMessage = (correctAnswer:number, incorrectAnswer:number): void => {
+    if(correctAnswer != 5){
       this.titleMsg = 'Lo sentimos no haz aprobado las preguntas';
-      this.bodyMsg = '¡No te desanimes! Sigue practicando y mejorarás';
+      this.bodyMsg = `
+      Tienes ${correctAnswer} respuestas buenas y ${incorrectAnswer} respuestas incorrectas <br>
+      '¡No te desanimes! Sigue practicando y mejorarás'
+      `;
       this.imagePath = 'assets/logos/incorrect.png';
-
       Swal.fire(
         this.titleMsg,
         this.bodyMsg,
@@ -86,41 +65,59 @@ export class QuestionsComponent implements OnInit {
       this.titleMsg,
       this.bodyMsg,
       'success'
-    )
+    ).then((result) => {
+      if (result.isConfirmed) {
+        this.router.navigate(['/fundamentos/main']);
+      }
+    })
   }
 
   onClick = (): void => {
-    /* switch(question){
-      case 0:{
-        this.selectedAnswer[question] = this.selectedQuestion1;
-        this.questionNum1.nativeElement.style.display = 'none';
-        this.questionNum2.nativeElement.style.display = '';
-        this.progressValue += 33;
-        break;
-      }
-      case 1:{
-        this.selectedAnswer[question] = this.selectedQuestion2;
-        this.questionNum2.nativeElement.style.display = 'none';
-        this.questionNum3.nativeElement.style.display = '';
-        this.progressValue += 33;
-        break;
-      }
-      case 2:{
-        this.selectedAnswer[question] = this.selectedQuestion3;
-        console.log(this.selectedAnswer);
-        this.progressValue += 1;
-        this.questionNum3.nativeElement.style.display = 'none';
-        this.progressBar.nativeElement.style.display = 'none';
-        this.showMessage();
-        break;
-      }
-    } */
-    this.selectedQuestion1 === this.selectedAnswer[0] ? this.correctAnswer ++ : this.incorrectAnswer++;
-    this.selectedQuestion2 === this.selectedAnswer[1] ? this.correctAnswer ++ : this.incorrectAnswer++;
-    this.selectedQuestion3 === this.selectedAnswer[2] ? this.correctAnswer ++ : this.incorrectAnswer++;
-    this.selectedQuestion4 === this.selectedAnswer[3] ? this.correctAnswer ++ : this.incorrectAnswer++;
-    this.selectedQuestion5 === this.selectedAnswer[4] ? this.correctAnswer ++ : this.incorrectAnswer++;
-    this.showMessage();
+    let correctAnswer = 0,
+    incorrectAnswer = 0;
+
+    if(this.selectedQuestion1 === this.selectedAnswer[0]){
+      correctAnswer ++
+      this.list_correct[0] = true;
+    }else{
+      incorrectAnswer++
+      this.list_correct[0] = false;
+    }
+    if(this.selectedQuestion2 === this.selectedAnswer[1]){
+      correctAnswer ++
+      this.list_correct[1] = true;
+    }else{
+      incorrectAnswer++
+      this.list_correct[1] = false;
+    }
+    if(this.selectedQuestion3 === this.selectedAnswer[2]){
+      correctAnswer ++
+      this.list_correct[2] = true;
+    }else{
+      incorrectAnswer++
+      this.list_correct[2] = false;
+    }
+    if(this.selectedQuestion4 === this.selectedAnswer[3]){
+      correctAnswer ++
+      this.list_correct[3] = true;
+    }else{
+      incorrectAnswer++
+      this.list_correct[3] = false;
+    }
+    if(this.selectedQuestion5 === this.selectedAnswer[4]){
+      correctAnswer ++
+      this.list_correct[4] = true;
+    }else{
+      incorrectAnswer++
+      this.list_correct[4] = false;
+    }
+
+    // this.selectedQuestion1 === this.selectedAnswer[0] ? correctAnswer ++ : incorrectAnswer++;
+    // this.selectedQuestion2 === this.selectedAnswer[1] ? correctAnswer ++ : incorrectAnswer++;
+    // this.selectedQuestion3 === this.selectedAnswer[2] ? correctAnswer ++ : incorrectAnswer++;
+    // this.selectedQuestion4 === this.selectedAnswer[3] ? correctAnswer ++ : incorrectAnswer++;
+    // this.selectedQuestion5 === this.selectedAnswer[4] ? correctAnswer ++ : incorrectAnswer++;
+    this.showMessage(correctAnswer, incorrectAnswer);
   }
 
   back = (): void => {
