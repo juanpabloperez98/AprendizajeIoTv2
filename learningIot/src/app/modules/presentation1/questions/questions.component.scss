@@ -1,28 +1,23 @@
-.section-1{
-  background-color: rgba(128, 128, 128, .6);
-  padding: 20px;
-  border-radius: 20px;
-}
-
-h3{
-  text-align: center;
-}
-
-.section-final{
-  background-color: rgba(0, 123, 255, .6);
-  padding: 20px;
-  border-radius: 20px;
-  width: 50%;
+.card-question{
+  background-color: rgb(4, 30, 67);
   color: white;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
 
-  img{
-    width: 100px;
-    margin: auto;
+  select{
+    // background-color: rgb(11, 55, 118);
+    // color: white;
+    padding: 10px;
+    border: 1px solid white;
+
+    option {
+      padding: 5px;
+    }
   }
+}
 
+.correct{
+  background-color: #198754;
+  color: white;
 }

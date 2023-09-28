@@ -748,7 +748,7 @@
         [max_line]="max_line5"></app-precode>
     </div>
   </div>
-  <div class="row mx-auto mt-">
+  <div class="row mx-auto mt-3">
     <div class="col-lg-12 mt-5">
       <h4>Transmisión Encriptada de Datos</h4>
       <p>
@@ -760,8 +760,65 @@
     </div>
   </div>
   <div class="row mx-auto mt-5">
+    <div class="col-lg-12">
+      <h3>6.7 Desarrollo de una aplicación de ejemplo: Monitoreo de temperatura y humedad</h3>
+    </div>
+    <hr>
+    <div class="col-lg-12">
+      <p>
+        Vamos a desarrollar un proyecto sencillo en el cual monitorearemos la temperatura y humedad usando Arduino y lo
+        conectaremos al Arduino IoT Cloud para visualizar estos datos en tiempo real.
+      </p>
+    </div>
+    <div class="col-lg-12">
+      <p>
+        <span class="bold">1 Componentes:</span>
+      </p>
+      <ul>
+        <li>Placa Arduino (como Arduino MKR WiFi 1010)</li>
+        <li>Sensor DHT22 (para medir temperatura y humedad)</li>
+        <li>Conexión Wi-Fi (integrada en Arduino MKR WiFi 1010 o a través de un módulo externo)</li>
+      </ul>
+      <p>
+        <span class="bold">2 Programación</span> <br>
+        Usaremos la líbreria <span class="bold">DHT</span> para trabajar con el sensor:
+      </p>
+      <app-precode [code]="CODE6" [LINE_CODE]="LINE_CODE6" [top]="top" [explain]="explain6"
+        [max_line]="max_line6"></app-precode>
+
+      <p>
+        <span class="bold">3 Conexión y visualización de datos en el Cloud</span> <br>
+        Una vez cargado el código anterior en tu Arduino, debes:
+      </p>
+      <ul>
+        <li>Configurar tu dispositivo en Arduino IoT Cloud.</li>
+        <li>Establecer tu red WiFi y credenciales en el código para permitir que tu Arduino se conecte a Internet.</li>
+        <li>Una vez que tu Arduino esté conectado y enviando datos, puedes visualizar esos datos en tiempo real en el
+          Arduino IoT Cloud Dashboard, donde puedes agregar gráficos para ver el historial de la temperatura y humedad.
+        </li>
+      </ul>
+
+      <p>
+        <span class="bold">4 Análisis de resultados y ajustes</span> <br>
+      </p>
+      <ul>
+        <li>Análisis de Resultados: Una vez que tus datos estén fluyendo hacia el cloud, podrás ver tendencias o
+          patrones. Por ejemplo, ¿hay momentos específicos del día en que la humedad es especialmente alta? ¿O tal vez
+          la temperatura fluctúa de maneras que no esperabas?</li>
+        <li>
+          Ajustes: Dependiendo de tus observaciones, quizás quieras hacer ajustes:
+          <ul>
+            <li>Modificar la frecuencia con la que lees y envías datos al cloud.</li>
+            <li>Añadir alertas si la temperatura o humedad superan ciertos umbrales.</li>
+            <li>Incorporar otros sensores o actuadores para, por ejemplo, encender un ventilador si la temperatura supera un cierto límite.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row mx-auto mt-5">
     <div class="col-lg-6">
-      <h3>6.4 Conclusión del Módulo: Presentación de la Plataforma Gratuita Arduino IoT Clou6</h3>
+      <h3>6.8 Conclusión del Módulo: Presentación de la Plataforma Gratuita Arduino IoT Clou6</h3>
       <hr>
       <p>
         Al concluir este módulo sobre la plataforma gratuita Arduino IoT Cloud, queda claro que el Internet de las
@@ -776,10 +833,13 @@
       </p>
     </div>
     <div class="col-lg-6">
-      <a routerLink="/plataformas-iot/questions" class="btn d-block w-50 mx-auto mt-5 botonColor">
+      <div class="content-img text-center">
+        <img src="../../../../assets/mod1/final_section.jpeg" alt="final_section.jpeg">
+      </div>
+      <a routerLink="/presentationOne/questions" class="btn d-block w-50 mx-auto mt-5 botonColor">
         Vamos aprender más
-        <img style="width: 30px;" class="ms-3" src="../../../../assets/icons/questionnaire.png" alt=""></a>
-      <a routerLink="/presentationOne/main" class="btn d-block w-50 mx-auto mt-3 botonColor">
+        <img style="width: 30px;" src="../../../../assets/icons/questionnaire.png" alt=""></a>
+      <a routerLink="/security" class="btn d-block w-50 mx-auto mt-3 botonColor">
         Siguiente módulo
         <img style="width: 30px;" class="ms-3" src="../../../../assets/icons/next_module.png" alt="">
       </a>
