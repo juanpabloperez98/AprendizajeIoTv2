@@ -748,7 +748,7 @@
         [max_line]="max_line5"></app-precode>
     </div>
   </div>
-  <div class="row mx-auto mt-">
+  <div class="row mx-auto mt-3">
     <div class="col-lg-12 mt-5">
       <h4>Transmisión Encriptada de Datos</h4>
       <p>
@@ -760,8 +760,36 @@
     </div>
   </div>
   <div class="row mx-auto mt-5">
+    <div class="col-lg-12">
+      <h3>6.7 Desarrollo de una aplicación de ejemplo: Monitoreo de temperatura y humedad</h3>
+    </div>
+    <hr>
+    <div class="col-lg-12">
+      <p>
+        Vamos a desarrollar un proyecto sencillo en el cual monitorearemos la temperatura y humedad usando Arduino y lo
+        conectaremos al Arduino IoT Cloud para visualizar estos datos en tiempo real.
+      </p>
+    </div>
+    <div class="col-lg-12">
+      <p>
+        <span class="bold">1 Componentes:</span>
+      </p>
+      <ul>
+        <li>Placa Arduino (como Arduino MKR WiFi 1010)</li>
+        <li>Sensor DHT22 (para medir temperatura y humedad)</li>
+        <li>Conexión Wi-Fi (integrada en Arduino MKR WiFi 1010 o a través de un módulo externo)</li>
+      </ul>
+      <p>
+        <span class="bold">2 Programación</span> <br>
+        Usaremos la líbreria <span class="bold">DHT</span> para trabajar con el sensor:
+      </p>
+      <app-precode [code]="CODE6" [LINE_CODE]="LINE_CODE6" [top]="top" [explain]="explain6"
+        [max_line]="max_line6"></app-precode>
+    </div>
+  </div>
+  <div class="row mx-auto mt-5">
     <div class="col-lg-6">
-      <h3>6.4 Conclusión del Módulo: Presentación de la Plataforma Gratuita Arduino IoT Clou6</h3>
+      <h3>6.8 Conclusión del Módulo: Presentación de la Plataforma Gratuita Arduino IoT Clou6</h3>
       <hr>
       <p>
         Al concluir este módulo sobre la plataforma gratuita Arduino IoT Cloud, queda claro que el Internet de las
@@ -776,9 +804,12 @@
       </p>
     </div>
     <div class="col-lg-6">
+      <div class="content-img text-center">
+        <img src="../../../../assets/mod1/final_section.jpeg" alt="final_section.jpeg">
+      </div>
       <a routerLink="/plataformas-iot/questions" class="btn d-block w-50 mx-auto mt-5 botonColor">
         Vamos aprender más
-        <img style="width: 30px;" class="ms-3" src="../../../../assets/icons/questionnaire.png" alt=""></a>
+        <img style="width: 30px;" src="../../../../assets/icons/questionnaire.png" alt=""></a>
       <a routerLink="/presentationOne/main" class="btn d-block w-50 mx-auto mt-3 botonColor">
         Siguiente módulo
         <img style="width: 30px;" class="ms-3" src="../../../../assets/icons/next_module.png" alt="">
