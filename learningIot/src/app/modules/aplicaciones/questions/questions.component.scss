@@ -7,7 +7,13 @@
 h3{
   text-align: center;
 }
-
+.ContenedorPadre{
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  margin-top: 50px;
+  grid-gap: 30px;
+  justify-items: center;
+}
 .section-final{
   background-color: rgba(0, 123, 255, .6);
   padding: 20px;
