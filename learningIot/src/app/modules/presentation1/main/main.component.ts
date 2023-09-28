@@ -437,100 +437,33 @@ export class MainComponent implements OnInit {
     "void loop() {",
     "  ArduinoCloud.update();",
     "  temperature = dht.readTemperature();",
-    "  humidity = dht.readHumidity();",
+    "  humidity = dht.readHumidity(); ",
     "  delay(2000);",
     "}",
   ];
   explain6:string[] = [
-    "Se incluye la biblioteca DHT.h que proporciona funciones y métodos para interactuar con sensores de temperatura y humedad DHT (como DHT22).",
-    "Se incluye la biblioteca ArduinoIoTCloud.h que facilita la conexión y comunicación con la plataforma Arduino IoT Cloud.",
-    "Se incluye la biblioteca WiFiConnectionManager.h que ayuda a gestionar las conexiones WiFi.",
-    "Se define una constante llamada DHTPIN con el valor 2, lo que indica que el sensor DHT22 está conectado al pin 2 de la placa Arduino.",
-    "Se define una constante llamada DHTTYPE para especificar el tipo de sensor DHT que se está utilizando, en este caso, DHT22.",
-    "Se crea una instancia del objeto DHT llamado dht. Esta instancia se inicializa con el pin y el tipo de sensor definidos anteriormente.",
-    "Se declara e inicializa una variable de punto flotante llamada temperature con un valor de 0.0. Esta variable almacenará la lectura de la temperatura.",
-    "Similar a la línea anterior, se declara e inicializa una variable llamada humidity para almacenar la lectura de la humedad.",
-    "Se define la función setup(). Esta función se ejecuta una vez al inicio del programa.",
-    "Se inicializa el sensor DHT22 usando el método begin() de la instancia dht.",
-    "Se inicializa la conexión con Arduino IoT Cloud utilizando la conexión preferida (por ejemplo, WiFi).",
-    "Se agrega la propiedad temperature a Arduino IoT Cloud para ser leída. La propiedad se actualizará cada 60 segundos.",
-    "Similar a la línea anterior, se agrega la propiedad humidity a Arduino IoT Cloud para ser leída.",
-    "Finaliza la definición de la función setup().",
-    "Se define la función loop(), que se ejecuta continuamente después de la función setup().",
-    "Se actualiza la conexión y las propiedades de Arduino IoT Cloud.",
-    "Se lee el valor de la temperatura del sensor DHT22 y se asigna a la variable temperature.",
-    "Se lee el valor de la humedad del sensor DHT22 y se asigna a la variable humidity.",
-    "Se introduce un retraso de 2000 milisegundos (2 segundos) antes de que el ciclo loop() vuelva a ejecutarse.",
-    "Finaliza la definición de la función loop().",
+    "Incluye la biblioteca DHT, que es necesaria para interactuar con el sensor DHT (que puede ser DHT11, DHT22, entre otros).",
+    "Incluye la biblioteca ArduinoIoTCloud para conectar y enviar datos al Arduino IoT Cloud.",
+    "Incluye la biblioteca WiFiConnectionManager que facilita la conexión a redes WiFi.",
+    "Define la constante DHTPIN con el valor 2. Esta constante representa el pin del Arduino al que está conectado el sensor DHT.",
+    "Define el tipo de sensor DHT que estás usando, en este caso, el DHT22.",
+    "Crea un objeto dht de la clase DHT con los valores previamente definidos (pin 2 y tipo DHT22).",
+    "Declara una variable flotante temperature e inicializa con el valor 0.0. Esta variable almacenará la temperatura leída por el sensor.",
+    "Declara una variable flotante humidity e inicializa con el valor 0.0. Esta variable almacenará la humedad leída por el sensor.",
+    "Inicia la función de configuración que se ejecuta una vez al inicio del programa.",
+    "Inicializa el sensor DHT.",
+    "Inicia la conexión al Arduino IoT Cloud usando la conexión preferida definida (en este caso, probablemente WiFi).",
+    "Añade la propiedad temperature al Arduino IoT Cloud, estableciendo que se puede leer cada 60 segundos.",
+    "Añade la propiedad humidity al Arduino IoT Cloud, estableciendo que se puede leer cada 60 segundos.",
+    "Cierra la función setup().",
+    "Inicia la función principal loop() que se ejecutará de manera continua en el Arduino.",
+    "Actualiza la conexión y el estado de las propiedades en Arduino IoT Cloud.",
+    "Lee la temperatura del sensor DHT y la almacena en la variable temperature.",
+    "Lee la humedad del sensor DHT y la almacena en la variable humidity.",
+    "Pausa la ejecución del programa durante 2000 milisegundos (2 segundos) antes de continuar con la próxima iteración del loop().",
+    "Cierra la función loop().",
   ];
   max_line6:number = 11;
-
-
-  CODE7:string=`#include <DHT.h>
-  #include <ArduinoIoTCloud.h>
-  #include <WiFiConnectionManager.h>
-  #define DHTPIN 2
-  #define DHTTYPE DHT22
-  DHT dht(DHTPIN, DHTTYPE);
-  float temperature = 0.0;
-  float humidity = 0.0;
-  void setup() {
-    dht.begin();
-    ArduinoCloud.begin(ArduinoIoTPreferredConnection);
-    ArduinoCloud.addProperty(temperature, READ, 60 * SECONDS, NULL);
-    ArduinoCloud.addProperty(humidity, READ, 60 * SECONDS, NULL);
-  }
-  void loop() {
-    ArduinoCloud.update();
-    temperature = dht.readTemperature();
-    humidity = dht.readHumidity();
-    delay(2000);
-  }`;
-  LINE_CODE7:string[]= [
-    "#include <DHT.h>",
-    "#include <ArduinoIoTCloud.h>",
-    "#include <WiFiConnectionManager.h>",
-    "#define DHTPIN 2 ",
-    "#define DHTTYPE DHT22 ",
-    "DHT dht(DHTPIN, DHTTYPE);",
-    "float temperature = 0.0;",
-    "float humidity = 0.0;",
-    "void setup() {",
-    "  dht.begin();",
-    "  ArduinoCloud.begin(ArduinoIoTPreferredConnection);",
-    "  ArduinoCloud.addProperty(temperature, READ, 60 * SECONDS, NULL);",
-    "  ArduinoCloud.addProperty(humidity, READ, 60 * SECONDS, NULL);",
-    "}",
-    "void loop() {",
-    "  ArduinoCloud.update();",
-    "  temperature = dht.readTemperature();",
-    "  humidity = dht.readHumidity();",
-    "  delay(2000);",
-    "}",
-  ];
-  explain7:string[] = [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-  ];
-  max_line7:number = 20;
 
 
 
