@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { HighlightService } from '../../../services/highlight.service';
 
 @Component({
   selector: 'presentation2-questions',
@@ -32,6 +33,7 @@ export class QuestionsComponent implements OnInit {
   correctAnswer = 0;
   incorrectAnswer = 0;
   ROUTE_PATH_INTRODUCTION = "/aplicaciones/main";
+  
 
 
 
@@ -97,5 +99,31 @@ export class QuestionsComponent implements OnInit {
       }
     }
   }
+
+  CODE1:string=
+  `
+  void setup() {
+    // Configuración inicial
+    pinMode(13, INPUT);
+  }
+  void loop() {
+    int horaDeseada = 18; // Hora deseada (6 PM) en formato de hora militar
+    int horaLimite=23;// Hora deseada (11 PM) en formato de hora militar
+
+    if (hour() >= horaDeseada && hour() < horaDeseada ) {
+      digitalWrite(13, HIGH); // Enciende la luz
+    } else {
+      digitalWrite(13, LOW); // Apaga la luz
+    }
+  }
+
+
+`;
+top:number = 16;
+
+
+
+
+
 
 }

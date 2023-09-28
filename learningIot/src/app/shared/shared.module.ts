@@ -8,6 +8,7 @@ import { LearnMoreComponent } from './components/learn-more/learn-more.component
 import { NextModuleComponent } from './components/next-module/next-module.component';
 import { RouterModule } from '@angular/router';
 import { SimulacionLucesComponent } from './components/simulacion-luces/simulacion-luces.component';
+import { AplicationCodeComponent } from './components/aplication-code/aplication-code.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SimulacionLucesComponent } from './components/simulacion-luces/simulaci
     LearnMoreComponent,
     NextModuleComponent,
     SimulacionLucesComponent,
+    AplicationCodeComponent,
 
   ],
   imports: [CommonModule, RouterModule],
@@ -29,6 +31,7 @@ import { SimulacionLucesComponent } from './components/simulacion-luces/simulaci
     LearnMoreComponent,
     NextModuleComponent,
     SimulacionLucesComponent,
+    AplicationCodeComponent,
   ],
 })
 export class SharedModule {}
