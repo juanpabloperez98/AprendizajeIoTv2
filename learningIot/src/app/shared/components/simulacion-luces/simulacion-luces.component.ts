@@ -11,7 +11,7 @@ export class SimulacionLucesComponent implements OnInit {
 
   @Input() Cuarto1: boolean = false;
   @Input() Cuarto2: boolean = false;
-  @Input() Baño: boolean = false;
+  @Input() Bano: boolean = false;
   @Input() Cocina: boolean = false;
   @Input() Sala: boolean = false;
   @Input() Comedor: boolean = false;

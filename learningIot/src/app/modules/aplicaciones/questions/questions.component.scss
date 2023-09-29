@@ -15,13 +15,18 @@ h3{
   justify-items: center;
 }
 .MensajeError{
-  background-color: aliceblue;
-  padding: 50px;
-  border-radius: 2%;
+  background-color:   #4D4033;
+  padding: 25px;
+  border-radius: 3%;
+  border-color: #7A6652;
+  border-style:solid;
   margin-top: 50px;
   text-align: center;
-  color: rgb(143, 34, 34);
-
+  color: rgb(255, 255, 255);
+  font-family: auto;
+}
+.ActivarMensajeError{
+  display: none;
 }
 .section-final{
   background-color: rgba(0, 123, 255, .6);
