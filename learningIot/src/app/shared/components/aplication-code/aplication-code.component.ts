@@ -10,7 +10,6 @@ export class AplicationCodeComponent implements OnInit {
 
     // CODIGO 1
     @Input() code: string = '';
-    @Input() top = 0;
     @Input() curent_line: number = 1;
     top_style: string = '';
     explain_txt: string = '';

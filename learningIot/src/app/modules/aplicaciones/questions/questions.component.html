@@ -6,22 +6,34 @@
 
   <div class="row" style="justify-content: center" #questionNum1>
     <div class="col-lg-20 section-1">
-      <h3>Problemática: Programación del Encendido de Luces a las 6 de la Tarde</h3>
+      <h3>Problemática 1: Programación del Encendido de Luces a las 6 de la Tarde</h3>
       <p>
         Eres el dueño de una casa inteligente con sistemas de automatización avanzados,
-         y te encuentras frente a un desafío: necesitas programar las luces de tu habitación
+         y te encuentras frente a un desafío: necesitas programar las luz de las habitaciónes
           para que se enciendan automáticamente todos los días a las 6 de la tarde. Esta
            automatización te permitirá crear un ambiente acogedor al atardecer y hacer que tu
            hogar sea más eficiente energéticamente."
       </p>
+      <h3>Desafio de programación:</h3>
+      <p>
+        Para lograr esta programación, te presentamos un bloque de código ya definido.
+        Tu tarea es <b>identificar el error del codigo</b> y seleccionar la opción correcta para que las luz
+        de las habitaciónes se enciendan puntualmente a las 6 de la tarde.
+      </p>
+      <p><b>Nota:</b>  Si tu respuesta fue correcta y le das en el boton enviar, se vera que prende la luz indicando
+        que fue correcta la respuesta</p>
       <section class="ContenedorPadre">
-        <app-simulacion-luces></app-simulacion-luces>
         <div>
-          <app-aplication-code [code]="CODE1"  [top]="top" ></app-aplication-code>
+          <app-simulacion-luces [Cuarto1]="cuarto1" [Cuarto2]="cuarto2"></app-simulacion-luces>
+          <h5 [ngClass]="{'MensajeError':mensajeError}">Error! respuesta incorrecta</h5>
+        </div>
+
+        <div>
+          <app-aplication-code [code]="CODE1" ></app-aplication-code>
           <div class="w-75 mx-auto mt-3">
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion1" name="question1" id="question11" checked/>
-            <label class="form-check-label" for="question11">Las horas estan mal declaradas </label>
+            <label class="form-check-label" for="question11">En la linea 3 el puerto de debe delcara como salida, no como entrada <b>pinMode(13, OUTPUT);</b></label>
           </div>
           <br>
           <div class="form-check">
@@ -31,24 +43,23 @@
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion1" name="question1" id="question13"/>
-            <label class="form-check-label" for="question13">En la linea 3 el puerto de debe delcara como salida, no como entrada <b>pinMode(13, OUTPUT);</b></label>
+            <label class="form-check-label" for="question13">Las horas estan mal declaradas</label>
           </div>
-          <button style="margin-right: 10px" class="btn btn-success mt-4" >Simular</button>
+          <button style="margin-right: 10px" class="btn btn-success mt-4" (click)="onClickEnviar(0)">Enviar</button>
 
-          <button class="btn btn-success mt-4" (click)="onClick(0)">Seleccionar Respuesta</button>
+          <button class="btn btn-success mt-4" (click)="onClick(0)">Siguiente</button>
         </div>
         </div>
 
       </section>
     </div>
-
   </div>
 
 
 
   <div class="row" style="justify-content: center" #questionNum2>
     <div class="col-lg-20 section-1">
-      <h3>Problemática: Programación del Encendido de Luces a las 6 de la Tarde</h3>
+      <h3>Problemática 2: Programación del Encendido de Luces a las 6 de la Tarde</h3>
       <p>
         Eres el dueño de una casa inteligente con sistemas de automatización avanzados,
          y te encuentras frente a un desafío: necesitas programar las luces de tu habitación
@@ -59,7 +70,7 @@
       <section class="ContenedorPadre">
         <app-simulacion-luces></app-simulacion-luces>
         <div>
-          <app-aplication-code [code]="CODE1"  [top]="top" ></app-aplication-code>
+          <app-aplication-code [code]="CODE1" ></app-aplication-code>
           <div class="w-75 mx-auto mt-3">
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion2" name="question2" id="question21" checked/>
@@ -91,7 +102,7 @@
 
   <div class="row" style="justify-content: center" #questionNum3>
     <div class="col-lg-20 section-1">
-      <h3>Problemática: Programación del Encendido de Luces a las 6 de la Tarde</h3>
+      <h3>Problemática 3: Programación del Encendido de Luces a las 6 de la Tarde</h3>
       <p>
         Eres el dueño de una casa inteligente con sistemas de automatización avanzados,
          y te encuentras frente a un desafío: necesitas programar las luces de tu habitación
@@ -102,7 +113,7 @@
       <section class="ContenedorPadre">
         <app-simulacion-luces></app-simulacion-luces>
         <div>
-          <app-aplication-code [code]="CODE1"  [top]="top" ></app-aplication-code>
+          <app-aplication-code [code]="CODE1" ></app-aplication-code>
           <div class="w-75 mx-auto mt-3">
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion3" name="question3" id="question31" checked/>
@@ -120,7 +131,7 @@
           </div>
           <button style="margin-right: 10px" class="btn btn-success mt-4" >Simular</button>
 
-          <button class="btn btn-success mt-4" (click)="onClick(0)">Seleccionar Respuesta</button>
+          <button class="btn btn-success mt-4" (click)="onClick(2)">Seleccionar Respuesta</button>
         </div>
         </div>
 
