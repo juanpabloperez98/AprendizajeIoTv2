@@ -13,11 +13,15 @@ import { LIST_DRAG_SECURITY } from '../../constant/question.constant';
 export class SecurityQuestionComponent implements OnInit {
   LIST_DRAG_SECURITY = [...LIST_DRAG_SECURITY];
 
-  constructor(private readonly router: Router) {}
+  isFirstLoad: boolean = false;
 
-  ngOnInit(): void {}
+  constructor(private readonly router: Router) { }
+
+  ngOnInit(): void { }
 
   validateAnswers(): void {
+    this.isFirstLoad = true;
+
     const validation: Record<string, boolean> = {
       question1: this.validateArray(0),
       question2: this.validateArray(1),
@@ -25,8 +29,6 @@ export class SecurityQuestionComponent implements OnInit {
       question4: this.validateArray(3),
       question5: this.validateArray(4),
     };
-
-    console.log(validation);
 
     if (Object.values(validation).every((question) => question)) {
       Swal.fire(
@@ -40,11 +42,24 @@ export class SecurityQuestionComponent implements OnInit {
       });
       return;
     }
+
+    const subject1 = this.countResponse(0)
+    const subject2 = this.countResponse(1)
+    const subject3 = this.countResponse(2)
+    const subject4 = this.countResponse(3)
+    const subject5 = this.countResponse(4)
+
     Swal.fire(
       'Lo sentimos no haz aprobado el cuestionario',
-      `Aun hay respuestas incorrectas.
-        ¡No te desanimes! Sigue practicando y mejorarás
-        `,
+      `Aun hay respuestas incorrectas.<br/>
+      <ul style='text-align: start'>
+        <li>Tema 1: tienes ${subject1[0]} correctas y ${subject1[1]} incorrectas.</li>
+        <li>Tema 2: tienes ${subject2[0]} correctas y ${subject2[1]} incorrectas.</li>
+        <li>Tema 3: tienes ${subject3[0]} correctas y ${subject3[1]} incorrectas.</li>
+        <li>Tema 4: tienes ${subject4[0]} correctas y ${subject4[1]} incorrectas.</li>
+        <li>Tema 5: tienes ${subject5[0]} correctas y ${subject5[1]} incorrectas.</li>
+      </ul>
+      ¡No te desanimes! Sigue practicando y mejorarás`,
       'error'
     );
   }
@@ -54,5 +69,17 @@ export class SecurityQuestionComponent implements OnInit {
       (question, indQ) =>
         this.LIST_DRAG_SECURITY[index].orderList.response[indQ] === question
     );
+  }
+
+  private countResponse(index: number): [number, number] {
+    let correct: number = 0
+    let error: number = 0;
+
+    const LIST_DRAG = this.LIST_DRAG_SECURITY[index].orderList
+    LIST_DRAG.question.forEach((question, index) => {
+      if (LIST_DRAG.response[index] === question) correct++;
+      else error++;
+    })
+    return [correct, error]
   }
 }

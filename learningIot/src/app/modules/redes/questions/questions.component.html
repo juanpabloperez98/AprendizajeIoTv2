@@ -16,98 +16,98 @@
   <div class="row mx-auto">
     <div class="col-lg-12">
       <div class="row mx-auto">
-        <div class="col-lg-12 p-5 card-question">
-          <h4>¿Cuáles son los principales protocolos de red utilizados en Internet?</h4>
+        <div class="col-lg-12 p-5 card-question" [ngClass]="{'correct': list_correct[0]}">
+          <h4>1. ¿Cuáles son los principales protocolos de red utilizados en Internet?</h4>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion1" name="question1" id="question11" checked/>
-            <label class="form-check-label" for="question11">TCP/IP.</label>
+            <input class="form-check-input" [disabled]="list_correct[0]" type="radio" value="answer1" [(ngModel)]="selectedQuestion1" name="question1" id="question11" checked/>
+            <label class="form-check-label" for="question11">UDP.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion1" name="question1" id="question12"/>
+            <input class="form-check-input" [disabled]="list_correct[0]" type="radio" value="answer2" [(ngModel)]="selectedQuestion1" name="question1" id="question12"/>
             <label class="form-check-label" for="question12">HTTP.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion1" name="question1" id="question13"/>
-            <label class="form-check-label" for="question13">UDP.</label>
+            <input class="form-check-input" [disabled]="list_correct[0]" type="radio" value="answer3" [(ngModel)]="selectedQuestion1" name="question1" id="question13"/>
+            <label class="form-check-label" for="question13">TCP/IP.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion1" name="question1" id="question14"/>
+            <input class="form-check-input" [disabled]="list_correct[0]" type="radio" value="answer4" [(ngModel)]="selectedQuestion1" name="question1" id="question14"/>
             <label class="form-check-label" for="question14">FTP.</label>
           </div>
         </div>
-        <div class="col-lg-12 p-5 card-question mt-3">
-          <h4>¿Cuál de las siguientes opciones es una topología de red en forma de anillo?</h4>
+        <div class="col-lg-12 p-5 card-question mt-3" [ngClass]="{'correct': list_correct[1]}">
+          <h4>2. ¿Cuál de las siguientes opciones es una topología de red en forma de anillo?</h4>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion2" name="question2" id="question21" checked/>
+            <input class="form-check-input" [disabled]="list_correct[1]" type="radio" value="answer1" [(ngModel)]="selectedQuestion2" name="question2" id="question21" checked/>
             <label class="form-check-label" for="question21">Estrella.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion2" name="question2" id="question22"/>
+            <input class="form-check-input" [disabled]="list_correct[1]" type="radio" value="answer2" [(ngModel)]="selectedQuestion2" name="question2" id="question22"/>
             <label class="form-check-label" for="question22"> Malla.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion2" name="question2" id="question23"/>
+            <input class="form-check-input" [disabled]="list_correct[1]" type="radio" value="answer3" [(ngModel)]="selectedQuestion2" name="question2" id="question23"/>
             <label class="form-check-label" for="question23">Anillo.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion2" name="question2" id="question24"/>
+            <input class="form-check-input" [disabled]="list_correct[1]" type="radio" value="answer4" [(ngModel)]="selectedQuestion2" name="question2" id="question24"/>
             <label class="form-check-label" for="question24">Árbol.</label>
           </div>
         </div>
-        <div class="col-lg-12 p-5 card-question mt-3">
-          <h4>¿Cuál es el propósito principal de un enrutador en una red?</h4>
+        <div class="col-lg-12 p-5 card-question mt-3" [ngClass]="{'correct': list_correct[2]}">
+          <h4>3. ¿Cuál es el propósito principal de un enrutador en una red?</h4>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion3" name="question3" id="question31" checked/>
+            <input class="form-check-input" [disabled]="list_correct[2]" type="radio" value="answer1" [(ngModel)]="selectedQuestion3" name="question3" id="question31" checked/>
             <label class="form-check-label" for="question31">Conectar dispositivos en la misma LAN.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion3" name="question3" id="question32"/>
+            <input class="form-check-input" [disabled]="list_correct[2]" type="radio" value="answer2" [(ngModel)]="selectedQuestion3" name="question3" id="question32"/>
             <label class="form-check-label" for="question32"> Conectar dispositivos en diferentes LAN.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion3" name="question3" id="question33"/>
+            <input class="form-check-input" [disabled]="list_correct[2]" type="radio" value="answer3" [(ngModel)]="selectedQuestion3" name="question3" id="question33"/>
             <label class="form-check-label" for="question33">Transmitir datos a través de un cable.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion3" name="question3" id="question34"/>
+            <input class="form-check-input" [disabled]="list_correct[2]" type="radio" value="answer4" [(ngModel)]="selectedQuestion3" name="question3" id="question34"/>
             <label class="form-check-label" for="question34">Administrar la seguridad de la red.</label>
           </div>
         </div>
-        <div class="col-lg-12 p-5 card-question mt-3">
-          <h4>¿Cuál de las siguientes tecnologías es una opción inalámbrica ampliamente utilizada en redes locales?</h4>
+        <div class="col-lg-12 p-5 card-question mt-3" [ngClass]="{'correct': list_correct[3]}">
+          <h4>4. ¿Cuál de las siguientes tecnologías es una opción inalámbrica ampliamente utilizada en redes locales?</h4>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion4" name="question4" id="question41" checked/>
-            <label class="form-check-label" for="question41">Bluetooth.</label>
+            <input class="form-check-input" [disabled]="list_correct[3]" type="radio" value="answer1" [(ngModel)]="selectedQuestion4" name="question4" id="question41" checked/>
+            <label class="form-check-label" for="question41">Ethernet.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion4" name="question4" id="question42"/>
-            <label class="form-check-label" for="question42">Ethernet.</label>
+            <input class="form-check-input" [disabled]="list_correct[3]" type="radio" value="answer2" [(ngModel)]="selectedQuestion4" name="question4" id="question42"/>
+            <label class="form-check-label" for="question42">Bluetooth.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion4" name="question4" id="question43"/>
+            <input class="form-check-input" [disabled]="list_correct[3]" type="radio" value="answer3" [(ngModel)]="selectedQuestion4" name="question4" id="question43"/>
             <label class="form-check-label" for="question43">USB.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion4" name="question4" id="question44"/>
+            <input class="form-check-input" [disabled]="list_correct[3]" type="radio" value="answer4" [(ngModel)]="selectedQuestion4" name="question4" id="question44"/>
             <label class="form-check-label" for="question44">NFC.</label>
           </div>
         </div>
-        <div class="col-lg-12 p-5 card-question mt-3">
-          <h4>¿Qué es una VLAN (Red de Área Local Virtual)?</h4>
+        <div class="col-lg-12 p-5 card-question mt-3" [ngClass]="{'correct': list_correct[4]}">
+          <h4>5. ¿Qué es una VLAN (Red de Área Local Virtual)?</h4>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion5" name="question5" id="question51" checked/>
+            <input class="form-check-input" [disabled]="list_correct[4]" type="radio" value="answer1" [(ngModel)]="selectedQuestion5" name="question5" id="question51" checked/>
             <label class="form-check-label" for="question51">Un tipo de enrutador.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion5" name="question5" id="question52"/>
+            <input class="form-check-input" [disabled]="list_correct[4]" type="radio" value="answer2" [(ngModel)]="selectedQuestion5" name="question5" id="question52"/>
             <label class="form-check-label" for="question52">Una red sin cables.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion5" name="question5" id="question53"/>
+            <input class="form-check-input" [disabled]="list_correct[4]" type="radio" value="answer3" [(ngModel)]="selectedQuestion5" name="question5" id="question53"/>
             <label class="form-check-label" for="question53">Una red separada lógicamente en una red física.</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion5" name="question5" id="question54"/>
+            <input class="form-check-input" [disabled]="list_correct[4]" type="radio" value="answer4" [(ngModel)]="selectedQuestion5" name="question5" id="question54"/>
             <label class="form-check-label" for="question54">Una red de fibra óptica.</label>
           </div>
         </div>

@@ -20,9 +20,9 @@ export class QuestionsComponent implements OnInit {
     'Inicialización del periférico',
     'Selección del microcontrolador',
     'Configuración de niveles lógicos',
+    'Gestión de errores y depuración',
     'Configuración de pull-up/pull-down (si es necesario)',
     'Configuración del registro de control',
-    'Gestión de errores y depuración',
   ];
 
   private response: string[] = [
@@ -63,8 +63,8 @@ export class QuestionsComponent implements OnInit {
     'Lectura y escritura de datos',
     'Temporización y sincronización',
     'Manejo de interrupciones',
-    'Optimización y eficiencia',
     'Documentación',
+    'Optimización y eficiencia',
   ]
 
   public correct2: boolean[] = [
@@ -117,16 +117,16 @@ export class QuestionsComponent implements OnInit {
   ]
 
   public pasos4: string[] = [
+    'Escritura y lectura de datos seriales',
     'Selección del microcontrolador',
-    'Determinación del protocolo de comunicación (SPI, UART, I2C)',
-    'Inicialización de módulo de comunicación serial',
     'Validación y corrección de errores',
     'Gestión de interrupciones de comunicación',
-    'Escritura y lectura de datos seriales',
+    'Determinación del protocolo de comunicación (SPI, UART, I2C)',
     'Configuración de parámetros de comunicación (baud rate, paridad, bits de parada)',
+    'Inicialización de módulo de comunicación serial',
     'Finalización y cierre de la comunicación',
-    'Sincronización de transmisión/recepción',
     'Documentación',
+    'Sincronización de transmisión/recepción',
   ];
 
   private response4: string[] = [
@@ -241,9 +241,11 @@ export class QuestionsComponent implements OnInit {
       });
     }else{
       Swal.fire(
-        "Lo sentimos no haz aprobado el cuestionario",
-        `Aun hay respuestas incorrectas.
-        ¡No te desanimes! Sigue practicando y mejorarás
+        "Lo sentimos aun no haz aprobado el cuestionario",
+        `Tema 1 tienes ${corrects1} correctas y ${this.pasos.length - corrects1} incorrectas.<br>
+        Tema 2 tienes ${corrects2} correctas y ${this.pasos2.length - corrects2} incorrectas.<br>
+        Tema 3 tienes ${corrects3} correctas y ${this.pasos3.length - corrects3} incorrectas..<br>
+        Tema 4 tienes ${corrects4} correctas y ${this.pasos4.length - corrects4} incorrectas..<br>
         `,
         'error'
       )
@@ -252,7 +254,8 @@ export class QuestionsComponent implements OnInit {
   }
 
   back = (): void => {
-    this.location.back();
+    // this.location.back();
+    this.router.navigate(['/microcontroller']);
   }
 
 }
