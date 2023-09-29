@@ -19,12 +19,18 @@ export class CardQuestionComponent implements OnInit {
 
   @Input() listQuestion: ListQuestion[] = [];
 
+  @Input('validateQuestion') set changeValidateQuestion(newValidateQuestion: boolean) {
+    if (newValidateQuestion) this.onValidateQuestion()
+  }
+
   formCard!: FormGroup;
+
+  isCorrect: boolean = false;
 
   constructor(
     private readonly formBuilder: FormBuilder,
     private readonly rootFormGroup: FormGroupDirective
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.FormGroupInit();
@@ -42,5 +48,11 @@ export class CardQuestionComponent implements OnInit {
     );
 
     this.rootFormGroup.form.addControl(String(this.id), this.formCard);
+  }
+
+  private onValidateQuestion(): void {
+    this.isCorrect = this.listQuestion.every(question =>
+      !!this.formCard.value[question.control] === !!question.isTrue
+    )
   }
 }

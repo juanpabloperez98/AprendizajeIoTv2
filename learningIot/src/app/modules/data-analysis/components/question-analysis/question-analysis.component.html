@@ -13,13 +13,9 @@
     </div>
   </div>
   <form class="row gap-3 mt-4" [formGroup]="formQuestion" #formQ="ngForm">
-    <app-card-question
-      *ngFor="let questions of QUESTION_DATA; let i = index"
-      class="col-lg-12"
-      [id]="i"
-      [titleQuestion]="questions.title"
-      [listQuestion]="questions.listQuestion"
-    ></app-card-question>
+    <app-card-question *ngFor="let questions of QUESTION_DATA; let i = index" class="col-lg-12" [id]="i"
+      [titleQuestion]="questions.title" [listQuestion]="questions.listQuestion"
+      [validateQuestion]="validateIsCorrect"></app-card-question>
     <button class="btn btn-success mt-2 w-25" (click)="validateAnswers()">
       Evaluar cuestionario
     </button>
