@@ -41,8 +41,8 @@ export class QuestionAnalysisComponent implements OnInit {
     }, 500);
     let responseCorrect = 0;
     let responseError = 0;
-    Object.keys(this.formQuestion.value).forEach((group) => {
-      const listQuestion = (this.formQuestion as any).value[group];
+    Object.keys(this.formQuestion.getRawValue()).forEach((group) => {
+      const listQuestion = (this.formQuestion as any).getRawValue()[group];
       Object.keys(listQuestion).forEach((question) => {
         if (
           listQuestion[question] &&
@@ -55,7 +55,7 @@ export class QuestionAnalysisComponent implements OnInit {
       });
     });
 
-    if (responseCorrect >= this.controlNameCorrect.length) {
+    if (responseCorrect >= this.controlNameCorrect.length && responseError === 0) {
       Swal.fire(
         'Felicidades haz aprobado las preguntas',
         '¡Felicitaciones! Has respondido correctamente a la mayoría de las preguntas',

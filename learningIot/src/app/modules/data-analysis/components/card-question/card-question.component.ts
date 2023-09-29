@@ -51,8 +51,11 @@ export class CardQuestionComponent implements OnInit {
   }
 
   private onValidateQuestion(): void {
-    this.isCorrect = this.listQuestion.every(question =>
-      !!this.formCard.value[question.control] === !!question.isTrue
+    this.isCorrect = this.listQuestion.map(question => {
+      if (!!this.formCard.getRawValue()[question.control] && question.isTrue) this.formCard.get(question.control)?.disable()
+      return question
+    }).every(question =>
+      !!this.formCard.getRawValue()[question.control] === !!question.isTrue
     )
   }
 }
