@@ -33,6 +33,8 @@ export class QuestionsComponent implements OnInit {
   sala:boolean=false;
   comedor:boolean=false;
 
+  mensajeError:boolean=false;
+
   // Final Secion variables
   imagePath = 'assets/logos/correct.png';
   titleMsg = 'Felicidades haz aprobado las preguntas';
@@ -114,6 +116,8 @@ export class QuestionsComponent implements OnInit {
             this.cuarto1=true;
             this.cuarto2=true;
         }else{
+          this.cuarto1=false;
+          this.cuarto2=false;
 
         }
         break;
