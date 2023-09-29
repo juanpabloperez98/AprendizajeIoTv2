@@ -12,7 +12,7 @@
          y te encuentras frente a un desafío: necesitas programar las luz de las habitaciónes
           para que se enciendan automáticamente todos los días a las 6 de la tarde. Esta
            automatización te permitirá crear un ambiente acogedor al atardecer y hacer que tu
-           hogar sea más eficiente energéticamente."
+           hogar sea más eficiente energéticamente.
       </p>
       <h3>Desafio de programación:</h3>
       <p>
@@ -20,12 +20,13 @@
         Tu tarea es <b>identificar el error del codigo</b> y seleccionar la opción correcta para que las luz
         de las habitaciónes se enciendan puntualmente a las 6 de la tarde.
       </p>
-      <p><b>Nota:</b>  Si tu respuesta fue correcta y le das en el boton enviar, se vera que prende la luz indicando
-        que fue correcta la respuesta</p>
+      <p><b>Nota:</b>  Si tu respuesta es correcta y le das en el boton enviar, veras que prende la luz en los lugares que se desea, indicando
+        que fue correcta la respuesta.
+      </p>
       <section class="ContenedorPadre">
         <div>
           <app-simulacion-luces [Cuarto1]="cuarto1" [Cuarto2]="cuarto2"></app-simulacion-luces>
-          <h5 [ngClass]="{'MensajeError':mensajeError}">Error! respuesta incorrecta</h5>
+          <h5 [ngClass]="{'ActivarMensajeError':ActivarMensajeError, 'MensajeError':ActivarEstiloError}">¡Error! respuesta incorrecta</h5>
         </div>
 
         <div>
@@ -33,7 +34,7 @@
           <div class="w-75 mx-auto mt-3">
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion1" name="question1" id="question11" checked/>
-            <label class="form-check-label" for="question11">En la linea 3 el puerto de debe delcara como salida, no como entrada <b>pinMode(13, OUTPUT);</b></label>
+            <label class="form-check-label" for="question11">Las horas estan mal declaradas</label>
           </div>
           <br>
           <div class="form-check">
@@ -43,11 +44,12 @@
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion1" name="question1" id="question13"/>
-            <label class="form-check-label" for="question13">Las horas estan mal declaradas</label>
+            <label class="form-check-label" for="question13">En la linea 3 el puerto de debe delcara como salida, no como entrada <b>pinMode(13, OUTPUT);</b>
+            </label>
           </div>
           <button style="margin-right: 10px" class="btn btn-success mt-4" (click)="onClickEnviar(0)">Enviar</button>
 
-          <button class="btn btn-success mt-4" (click)="onClick(0)">Siguiente</button>
+          <button class="btn btn-success mt-4" [disabled]="botonSiguienteDisabled" (click)="onClick(0)">Siguiente</button>
         </div>
         </div>
 
@@ -59,36 +61,48 @@
 
   <div class="row" style="justify-content: center" #questionNum2>
     <div class="col-lg-20 section-1">
-      <h3>Problemática 2: Programación del Encendido de Luces a las 6 de la Tarde</h3>
+      <h3>Problemática 2: Control de Iluminación en una Casa Inteligente</h3>
       <p>
-        Eres el dueño de una casa inteligente con sistemas de automatización avanzados,
-         y te encuentras frente a un desafío: necesitas programar las luces de tu habitación
-          para que se enciendan automáticamente todos los días a las 6 de la tarde. Esta
-           automatización te permitirá crear un ambiente acogedor al atardecer y hacer que tu
-           hogar sea más eficiente energéticamente."
+        Imagina que posees una casa inteligente con sistemas de iluminación automatizada en la cocina y la sala.
+         Deseas crear un ambiente acogedor en estas áreas y ahorrar energía al mismo tiempo. Tu objetivo es programar
+         las luces para que se enciendan automáticamente al atardecer y se apaguen a una hora específica en la noche,
+          cuando normalmente te retiras a dormir.
+      </p>
+      <h3>Desafio de programación:</h3>
+      <p>
+        Para lograr esta programación, te presentamos un bloque de código ya definido.
+        Tu tarea es <b>identificar el error del codigo</b> y seleccionar la opción correcta para que la simulacion de automatización funcione.
+      </p>
+      <p><b>Nota:</b>  Si tu respuesta es correcta y le das en el boton enviar, veras que prende la luz en los lugares que se desea, indicando
+        que fue correcta la respuesta.
       </p>
       <section class="ContenedorPadre">
-        <app-simulacion-luces></app-simulacion-luces>
+        <div style="margin-top: 200px;">
+          <app-simulacion-luces [Sala]="sala" [Cocina]="cocina"></app-simulacion-luces>
+          <h5 [ngClass]="{'ActivarMensajeError':ActivarMensajeError, 'MensajeError':ActivarEstiloError}">¡Error! respuesta incorrecta</h5>
+        </div>
+
         <div>
-          <app-aplication-code [code]="CODE1" ></app-aplication-code>
+          <app-aplication-code [code]="CODE2" ></app-aplication-code>
           <div class="w-75 mx-auto mt-3">
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion2" name="question2" id="question21" checked/>
-            <label class="form-check-label" for="question11">Las horas estan mal declaradas </label>
+            <label class="form-check-label" for="question11">los puertos <b>(PinLuzCocina y PinLuzSala)</b> deben ser de entrada <b> NO de salida </b></label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion2" name="question2" id="question22"/>
-            <label class="form-check-label" for="question12">En la linea 9 el operador logico no es correcto usar <b>&&</b> debe ser <b>and</b> </label>
+            <label class="form-check-label" for="question12">El estado de la escritura de los puertos <b>(PinLuzCocina y PinLuzSala)</b> estan mal declarados
+            (lineas de codigo 23, 24 y 26, 27) </label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion2" name="question2" id="question23"/>
-            <label class="form-check-label" for="question13">En la linea 3 el puerto de debe delcara como salida, no como entrada <b>pinMode(13, OUTPUT);</b></label>
+            <label class="form-check-label" for="question13">El <b>else</b> de la  lines 13 afecta en el proceso del codigo, por lo tanto es necesario eliminarlo</label>
           </div>
-          <button style="margin-right: 10px" class="btn btn-success mt-4" >Simular</button>
+          <button style="margin-right: 10px" class="btn btn-success mt-4" (click)="onClickEnviar(1)">Enviar</button>
 
-          <button class="btn btn-success mt-4" (click)="onClick(1)">Seleccionar Respuesta</button>
+          <button class="btn btn-success mt-4" [disabled]="botonSiguienteDisabled" (click)="onClick(1)">Siguiente</button>
         </div>
         </div>
 
@@ -102,36 +116,48 @@
 
   <div class="row" style="justify-content: center" #questionNum3>
     <div class="col-lg-20 section-1">
-      <h3>Problemática 3: Programación del Encendido de Luces a las 6 de la Tarde</h3>
+      <h3>Problemática 3: Control de Iluminación en el Baño con Detección de Movimiento</h3>
       <p>
-        Eres el dueño de una casa inteligente con sistemas de automatización avanzados,
-         y te encuentras frente a un desafío: necesitas programar las luces de tu habitación
-          para que se enciendan automáticamente todos los días a las 6 de la tarde. Esta
-           automatización te permitirá crear un ambiente acogedor al atardecer y hacer que tu
-           hogar sea más eficiente energéticamente."
+        Imagina que deseas implementar un sistema de iluminación automática en el baño de tu casa.
+        La idea es que la luz del baño se encienda automáticamente cuando detecte movimiento y se apague
+        después de un período de tiempo si no se detecta movimiento. Esto no solo proporcionará comodidad,
+        sino también ahorro de energía al asegurarse de que la luz solo esté encendida cuando sea necesaria.
+      </p>
+      <h3>Desafio de programación:</h3>
+      <p>
+        Para lograr esta programación, te presentamos un bloque de código ya definido.
+        Tu tarea es <b>identificar el error del codigo</b> y seleccionar la opción correcta para que la simulacion de automatización funcione.
+      </p>
+      <p><b>Nota:</b>  Si tu respuesta es correcta y le das en el boton enviar, veras que prende la luz del lugar que se desea, indicando
+        que fue correcta la respuesta.
       </p>
       <section class="ContenedorPadre">
-        <app-simulacion-luces></app-simulacion-luces>
+        <div style="margin-top: 50px;">
+          <app-simulacion-luces [Bano]="bano"></app-simulacion-luces>
+          <h5 [ngClass]="{'ActivarMensajeError':ActivarMensajeError, 'MensajeError':ActivarEstiloError}">¡Error! respuesta incorrecta</h5>
+        </div>
+
         <div>
-          <app-aplication-code [code]="CODE1" ></app-aplication-code>
+          <app-aplication-code [code]="CODE3" ></app-aplication-code>
           <div class="w-75 mx-auto mt-3">
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion3" name="question3" id="question31" checked/>
-            <label class="form-check-label" for="question11">Las horas estan mal declaradas </label>
+            <label class="form-check-label" for="question11">No se esta escribiendo nada en el puerto <b> pinSensorMovimiento </b></label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion3" name="question3" id="question32"/>
-            <label class="form-check-label" for="question12">En la linea 9 el operador logico no es correcto usar <b>&&</b> debe ser <b>and</b> </label>
+            <label class="form-check-label" for="question12">En la linea 12 el operador logico no el correcto, se debe usar mayor <b>(>)</b></label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion3" name="question3" id="question33"/>
-            <label class="form-check-label" for="question13">En la linea 3 el puerto de debe delcara como salida, no como entrada <b>pinMode(13, OUTPUT);</b></label>
+            <label class="form-check-label" for="question13"> De acuerdo el codigo, la luz nunca se paga una vez que el sensor de movimiento se activo. Por lo tanto
+              se debe validar tambien cuando el sensor de desactivo</label>
           </div>
-          <button style="margin-right: 10px" class="btn btn-success mt-4" >Simular</button>
+          <button style="margin-right: 10px" class="btn btn-success mt-4" (click)="onClickEnviar(2)">Enviar</button>
 
-          <button class="btn btn-success mt-4" (click)="onClick(2)">Seleccionar Respuesta</button>
+          <button class="btn btn-success mt-4" [disabled]="botonSiguienteDisabled" (click)="onClick(2)">Siguiente</button>
         </div>
         </div>
 

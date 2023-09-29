@@ -15,7 +15,7 @@ export class QuestionsComponent implements OnInit {
   @ViewChild('progressBar', { static: false }) progressBar!: ElementRef;
 
   questionsAnswer: string[] = [
-    "answer1",
+    "answer3",
     "answer2",
     "answer3",
   ]
@@ -28,12 +28,15 @@ export class QuestionsComponent implements OnInit {
 
   cuarto1:boolean=false;
   cuarto2:boolean=false;
-  baño:boolean=false;
+  bano:boolean=false;
   cocina:boolean=false;
   sala:boolean=false;
   comedor:boolean=false;
 
-  mensajeError:boolean=false;
+  ActivarMensajeError:boolean=true;
+  ActivarEstiloError:boolean=true;
+
+  botonSiguienteDisabled:boolean=true;
 
   // Final Secion variables
   imagePath = 'assets/logos/correct.png';
@@ -84,6 +87,8 @@ export class QuestionsComponent implements OnInit {
   onClick = (question: number): void => {
     switch(question){
       case 0:{
+        this.botonSiguienteDisabled=true;
+        this.ActivarMensajeError=true;
         this.selectedAnswer[question] = this.selectedQuestion1;
         this.questionNum1.nativeElement.style.display = 'none';
         this.questionNum2.nativeElement.style.display = '';
@@ -91,6 +96,8 @@ export class QuestionsComponent implements OnInit {
         break;
       }
       case 1:{
+        this.botonSiguienteDisabled=true;
+        this.ActivarMensajeError=true;
         this.selectedAnswer[question] = this.selectedQuestion2;
         this.questionNum2.nativeElement.style.display = 'none';
         this.questionNum3.nativeElement.style.display = '';
@@ -98,8 +105,9 @@ export class QuestionsComponent implements OnInit {
         break;
       }
       case 2:{
+        this.botonSiguienteDisabled=true;
+        this.ActivarMensajeError=true;
         this.selectedAnswer[question] = this.selectedQuestion3;
-        console.log(this.selectedAnswer);
         this.progressValue += 1;
         this.questionNum3.nativeElement.style.display = 'none';
         this.progressBar.nativeElement.style.display = 'none';
@@ -109,31 +117,53 @@ export class QuestionsComponent implements OnInit {
     }
   }
 
+
+
   onClickEnviar = (question: number): void => {
     switch(question){
       case 0:{
-        if (this.selectedAnswer[question] == this.selectedQuestion1){
+        this.botonSiguienteDisabled=false;
+        if (this.selectedQuestion1=="answer3"){
             this.cuarto1=true;
             this.cuarto2=true;
+            if(this.ActivarMensajeError==false){
+              this.ActivarMensajeError=true;
+            }
         }else{
           this.cuarto1=false;
           this.cuarto2=false;
-
+          this.ActivarMensajeError=false;
         }
         break;
       }
       case 1:{
-        if (this.selectedAnswer[question] == this.selectedQuestion2){
+        this.botonSiguienteDisabled=false;
+        if (this.selectedQuestion2=="answer2"){
+          this.sala=true;
+          this.cocina=true;
+          if(this.ActivarMensajeError==false){
+            this.ActivarMensajeError=true;
+          }
 
         }else{
+          this.sala=false;
+          this.cocina=false;
+          this.ActivarMensajeError=false;
 
         }
         break;
       }
       case 2:{
-        if (this.selectedAnswer[question] == this.selectedQuestion3){
+        this.botonSiguienteDisabled=false;
+        if (this.selectedQuestion3=="answer3"){
+          this.bano=true
+          if(this.ActivarMensajeError==false){
+            this.ActivarMensajeError=true;
+          }
 
         }else{
+          this.bano=false
+          this.ActivarMensajeError=false;
 
         }
         break;
@@ -157,9 +187,62 @@ export class QuestionsComponent implements OnInit {
       digitalWrite(13, LOW); // Apaga la luz
     }
   }
-
-
 `;
+
+CODE2:string=
+`
+Adafruit_TSL2591 tsl = Adafruit_TSL2591(2591); // Sensor de luz
+int pinLuzCocina = 9; // Pin para la luz Cocina
+int pinLuzSala = 10; // Pin para la luz Sala
+
+void setup() {
+  pinMode(pinLuzCocina, OUTPUT);
+  pinMode(pinLuzSala, OUTPUT);
+
+  // Inicializa el sensor de luz
+  if (tsl.begin()) {
+    Serial.begin(9600);
+    tsl.setGain(TSL2591_GAIN_LOW);
+  } else {
+    Serial.println("No se pudo inicializar el sensor de luz");
+    while (1); /*Entra en un bucle infinito en
+                llegeado caso que el sesonr no pudo inicializar*/
+  }
+}
+void loop() {
+  uint16_t luminosidad = tsl.getLuminosity(TSL2591_VISIBLE);
+  // Verifica si es hora de encender la luz (por ejemplo, al atardecer)
+  if (luminosidad < 100) { // Ajusta este umbral según la sensibilidad
+    digitalWrite(pinLuzCocina, LOW);
+    digitalWrite(pinLuzSala, LOW); // Enciende la luz
+  } else {
+    digitalWrite(pinLuzCocina, HIGH);
+    digitalWrite(pinLuzSala, HIGH); // Apaga la luz
+  }
+  // Espera 1 segundo antes de volver a verificar la luminosidad
+  delay(1000);
+}
+`;
+
+CODE3:string=
+`
+int pinSensorMovimiento = 2;// Pin conectado al sensor de movimiento
+int pinLuzBano = 3;      // Pin conectado al relé de la luz del baño
+
+void setup() {
+  pinMode(pinSensorMovimiento, INPUT);
+  pinMode(pinLuzBano, OUTPUT);
+}
+
+void loop() {
+  int movimiento = digitalRead(pinSensorMovimiento);
+
+  if (movimiento == HIGH) {
+    digitalWrite(pinLuzBano, HIGH);
+  }
+
+
+}`
 
 
 
