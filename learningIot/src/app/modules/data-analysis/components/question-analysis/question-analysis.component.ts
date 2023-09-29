@@ -26,6 +26,8 @@ export class QuestionAnalysisComponent implements OnInit {
     'clustering5',
   ];
 
+  validateIsCorrect: boolean = false;
+
   constructor(private readonly formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
@@ -33,6 +35,10 @@ export class QuestionAnalysisComponent implements OnInit {
   }
 
   validateAnswers(): void {
+    this.validateIsCorrect = true;
+    setTimeout(() => {
+      this.validateIsCorrect = false;
+    }, 500);
     let responseCorrect = 0;
     let responseError = 0;
     Object.keys(this.formQuestion.value).forEach((group) => {
@@ -49,7 +55,7 @@ export class QuestionAnalysisComponent implements OnInit {
       });
     });
 
-    if (responseError <= 0) {
+    if (responseCorrect >= this.controlNameCorrect.length) {
       Swal.fire(
         'Felicidades haz aprobado las preguntas',
         '¡Felicitaciones! Has respondido correctamente a la mayoría de las preguntas',
