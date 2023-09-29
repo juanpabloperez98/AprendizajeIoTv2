@@ -125,14 +125,16 @@ export class QuestionsComponent implements OnInit {
         if (this.selectedQuestion1=="answer3"){
             this.cuarto1=true;
             this.cuarto2=true;
+            this.botonSiguienteDisabled=false;
             if(this.ActivarMensajeError==false){
               this.ActivarMensajeError=true;
-              this.botonSiguienteDisabled=false;
+
             }
         }else{
           this.cuarto1=false;
           this.cuarto2=false;
           this.ActivarMensajeError=false;
+          this.botonSiguienteDisabled=true;
         }
         break;
       }
@@ -140,15 +142,17 @@ export class QuestionsComponent implements OnInit {
         if (this.selectedQuestion2=="answer2"){
           this.sala=true;
           this.cocina=true;
+          this.botonSiguienteDisabled=false;
           if(this.ActivarMensajeError==false){
             this.ActivarMensajeError=true;
-            this.botonSiguienteDisabled=false;
+
           }
 
         }else{
           this.sala=false;
           this.cocina=false;
           this.ActivarMensajeError=false;
+          this.botonSiguienteDisabled=true;
 
         }
         break;
@@ -156,14 +160,15 @@ export class QuestionsComponent implements OnInit {
       case 2:{
         if (this.selectedQuestion3=="answer3"){
           this.bano=true
+          this.botonSiguienteDisabled=false;
           if(this.ActivarMensajeError==false){
             this.ActivarMensajeError=true;
-            this.botonSiguienteDisabled=false;
           }
 
         }else{
           this.bano=false
           this.ActivarMensajeError=false;
+          this.botonSiguienteDisabled=true;
 
         }
         break;
