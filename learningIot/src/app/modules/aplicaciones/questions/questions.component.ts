@@ -26,6 +26,13 @@ export class QuestionsComponent implements OnInit {
 
   progressValue: number = 33;
 
+  cuarto1:boolean=false;
+  cuarto2:boolean=false;
+  baño:boolean=false;
+  cocina:boolean=false;
+  sala:boolean=false;
+  comedor:boolean=false;
+
   // Final Secion variables
   imagePath = 'assets/logos/correct.png';
   titleMsg = 'Felicidades haz aprobado las preguntas';
@@ -33,7 +40,7 @@ export class QuestionsComponent implements OnInit {
   correctAnswer = 0;
   incorrectAnswer = 0;
   ROUTE_PATH_INTRODUCTION = "/aplicaciones/main";
-  
+
 
 
 
@@ -100,6 +107,36 @@ export class QuestionsComponent implements OnInit {
     }
   }
 
+  onClickEnviar = (question: number): void => {
+    switch(question){
+      case 0:{
+        if (this.selectedAnswer[question] == this.selectedQuestion1){
+            this.cuarto1=true;
+            this.cuarto2=true;
+        }else{
+
+        }
+        break;
+      }
+      case 1:{
+        if (this.selectedAnswer[question] == this.selectedQuestion2){
+
+        }else{
+
+        }
+        break;
+      }
+      case 2:{
+        if (this.selectedAnswer[question] == this.selectedQuestion3){
+
+        }else{
+
+        }
+        break;
+      }
+    }
+  }
+
   CODE1:string=
   `
   void setup() {
@@ -119,7 +156,7 @@ export class QuestionsComponent implements OnInit {
 
 
 `;
-top:number = 16;
+
 
 
 
