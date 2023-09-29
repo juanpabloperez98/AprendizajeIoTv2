@@ -122,12 +122,12 @@ export class QuestionsComponent implements OnInit {
   onClickEnviar = (question: number): void => {
     switch(question){
       case 0:{
-        this.botonSiguienteDisabled=false;
         if (this.selectedQuestion1=="answer3"){
             this.cuarto1=true;
             this.cuarto2=true;
             if(this.ActivarMensajeError==false){
               this.ActivarMensajeError=true;
+              this.botonSiguienteDisabled=false;
             }
         }else{
           this.cuarto1=false;
@@ -137,12 +137,12 @@ export class QuestionsComponent implements OnInit {
         break;
       }
       case 1:{
-        this.botonSiguienteDisabled=false;
         if (this.selectedQuestion2=="answer2"){
           this.sala=true;
           this.cocina=true;
           if(this.ActivarMensajeError==false){
             this.ActivarMensajeError=true;
+            this.botonSiguienteDisabled=false;
           }
 
         }else{
@@ -154,11 +154,11 @@ export class QuestionsComponent implements OnInit {
         break;
       }
       case 2:{
-        this.botonSiguienteDisabled=false;
         if (this.selectedQuestion3=="answer3"){
           this.bano=true
           if(this.ActivarMensajeError==false){
             this.ActivarMensajeError=true;
+            this.botonSiguienteDisabled=false;
           }
 
         }else{
@@ -243,10 +243,6 @@ void loop() {
 
 
 }`
-
-
-
-
 
 
 
