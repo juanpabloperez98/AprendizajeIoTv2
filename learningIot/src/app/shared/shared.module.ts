@@ -9,6 +9,7 @@ import { NextModuleComponent } from './components/next-module/next-module.compon
 import { RouterModule } from '@angular/router';
 import { SimulacionLucesComponent } from './components/simulacion-luces/simulacion-luces.component';
 import { AplicationCodeComponent } from './components/aplication-code/aplication-code.component';
+import { SimulacionAgricolaComponent } from './components/simulacion-agricola/simulacion-agricola.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AplicationCodeComponent } from './components/aplication-code/aplication
     NextModuleComponent,
     SimulacionLucesComponent,
     AplicationCodeComponent,
+    SimulacionAgricolaComponent,
 
   ],
   imports: [CommonModule, RouterModule],
@@ -32,6 +34,7 @@ import { AplicationCodeComponent } from './components/aplication-code/aplication
     NextModuleComponent,
     SimulacionLucesComponent,
     AplicationCodeComponent,
+    SimulacionAgricolaComponent,
   ],
 })
 export class SharedModule {}

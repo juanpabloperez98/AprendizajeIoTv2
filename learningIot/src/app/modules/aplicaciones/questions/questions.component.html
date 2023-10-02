@@ -167,6 +167,123 @@
   </div>
 
 
+<div class="row" style="justify-content: center" #questionNum4>
+    <div class="col-lg-20 section-1">
+      <h3>Problemática 4: Sistema de Riego Automático</h3>
+      <p>
+        Un agricultor cultiva un campo de berenjena,tomate y maiz, necesita un sistema de riego automático para garantizar que sus cultivos
+        reciban la cantidad adecuada de agua. El clima es variable, y el agricultor quiere conservar agua y energía al evitar
+        el riego excesivo o insuficiente. Desea que el sistema de riego se active solo cuando el suelo esté seco y que se apague
+        cuando se haya alcanzado un nivel óptimo de humedad.
+      </p>
+
+      <h3>Descripción del Problema:</h3>
+      <p>
+          El agricultor necesita un sistema de riego automático que utilice sensores de humedad en el suelo para determinar cuándo
+          es necesario regar los cultivos y cuándo detener el riego. Además, desea que el sistema sea programable para establecer
+          horarios específicos de riego y evitar el riego durante la lluvia.
+      </p>
+
+      <h3>Desafio de programación:</h3>
+      <p>
+        El código a continuación simula un sistema de riego automático. Sin embargo, hay un <b>error</b> en el código que necesita corrección.
+        El sistema de riego no está funcionando como se espera y debe asegurarse de que se active cuando la humedad sea baja y se apague
+        cuando la humedad sea suficiente. Identifique y corrija el error en el código para que el sistema de riego funcione correctamente.
+      </p>
+      <p><b>Nota:</b>  Si tu respuesta es correcta y le das en el boton enviar, veras en la imagen como se activa ciertas zona, indicando
+        que fue correcta la respuesta.
+      </p>
+      <section class="ContenedorPadre">
+        <div style="margin-top: 50px;">
+          <app-simulacion-agricola [Berenjena]="berenjena" [Berenjena1]="berenjena1"  [Berenjena2]="berenjena2" [Berenjena21]="berenjena21"
+          [Flor1]="flor1" [Flor12]="flor12"  [Flor2]="flor2" [Flor21]="flor21">
+
+          </app-simulacion-agricola>
+          <h5 [ngClass]="{'ActivarMensajeError':ActivarMensajeError, 'MensajeError':ActivarEstiloError}">¡Error! respuesta incorrecta</h5>
+        </div>
+
+        <div>
+          <app-aplication-code [code]="CODE4" ></app-aplication-code>
+          <div class="w-75 mx-auto mt-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion4" name="question4" id="question41" checked/>
+            <label class="form-check-label" for="question11"> En la línea 12  <b>(if (valHumedad < 300))</b>  no controla adecuadamente el riego. Actualmente, solo
+              verifica si la humedad es inferior a 300 y no tiene en cuenta un umbral superior para detener el riego</label>
+          </div>
+          <br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion4" name="question4" id="question42"/>
+            <label class="form-check-label" for="question12">En la linea 12 el operador logico no el correcto, se debe usar mayor <b>(>)</b></label>
+          </div>
+          <br>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion4" name="question4" id="question43"/>
+            <label class="form-check-label" for="question13"> De acuerdo el codigo, la luz nunca se paga una vez que el sensor de movimiento se activo. Por lo tanto
+              se debe validar tambien cuando el sensor de desactivo</label>
+          </div>
+          <button style="margin-right: 10px" class="btn btn-success mt-4" (click)="onClickEnviar(3)">Enviar</button>
+
+          <button class="btn btn-success mt-4" [disabled]="botonSiguienteDisabled" (click)="onClick(3)">Siguiente</button>
+        </div>
+        </div>
+      </section>
+    </div>
+</div>
+
+
+<div class="row" style="justify-content: center" #questionNum5>
+  <div class="col-lg-20 section-1">
+    <h3>Problemática 5: Control de Iluminación en el Baño con Detección de Movimiento</h3>
+    <p>
+      Imagina que deseas implementar un sistema de iluminación automática en el baño de tu casa.
+      La idea es que la luz del baño se encienda automáticamente cuando detecte movimiento y se apague
+      después de un período de tiempo si no se detecta movimiento. Esto no solo proporcionará comodidad,
+      sino también ahorro de energía al asegurarse de que la luz solo esté encendida cuando sea necesaria.
+    </p>
+    <h3>Desafio de programación:</h3>
+    <p>
+      Para lograr esta programación, te presentamos un bloque de código ya definido.
+      Tu tarea es <b>identificar el error del codigo</b> y seleccionar la opción correcta para que la simulacion de automatización funcione.
+    </p>
+    <p><b>Nota:</b>  Si tu respuesta es correcta y le das en el boton enviar, veras que prende la luz del lugar que se desea, indicando
+      que fue correcta la respuesta.
+    </p>
+    <section class="ContenedorPadre">
+      <div style="margin-top: 50px;">
+        <app-simulacion-luces [Bano]="bano"></app-simulacion-luces>
+        <h5 [ngClass]="{'ActivarMensajeError':ActivarMensajeError, 'MensajeError':ActivarEstiloError}">¡Error! respuesta incorrecta</h5>
+      </div>
+
+      <div>
+        <app-aplication-code [code]="CODE3" ></app-aplication-code>
+        <div class="w-75 mx-auto mt-3">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion5" name="question5" id="question51" checked/>
+          <label class="form-check-label" for="question11">No se esta escribiendo nada en el puerto <b> pinSensorMovimiento </b></label>
+        </div>
+        <br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion5" name="question5" id="question52"/>
+          <label class="form-check-label" for="question12">En la linea 12 el operador logico no el correcto, se debe usar mayor <b>(>)</b></label>
+        </div>
+        <br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion5" name="question5" id="question3"/>
+          <label class="form-check-label" for="question13"> De acuerdo el codigo, la luz nunca se paga una vez que el sensor de movimiento se activo. Por lo tanto
+            se debe validar tambien cuando el sensor de desactivo</label>
+        </div>
+        <button style="margin-right: 10px" class="btn btn-success mt-4" (click)="onClickEnviar(4)">Enviar</button>
+
+        <button class="btn btn-success mt-4" [disabled]="botonSiguienteDisabled" (click)="onClick(4)">Siguiente</button>
+      </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+
+
   <div class="row" #finalSection>
     <div class="col-lg-12 section-final">
       <img [src]="imagePath" alt="correct.png">

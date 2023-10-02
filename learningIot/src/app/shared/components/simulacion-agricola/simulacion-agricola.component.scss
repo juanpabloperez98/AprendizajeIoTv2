@@ -1,0 +1,156 @@
+.image-container {
+  position: relative;
+  display: inline-block;
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Berenjena {
+  position: absolute;
+  top: 2%; /* Ajusta la posición vertical de la iluminación según tus necesidades */
+  left: 58%; /* Ajusta la posición horizontal de la iluminación según tus necesidades */
+  width: 40%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  height: 8%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  background-color: rgba(35, 106, 240, 0.581); /* Ajusta la opacidad según tus preferencias */
+  shape-outside: inset(20px);
+  pointer-events: none; /* Para que los eventos del mouse pasen a través de la capa */
+}
+
+.Berenjena1 {
+  position: absolute;
+  top: 10%; /* Ajusta la posición vertical de la iluminación según tus necesidades */
+  left: 85%; /* Ajusta la posición horizontal de la iluminación según tus necesidades */
+  width: 13%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  height: 17%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  background-color: rgba(35, 106, 240, 0.581); /* Ajusta la opacidad según tus preferencias */
+  shape-outside: inset(20px);
+  pointer-events: none; /* Para que los eventos del mouse pasen a través de la capa */
+}
+
+.Berenjena2{
+  position: absolute;
+  top: 10%; /* Ajusta la posición vertical de la iluminación según tus necesidades */
+  left: 3%; /* Ajusta la posición horizontal de la iluminación según tus necesidades */
+  width: 13%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  height: 17%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  background-color: rgba(35, 106, 240, 0.581); /* Ajusta la opacidad según tus preferencias */
+  shape-outside: inset(20px);
+  pointer-events: none; /* Para que los eventos del mouse pasen a través de la capa */
+}
+
+.Berenjena21{
+  position: absolute;
+  top: 2%; /* Ajusta la posición vertical de la iluminación según tus necesidades */
+  left: 3%; /* Ajusta la posición horizontal de la iluminación según tus necesidades */
+  width: 40%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  height: 8%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  background-color: rgba(35, 106, 240, 0.581); /* Ajusta la opacidad según tus preferencias */
+  shape-outside: inset(20px);
+  pointer-events: none; /* Para que los eventos del mouse pasen a través de la capa */
+
+}
+
+
+.Flor1{
+  position: absolute;
+  top: 72%; /* Ajusta la posición vertical de la iluminación según tus necesidades */
+  left: 3%; /* Ajusta la posición horizontal de la iluminación según tus necesidades */
+  width: 13%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  height: 25%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  background-color: rgba(222, 34, 34, 0.581); /* Ajusta la opacidad según tus preferencias */
+  shape-outside: inset(20px);
+  pointer-events: none; /* Para que los eventos del mouse pasen a través de la capa */
+}
+
+.Flor12{
+  position: absolute;
+  top: 90%; /* Ajusta la posición vertical de la iluminación según tus necesidades */
+  left: 16%; /* Ajusta la posición horizontal de la iluminación según tus necesidades */
+  width: 25%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  height: 7%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  background-color: rgba(222, 34, 34, 0.581); /* Ajusta la opacidad según tus preferencias */
+  shape-outside: inset(20px);
+  pointer-events: none; /* Para que los eventos del mouse pasen a través de la capa */
+}
+
+.Flor2{
+  position: absolute;
+  top: 72%; /* Ajusta la posición vertical de la iluminación según tus necesidades */
+  left: 85%; /* Ajusta la posición horizontal de la iluminación según tus necesidades */
+  width: 13%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  height: 25%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  background-color: rgba(222, 34, 34, 0.581); /* Ajusta la opacidad según tus preferencias */
+  shape-outside: inset(20px);
+  pointer-events: none; /* Para que los eventos del mouse pasen a través de la capa */
+}
+
+.Flor21{
+  position: absolute;
+  top: 90%; /* Ajusta la posición vertical de la iluminación según tus necesidades */
+  left: 59%; /* Ajusta la posición horizontal de la iluminación según tus necesidades */
+  width: 26%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  height: 7%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  background-color: rgba(222, 34, 34, 0.581); /* Ajusta la opacidad según tus preferencias */
+  shape-outside: inset(20px);
+  pointer-events: none; /* Para que los eventos del mouse pasen a través de la capa */
+}
+
+
+.Zanaoria1{
+  position: absolute;
+  top: 61%; /* Ajusta la posición vertical de la iluminación según tus necesidades */
+  left: 22%; /* Ajusta la posición horizontal de la iluminación según tus necesidades */
+  width: 25%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  height: 7%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  background-color: rgba(35, 106, 240, 0.581); /* Ajusta la opacidad según tus preferencias */
+  shape-outside: inset(20px);
+  pointer-events: none; /* Para que los eventos del mouse pasen a través de la capa */
+}
+
+.Zanaoria11{
+  position: absolute;
+  top: 61%; /* Ajusta la posición vertical de la iluminación según tus necesidades */
+  left: 54%; /* Ajusta la posición horizontal de la iluminación según tus necesidades */
+  width: 25%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  height: 7%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  background-color: rgba(35, 106, 240, 0.581); /* Ajusta la opacidad según tus preferencias */
+  shape-outside: inset(20px);
+  pointer-events: none; /* Para que los eventos del mouse pasen a través de la capa */
+}
+
+.Zanaoria2{
+  position: absolute;
+  top: 32%; /* Ajusta la posición vertical de la iluminación según tus necesidades */
+  left: 22%; /* Ajusta la posición horizontal de la iluminación según tus necesidades */
+  width: 25%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  height: 7%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  background-color: rgba(35, 106, 240, 0.581); /* Ajusta la opacidad según tus preferencias */
+  shape-outside: inset(20px);
+  pointer-events: none; /* Para que los eventos del mouse pasen a través de la capa */
+}
+
+.Zanaoria21{
+  position: absolute;
+  top: 32%; /* Ajusta la posición vertical de la iluminación según tus necesidades */
+  left: 54%; /* Ajusta la posición horizontal de la iluminación según tus necesidades */
+  width: 25%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  height: 7%; /* Ajusta el tamaño de la iluminación según tus necesidades */
+  background-color: rgba(35, 106, 240, 0.581); /* Ajusta la opacidad según tus preferencias */
+  shape-outside: inset(20px);
+  pointer-events: none; /* Para que los eventos del mouse pasen a través de la capa */
+}
+
+
+
+
+
+
+
+
+
+
+
