@@ -36,42 +36,36 @@
 
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion1" name="question1" id="question11" checked/>
-            <label class="form-check-label" for="question11">Las horas estan mal declaradas</label>
+            <label class="form-check-label" for="question11">Las horas estan mal declaradas.</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion1" name="question1" id="question12"/>
-            <label class="form-check-label" for="question12">En la linea 9 el operador logico no es correcto usar <b>&&</b> debe ser <b>and</b> </label>
+            <label class="form-check-label" for="question12">En la linea 9 el operador logico no es correcto usar <b>&&</b> debe ser <b>and</b>.</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion1" name="question1" id="question13"/>
-            <label class="form-check-label" for="question13">En la linea 3 el puerto de debe delcara como salida, no como entrada <b>pinMode(13, OUTPUT);</b>
+            <label class="form-check-label" for="question13">En la linea 3 el puerto de debe delcara como salida, no como entrada <b>pinMode(13, OUTPUT);</b>.
             </label>
           </div>
 
 
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion1" name="question1" id="question14" checked/>
-            <label class="form-check-label" for="question14">Cambiar la hora deseada <b>horaDeseada</b> como <b>int horaDeseada = 12;</b> </label>
+            <label class="form-check-label" for="question14">Cambiar la hora deseada <b>horaDeseada</b> como <b>int horaDeseada = 12;</b>.</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer5" [(ngModel)]="selectedQuestion1" name="question1" id="question15"/>
             <label class="form-check-label" for="question15">Cambiar la declaración de <b>horaDeseada</b>  y <b>horaLimite</b>  para que sean flotantes en lugar de enteros, como <b>float horaDeseada = 18.0;</b>
-            y <b>float horaLimite = 23.0;</b> </label>
+            y <b>float horaLimite = 23.0;</b>.</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer6" [(ngModel)]="selectedQuestion1" name="question1" id="question16"/>
-            <label class="form-check-label" for="question16">Cambiar la condición en la línea if para que siempre sea verdadera, como <b>if (true)</b> </label>
+            <label class="form-check-label" for="question16">Cambiar la condición en la línea if para que siempre sea verdadera, como <b>if (true)</b>.</label>
           </div>
-
-
-
-
-
-
 
           <button style="margin-right: 10px" class="btn btn-success mt-4" (click)="onClickEnviar(0)">Enviar</button>
 
@@ -114,18 +108,18 @@
 
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion2" name="question2" id="question21" checked/>
-            <label class="form-check-label" for="question11">los puertos <b>(PinLuzCocina y PinLuzSala)</b> deben ser de entrada <b> NO de salida </b></label>
+            <label class="form-check-label" for="question11">los puertos <b>(PinLuzCocina y PinLuzSala)</b> deben ser de entrada <b> NO de salida</b>.</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion2" name="question2" id="question22"/>
             <label class="form-check-label" for="question12">El estado de la escritura de los puertos <b>(PinLuzCocina y PinLuzSala)</b> estan mal declarados
-            (lineas de codigo 23, 24 y 26, 27) </label>
+            (lineas de codigo 23, 24 y 26, 27).</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion2" name="question2" id="question23"/>
-            <label class="form-check-label" for="question13">El <b>else</b> de la  lines 13 afecta en el proceso del codigo, por lo tanto es necesario eliminarlo</label>
+            <label class="form-check-label" for="question13">El <b>else</b> de la  lines 13 afecta en el proceso del codigo, por lo tanto es necesario eliminarlo.</label>
           </div>
 
 
@@ -133,21 +127,18 @@
 
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion2" name="question2" id="question24" checked/>
-            <label class="form-check-label" for="question11">Cambiar la condición en el bucle <b>loop</b> para que dependa de la hora del día en lugar de la luminosidad</label>
+            <label class="form-check-label" for="question11">Cambiar la condición en el bucle <b>loop</b> para que dependa de la hora del día en lugar de la luminosidad.</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer5" [(ngModel)]="selectedQuestion2" name="question2" id="question25"/>
-            <label class="form-check-label" for="question12">Cambiar la configuración del sensor de luz para utilizar una ganancia más alta, como <b>tsl.setGain(TSL2591_GAIN_HIGH);</b> </label>
+            <label class="form-check-label" for="question12">Cambiar la configuración del sensor de luz para utilizar una ganancia más alta, como <b>tsl.setGain(TSL2591_GAIN_HIGH);</b>.</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer6" [(ngModel)]="selectedQuestion2" name="question2" id="question26"/>
-            <label class="form-check-label" for="question13"> Modificar la configuración del sensor de luz para utilizar un tiempo de integración más corto, como <b>tsl.setIntegrationTime(TSL2591_INTEGRATIONTIME_100MS);</b> </label>
+            <label class="form-check-label" for="question13"> Modificar la configuración del sensor de luz para utilizar un tiempo de integración más corto, como <b>tsl.setIntegrationTime(TSL2591_INTEGRATIONTIME_100MS);</b>.</label>
           </div>
-
-
-
 
 
           <button style="margin-right: 10px" class="btn btn-success mt-4" (click)="onClickEnviar(1)">Enviar</button>
@@ -192,33 +183,33 @@
           <div class="w-75 mx-auto mt-3">
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion3" name="question3" id="question31" checked/>
-            <label class="form-check-label" for="question11">No se esta escribiendo nada en el puerto <b> pinSensorMovimiento </b></label>
+            <label class="form-check-label" for="question11">No se esta escribiendo nada en el puerto <b> pinSensorMovimiento </b>.</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion3" name="question3" id="question32"/>
-            <label class="form-check-label" for="question12">En la linea 12 el operador logico no el correcto, se debe usar mayor <b>(>)</b></label>
+            <label class="form-check-label" for="question12">En la linea 12 el operador logico no el correcto, se debe usar mayor <b>(>)</b>.</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion3" name="question3" id="question33"/>
             <label class="form-check-label" for="question13"> De acuerdo el codigo, la luz nunca se paga una vez que el sensor de movimiento se activo. Por lo tanto
-              se debe validar tambien cuando el sensor de desactivo</label>
+              se debe validar tambien cuando el sensor de desactivo.</label>
           </div>
 
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion3" name="question3" id="question34" checked/>
-            <label class="form-check-label" for="question14">Eliminar la línea que declara <b>pinLuzBano</b> </label>
+            <label class="form-check-label" for="question14">Eliminar la línea que declara <b>pinLuzBano</b>.</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer5" [(ngModel)]="selectedQuestion3" name="question3" id="question35"/>
-            <label class="form-check-label" for="question15">Cambiar la declaración de <b>pinSensorMovimiento</b> para que use un pin analógico en lugar de un pin digital, como <b> int pinSensorMovimiento = A0;</b> </label>
+            <label class="form-check-label" for="question15">Cambiar la declaración de <b>pinSensorMovimiento</b> para que use un pin analógico en lugar de un pin digital, como <b> int pinSensorMovimiento = A0;</b>.</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer6" [(ngModel)]="selectedQuestion3" name="question3" id="question36"/>
-            <label class="form-check-label" for="question16">Comentar completamente la línea que declara <b>pinSensorMovimiento</b>, esta linea no esta generando problemas en el codigo</label>
+            <label class="form-check-label" for="question16">Comentar completamente la línea que declara <b>pinSensorMovimiento</b>, esta linea no esta generando problemas en el codigo.</label>
           </div>
 
 
@@ -275,32 +266,32 @@
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion4" name="question4" id="question41" checked/>
             <label class="form-check-label" for="question11"> En la línea 12  <b>(if (valHumedad < 300))</b>  no controla adecuadamente el riego. Actualmente, solo
-              verifica si la humedad es inferior a 300 y no tiene en cuenta un umbral superior para detener el riego</label>
+              verifica si la humedad es inferior a 300 y no tiene en cuenta un umbral superior para detener el riego.</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion4" name="question4" id="question42"/>
-            <label class="form-check-label" for="question12">En la linea 19 la escirtura debe ser bajo (LOW) y la linea 22 debe ser alto (HAIGH)</label>
+            <label class="form-check-label" for="question12">En la linea 19 la escirtura debe ser bajo (LOW) y la linea 22 debe ser alto (HAIGH).</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion4" name="question4" id="question43"/>
-            <label class="form-check-label" for="question13">El Serial.begin(9600) no aporta funcionalidad al codigo</label>
+            <label class="form-check-label" for="question13">El Serial.begin(9600) no aporta funcionalidad al codigo.</label>
           </div>
 
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion4" name="question4" id="question44" checked/>
-            <label class="form-check-label" for="question14">El analogRead no me puede leer sensores, por ende la linea 16 esta erronea</label>
+            <label class="form-check-label" for="question14">El analogRead no me puede leer sensores, por ende la linea 16 esta erronea.</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer5" [(ngModel)]="selectedQuestion4" name="question4" id="question45"/>
-            <label class="form-check-label" for="question15">el delay me detiene el codigo durante 1 minuto lo que hace que el sistema sea lento</label>
+            <label class="form-check-label" for="question15">el delay me detiene el codigo durante 1 minuto lo que hace que el sistema sea lento.</label>
           </div>
           <br>
           <div class="form-check">
             <input class="form-check-input" type="radio" value="answer6" [(ngModel)]="selectedQuestion4" name="question4" id="question46"/>
-            <label class="form-check-label" for="question16">El pin de la valvula debe ser analógico </label>
+            <label class="form-check-label" for="question16">El pin de la valvula debe ser analógico.</label>
           </div>
 
 
@@ -353,35 +344,33 @@
         <div class="w-75 mx-auto mt-3">
         <div class="form-check">
           <input class="form-check-input" type="radio" value="answer1" [(ngModel)]="selectedQuestion5" name="question5" id="question51" checked/>
-          <label class="form-check-label" for="question11">Falta definir la varable en el <b>void setup()</b>  donde se va almacenar los datos del sensor de humedad <b>humedadSuelo = analogRead(sensorHumedad);</b>  </label>
+          <label class="form-check-label" for="question11">Falta definir la varable en el <b>void setup()</b>  donde se va almacenar los datos del sensor de humedad <b>humedadSuelo = analogRead(sensorHumedad);</b>.</label>
         </div>
         <br>
         <div class="form-check">
           <input class="form-check-input" type="radio" value="answer2" [(ngModel)]="selectedQuestion5" name="question5" id="question52"/>
-          <label class="form-check-label" for="question12">Falta definir la varable en el <b>void loop()</b>  donde se va almacenar los datos del sensor de humedad <b>humedadSuelo = analogRead(sensorHumedad);</b> </label>
+          <label class="form-check-label" for="question12">Falta definir la varable en el <b>void loop()</b>  donde se va almacenar los datos del sensor de humedad <b>humedadSuelo = analogRead(sensorHumedad);</b>.</label>
         </div>
         <br>
         <div class="form-check">
           <input class="form-check-input" type="radio" value="answer3" [(ngModel)]="selectedQuestion5" name="question5" id="question53"/>
-          <label class="form-check-label" for="question13">Cambiar la declaración del sensor de humedad para que use un pin digital en lugar de un pin analógico, como <b>const int sensorHumedad = 2;</b> </label>
+          <label class="form-check-label" for="question13">Cambiar la declaración del sensor de humedad para que use un pin digital en lugar de un pin analógico, como <b>const int sensorHumedad = 2;</b>.</label>
         </div>
 
         <div class="form-check">
           <input class="form-check-input" type="radio" value="answer4" [(ngModel)]="selectedQuestion5" name="question5" id="question54"/>
-          <label class="form-check-label" for="question14">Comentar la línea que construye la URL para enviar los datos a ThingSpeak. Esto evitará que se envíen los datos </label>
+          <label class="form-check-label" for="question14">Comentar la línea que construye la URL para enviar los datos a ThingSpeak. Esto evitará que se envíen los datos.</label>
         </div>
         <br>
         <div class="form-check">
           <input class="form-check-input" type="radio" value="answer5" [(ngModel)]="selectedQuestion5" name="question5" id="question55"/>
-          <label class="form-check-label" for="question15">Eliminar completamente el bloque de código que se encarga de la conexión y envío de datos a ThingSpeak, dejando únicamente la parte de lectura del sensor de humedad</label>
+          <label class="form-check-label" for="question15">Eliminar completamente el bloque de código que se encarga de la conexión y envío de datos a ThingSpeak, dejando únicamente la parte de lectura del sensor de humedad.</label>
         </div>
         <br>
         <div class="form-check">
           <input class="form-check-input" type="radio" value="answer6" [(ngModel)]="selectedQuestion5" name="question5" id="question56"/>
-          <label class="form-check-label" for="question16">El <b>Serial.println("Error al conectar a ThingSpeak");</b> me genera error al conectar con el servidor</label>
+          <label class="form-check-label" for="question16">El <b>Serial.println("Error al conectar a ThingSpeak");</b> me genera error al conectar con el servidor.</label>
         </div>
-
-
 
         <button style="margin-right: 10px" class="btn btn-success mt-4" (click)="onClickEnviar(4)">Enviar</button>
 
