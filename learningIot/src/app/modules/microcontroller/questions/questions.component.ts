@@ -25,7 +25,7 @@ export class QuestionsComponent implements OnInit {
     'Configuración del registro de control',
   ];
 
-  private response: string[] = [
+  public response: string[] = [
     'Selección del microcontrolador',
     'Inicialización del periférico',
     'Configuración del registro de control',
@@ -57,7 +57,7 @@ export class QuestionsComponent implements OnInit {
     'Documentación',
   ];
 
-  private response2: string[] = [
+  public response2: string[] = [
     'Identificación de periféricos',
     'Inicialización de periféricos',
     'Lectura y escritura de datos',
@@ -90,7 +90,7 @@ export class QuestionsComponent implements OnInit {
     'Gestión de errores y depuración',
   ];
 
-  private response3: string[] = [
+  public response3: string[] = [
     'Selección del microcontrolador',
     'Identificación de requisitos de consumo',
     'Selección del modo de bajo consumo adecuado',
@@ -129,7 +129,7 @@ export class QuestionsComponent implements OnInit {
     'Sincronización de transmisión/recepción',
   ];
 
-  private response4: string[] = [
+  public response4: string[] = [
     'Selección del microcontrolador',
     'Determinación del protocolo de comunicación (SPI, UART, I2C)',
     'Inicialización de módulo de comunicación serial',
@@ -185,6 +185,7 @@ export class QuestionsComponent implements OnInit {
     for (let i = 0; i < this.pasos.length; i++) {
       const element1 = this.pasos[i],
             element2 = this.response[i];
+
       if(element1 === element2){
         corrects1++;
         this.correct[i] = true;
@@ -197,12 +198,14 @@ export class QuestionsComponent implements OnInit {
     for (let i = 0; i < this.pasos2.length; i++) {
       const element1 = this.pasos2[i],
             element2 = this.response2[i];
+
       if(element1 === element2){
         corrects2++;
         this.correct2[i] = true;
       }else{
         this.correct2[i] = false;
       }
+
     }
 
     //Validamos el tema 3

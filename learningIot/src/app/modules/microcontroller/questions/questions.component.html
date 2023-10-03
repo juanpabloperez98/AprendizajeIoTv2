@@ -20,7 +20,7 @@
     <div class="col-lg-12 card-question">
       <h4>1 Tema: Configuración de pines en microcontroladores</h4>
       <div class="drop" cdkDropList (cdkDropListDropped)="onDrop($event)">
-        <div [ngClass]="{'correct': correct[i]}" *ngFor="let paso of pasos; let i = index" cdkDrag>
+        <div [cdkDragDisabled]="correct[i]" [ngClass]="{'correct': correct[i]}" *ngFor="let paso of pasos; let i = index" cdkDrag>
           {{i+1}} - {{ paso }}
         </div>
       </div>
@@ -28,7 +28,7 @@
     <div class="col-lg-12 card-question">
       <h4>2 Tema: Gestión de periféricos en microcontroladores</h4>
       <div class="drop" cdkDropList (cdkDropListDropped)="onDrop2($event)">
-        <div [ngClass]="{'correct': correct2[i]}" *ngFor="let paso of pasos2; let i = index" cdkDrag>
+        <div [cdkDragDisabled]="correct2[i]" [ngClass]="{'correct': correct2[i]}" *ngFor="let paso of pasos2; let i = index" cdkDrag>
           {{i+1}} - {{ paso }}
         </div>
       </div>
@@ -36,7 +36,7 @@
     <div class="col-lg-12 card-question">
       <h4>3 Tema: Configuración de modos de bajo consumo en microcontroladores</h4>
       <div class="drop" cdkDropList (cdkDropListDropped)="onDrop3($event)">
-        <div [ngClass]="{'correct': correct3[i]}" *ngFor="let paso of pasos3; let i = index" cdkDrag>
+        <div [cdkDragDisabled]="correct3[i]" [ngClass]="{'correct': correct3[i]}" *ngFor="let paso of pasos3; let i = index" cdkDrag>
           {{i+1}} - {{ paso }}
         </div>
       </div>
@@ -44,7 +44,7 @@
     <div class="col-lg-12 card-question">
       <h4>4 Tema: Comunicación Serial en microcontroladores</h4>
       <div class="drop" cdkDropList (cdkDropListDropped)="onDrop4($event)">
-        <div [ngClass]="{'correct': correct4[i]}" *ngFor="let paso of pasos4; let i = index" cdkDrag>
+        <div [cdkDragDisabled]="correct4[i]" [ngClass]="{'correct': correct4[i]}" *ngFor="let paso of pasos4; let i = index" cdkDrag>
           {{i+1}} - {{ paso }}
         </div>
       </div>
