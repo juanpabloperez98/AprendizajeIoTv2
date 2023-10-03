@@ -11,6 +11,8 @@ export class QuestionsComponent implements OnInit {
   @ViewChild('questionNum1', { static: false }) questionNum1!: ElementRef;
   @ViewChild('questionNum2', { static: false }) questionNum2!: ElementRef;
   @ViewChild('questionNum3', { static: false }) questionNum3!: ElementRef;
+  @ViewChild('questionNum4', { static: false }) questionNum4!: ElementRef;
+  @ViewChild('questionNum5', { static: false }) questionNum5!: ElementRef;
   @ViewChild('finalSection', { static: false }) finalSection!: ElementRef;
   @ViewChild('progressBar', { static: false }) progressBar!: ElementRef;
 
@@ -18,11 +20,15 @@ export class QuestionsComponent implements OnInit {
     "answer3",
     "answer2",
     "answer3",
+    "answer1",
+    "answer2",
   ]
-  selectedAnswer: string[] = ['answer1','answer1','answer1'];
+  selectedAnswer: string[] = ['answer1','answer1','answer1','answer1','answer1'];
   selectedQuestion1: string = 'answer1';
   selectedQuestion2: string = 'answer1';
   selectedQuestion3: string = 'answer1';
+  selectedQuestion4: string = 'answer1';
+  selectedQuestion5: string = 'answer1';
 
   progressValue: number = 33;
 
@@ -32,6 +38,25 @@ export class QuestionsComponent implements OnInit {
   cocina:boolean=false;
   sala:boolean=false;
   comedor:boolean=false;
+
+
+  berenjena: boolean = false;
+  berenjena1: boolean = false;
+  berenjena2: boolean = false;
+  berenjena21: boolean = false;
+
+  flor1: boolean = false;
+  flor12: boolean = false;
+  flor2: boolean = false;
+  flor21: boolean = false;
+
+  zanaoria1: boolean = false;
+  zanaoria11: boolean = false;
+  zanaoria2: boolean = false;
+  zanaoria21: boolean = false;
+
+
+
 
   ActivarMensajeError:boolean=true;
   ActivarEstiloError:boolean=true;
@@ -57,6 +82,8 @@ export class QuestionsComponent implements OnInit {
     this.finalSection.nativeElement.style.display = 'none';
     this.questionNum2.nativeElement.style.display = 'none';
     this.questionNum3.nativeElement.style.display = 'none';
+    this.questionNum4.nativeElement.style.display = 'none';
+    this.questionNum5.nativeElement.style.display = 'none';
   }
 
   ngOnInit(): void {
@@ -108,12 +135,36 @@ export class QuestionsComponent implements OnInit {
         this.botonSiguienteDisabled=true;
         this.ActivarMensajeError=true;
         this.selectedAnswer[question] = this.selectedQuestion3;
-        this.progressValue += 1;
         this.questionNum3.nativeElement.style.display = 'none';
+        this.questionNum4.nativeElement.style.display = '';
+        this.progressValue += 33;
+        break;
+      }
+
+      case 3:{
+        this.botonSiguienteDisabled=true;
+        this.ActivarMensajeError=true;
+        this.selectedAnswer[question] = this.selectedQuestion4;
+        this.questionNum4.nativeElement.style.display = 'none';
+        this.questionNum5.nativeElement.style.display = '';
+        this.progressValue += 33;
+        break;
+      }
+
+      case 4:{
+        this.botonSiguienteDisabled=true;
+        this.ActivarMensajeError=true;
+        this.selectedAnswer[question] = this.selectedQuestion5;
+        this.progressValue += 1;
+        this.questionNum5.nativeElement.style.display = 'none';
         this.progressBar.nativeElement.style.display = 'none';
         this.showMessage();
         break;
       }
+
+
+
+
     }
   }
 
@@ -173,6 +224,57 @@ export class QuestionsComponent implements OnInit {
         }
         break;
       }
+
+      case 3:{
+        if (this.selectedQuestion4=="answer1"){
+          this.berenjena=true;
+          this.berenjena1=true;
+          this.berenjena2=true;
+          this.berenjena21=true;
+          this.flor1=true;
+          this.flor12=true;
+          this.flor2=true;
+          this.flor21=true;
+          this.botonSiguienteDisabled=false;
+          if(this.ActivarMensajeError==false){
+            this.ActivarMensajeError=true;
+          }
+
+        }else{
+          this.berenjena=false;
+          this.berenjena1=false;
+          this.berenjena2=false;
+          this.berenjena21=false;
+          this.flor1=true;
+          this.flor12=true;
+          this.flor2=true;
+          this.flor21=true;
+          this.ActivarMensajeError=false;
+          this.botonSiguienteDisabled=true;
+
+        }
+        break;
+      }
+
+      case 4:{
+        if (this.selectedQuestion5=="answer2"){
+
+          this.botonSiguienteDisabled=false;
+          if(this.ActivarMensajeError==false){
+            this.ActivarMensajeError=true;
+          }
+
+        }else{
+
+          this.ActivarMensajeError=false;
+          this.botonSiguienteDisabled=true;
+
+        }
+        break;
+      }
+
+
+
     }
   }
 
@@ -248,6 +350,31 @@ void loop() {
 
 
 }`
+
+CODE4:string=
+`
+int sensorHumedad = A0;  // Pin analógico para el sensor de humedad
+int valHumedad;    // Variable para almacenar la lectura de humedad
+
+void setup() {
+  pinMode(sensorHumedad, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  valHumedad = analogRead(sensorHumedad);
+
+  if (valHumedad < 300) {
+    // ¡Agrega código aquí para encender el sistema de riego!
+    Serial.println("Riego activado");
+  } else {
+    // ¡Agrega código aquí para apagar el sistema de riego!
+    Serial.println("Riego desactivado");
+  }
+
+  delay(1000);
+}
+`
 
 
 
