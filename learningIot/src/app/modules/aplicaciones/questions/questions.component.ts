@@ -245,10 +245,10 @@ export class QuestionsComponent implements OnInit {
           this.berenjena1=false;
           this.berenjena2=false;
           this.berenjena21=false;
-          this.flor1=true;
-          this.flor12=true;
-          this.flor2=true;
-          this.flor21=true;
+          this.flor1=false;
+          this.flor12=false;
+          this.flor2=false;
+          this.flor21=false;
           this.ActivarMensajeError=false;
           this.botonSiguienteDisabled=true;
 
@@ -259,12 +259,21 @@ export class QuestionsComponent implements OnInit {
       case 4:{
         if (this.selectedQuestion5=="answer2"){
 
+          this.zanaoria1=true;
+          this.zanaoria11= true;
+          this.zanaoria2 = true;
+          this.zanaoria21 = true;
+
           this.botonSiguienteDisabled=false;
           if(this.ActivarMensajeError==false){
             this.ActivarMensajeError=true;
           }
 
         }else{
+          this.zanaoria1=false;
+          this.zanaoria11= false;
+          this.zanaoria2 = false;
+          this.zanaoria21 = false;
 
           this.ActivarMensajeError=false;
           this.botonSiguienteDisabled=true;
@@ -376,6 +385,57 @@ void loop() {
 }
 `
 
+CODE5:string=
+`
+#include <ESP8266WiFi.h>
+#include <Wire.h>
+const char* ssid = "TU_SSID";
+const char* password = "TU_CLAVE_WIFI";
+const char* host = "api.thingspeak.com";
+const String apiKey = "TU_API_KEY";
 
+float humedadSuelo; // Variable para almacenar la lectura de humedad
 
+// Pin analógico para el sensor de humedad del suelo
+const int sensorHumedad = A0;
+void setup() {
+  Serial.begin(115200);
+  delay(10);
+  // Conectar a Wi-Fi
+  Serial.println();
+  Serial.println();
+  Serial.print("Conectando a ");
+  Serial.println(ssid);
+
+  WiFi.begin(ssid, password);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("");
+  Serial.println("Conexión WiFi establecida");
+}
+void loop() {
+
+  // Construir la URL para enviar los datos a ThingSpeak
+  String url = "/update?api_key=" + apiKey + "&field1="
+  + String(humedadSuelo);
+  // Conectar al servidor ThingSpeak
+  WiFiClient client;
+  if (client.connect(host, 80)) {
+    Serial.println("Conectado a ThingSpeak");
+    client.print("GET " + url + " HTTP/1.1\r\n");
+    client.print("Host: " + String(host) + "\r\n");
+    client.print("Connection: close\r\n\r\n");
+    delay(1000);
+    client.stop();
+    Serial.println("Datos enviados a ThingSpeak");
+  } else {
+    Serial.println("Error al conectar a ThingSpeak");
+  }
+  // Esperar un tiempo antes de la siguiente lectura
+  delay(900000);  // 15 minutos en milisegundos
+}
+`
 }
