@@ -1,6 +1,9 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { HighlightService } from '../../../services/highlight.service';
 
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'presentation2-questions',
   templateUrl: './questions.component.html',
@@ -74,10 +77,14 @@ export class QuestionsComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(
+    private highlightService: HighlightService,
+    private router: Router
+  ) { }
 
   ngAfterViewInit() {
     // this.questionNum1.nativeElement.style.display = 'none';
+    this.highlightService.highlightAll();
     this.progressBar.nativeElement.style.display = 'none';
     this.finalSection.nativeElement.style.display = 'none';
     this.questionNum2.nativeElement.style.display = 'none';
@@ -103,12 +110,23 @@ export class QuestionsComponent implements OnInit {
 
   showMessage = (): void => {
     this.getAnswers();
-    if(this.correctAnswer < this.incorrectAnswer){
+    /* if(this.correctAnswer < this.incorrectAnswer){
       this.titleMsg = 'Lo sentimos no haz aprobado las preguntas';
       this.bodyMsg = '¡No te desanimes! Sigue practicando y mejorarás';
       this.imagePath = 'assets/logos/incorrect.png';
     }
-    this.finalSection.nativeElement.style.display = '';
+    this.finalSection.nativeElement.style.display = ''; */
+    Swal.fire(
+      '🎉 ¡Perfecto!',
+      `Has completado con éxito todos los módulos de esta aplicación. ¡Excelente trabajo!
+      Aunque has llegado al final de nuestro programa, la jornada en el amplio mundo del Internet de las Cosas (IoT) apenas comienza. Hay un océano de información y oportunidades esperando por ti. Te animamos a seguir profundizando y explorando en línea para ampliar tu conocimiento y habilidades. El futuro de IoT es brillante, y tú eres ahora parte de él.
+      ¡Continúa explorando y nunca dejes de aprender!`,
+      'success'
+    ).then((response) => {
+      if(response.isConfirmed){
+        this.router.navigate(['/']);
+      }
+    })
   }
 
   onClick = (question: number): void => {
@@ -161,13 +179,18 @@ export class QuestionsComponent implements OnInit {
         this.showMessage();
         break;
       }
-
-
-
-
     }
+    this.scrollToTop();
   }
 
+
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
 
 
   onClickEnviar = (question: number): void => {
@@ -179,8 +202,13 @@ export class QuestionsComponent implements OnInit {
             this.botonSiguienteDisabled=false;
             if(this.ActivarMensajeError==false){
               this.ActivarMensajeError=true;
-
             }
+            this.scrollToTop();
+            Swal.fire(
+              '✅ ¡Bien hecho',
+              '¡Felicitaciones! Has respondido correctamente, dale siguiente para continuar',
+              'success'
+            );
         }else{
           this.cuarto1=false;
           this.cuarto2=false;
@@ -198,7 +226,12 @@ export class QuestionsComponent implements OnInit {
             this.ActivarMensajeError=true;
 
           }
-
+          this.scrollToTop();
+            Swal.fire(
+              '✅ ¡Bien hecho',
+              '¡Felicitaciones! Has respondido correctamente, dale siguiente para continuar',
+              'success'
+            );
         }else{
           this.sala=false;
           this.cocina=false;
@@ -215,7 +248,12 @@ export class QuestionsComponent implements OnInit {
           if(this.ActivarMensajeError==false){
             this.ActivarMensajeError=true;
           }
-
+          this.scrollToTop();
+          Swal.fire(
+            '✅ ¡Bien hecho',
+            '¡Felicitaciones! Has respondido correctamente, dale siguiente para continuar',
+            'success'
+          );
         }else{
           this.bano=false
           this.ActivarMensajeError=false;
@@ -239,7 +277,12 @@ export class QuestionsComponent implements OnInit {
           if(this.ActivarMensajeError==false){
             this.ActivarMensajeError=true;
           }
-
+          this.scrollToTop();
+            Swal.fire(
+              '✅ ¡Bien hecho',
+              '¡Felicitaciones! Has respondido correctamente, dale siguiente para continuar',
+              'success'
+            );
         }else{
           this.berenjena=false;
           this.berenjena1=false;
@@ -269,6 +312,12 @@ export class QuestionsComponent implements OnInit {
             this.ActivarMensajeError=true;
           }
 
+          this.scrollToTop();
+            Swal.fire(
+              '✅ ¡Bien hecho',
+              '¡Felicitaciones! Has respondido correctamente, dale siguiente para continuar',
+              'success'
+            );
         }else{
           this.zanaoria1=false;
           this.zanaoria11= false;

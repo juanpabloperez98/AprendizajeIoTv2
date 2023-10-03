@@ -16,8 +16,9 @@
     <app-card-question *ngFor="let questions of QUESTION_DATA; let i = index" class="col-lg-12" [id]="i"
       [titleQuestion]="questions.title" [listQuestion]="questions.listQuestion"
       [validateQuestion]="validateIsCorrect"></app-card-question>
-    <button class="btn btn-success mt-2 w-25" (click)="validateAnswers()">
-      Evaluar cuestionario
-    </button>
+    <div class="col-lg-12 py-5">
+      <button class="btn btn-success mt-2 w-25" (click)="validateAnswers()">Evaluar cuestionario</button>
+      <button class="btn btn-warning mt-2 ms-3" (click)="back()">Volver</button>
+    </div>
   </form>
 </article>
