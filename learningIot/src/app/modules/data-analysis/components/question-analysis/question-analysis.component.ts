@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { QUESTION_DATA } from '../../constant/question.constant';
 import Swal from 'sweetalert2';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-question-analysis',
@@ -28,7 +30,7 @@ export class QuestionAnalysisComponent implements OnInit {
 
   validateIsCorrect: boolean = false;
 
-  constructor(private readonly formBuilder: FormBuilder) { }
+  constructor(private readonly formBuilder: FormBuilder, private location: Location) { }
 
   ngOnInit(): void {
     this.formQuestion = this.formBuilder.group({});
@@ -71,5 +73,9 @@ export class QuestionAnalysisComponent implements OnInit {
       `,
       'error'
     );
+  }
+
+  back(){
+    this.location.back();
   }
 }
