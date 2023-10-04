@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'shared-button-go-back',
@@ -12,11 +13,19 @@ export class ButtonGoBackComponent implements OnInit {
 
   public direct: string = "#"
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+
+  }
+
+  onClick(){
     if(this.lastSection){
-      this.direct = '/aplicaciones/main'
+      this.router.navigate(['/aplicaciones/main']);
+    }else{
+      this.router.navigate(['/']);
     }
   }
 
