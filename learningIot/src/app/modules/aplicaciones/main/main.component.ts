@@ -247,6 +247,204 @@ export class MainComponent implements OnInit {
 
 
 
+  //CODE 3 ----------------------------------------------------------------
+
+
+  CODE3: string = `def evaluarConsumoEnergia(hardware):
+  consumos = {
+      'MicrocontroladorA': 15,  # mA/h
+      'MicrocontroladorB': 20,  # mA/h
+      # ... otros microcontroladores y sus consumos
+  }
+  return consumos.get(hardware, -1)  # Devuelve -1 si el hardware no se encuentra
+  # Test de la función
+  hardware_seleccionado = 'MicrocontroladorA'
+  consumo = evaluarConsumoEnergia(hardware_seleccionado)
+  if consumo != -1:
+    print(f'El {hardware_seleccionado} tiene un consumo de {consumo} mA/h')
+  else:
+    print(f'Hardware {hardware_seleccionado} no encontrado')`;
+
+  LINE_CODE3: string[] = [
+    'def evaluarConsumoEnergia(hardware):',
+    '    consumos = {',
+    '        "MicrocontroladorA": 15,  # mA/h',
+    '        "MicrocontroladorB": 20,  # mA/h',
+    '        # ... otros microcontroladores y sus consumos',
+    '    }',
+    '    return consumos.get(hardware, -1)  # Devuelve -1 si el hardware no se encuentra',
+    '# Test de la función',
+    'hardware_seleccionado = "MicrocontroladorA"',
+    'consumo = evaluarConsumoEnergia(hardware_seleccionado)',
+    'if consumo != -1:',
+    '    print(f"El {hardware_seleccionado} tiene un consumo de {consumo} mA/h")',
+    'else:',
+    '    print(f"Hardware {hardware_seleccionado} no encontrado")',
+  ];
+
+  EXPLAIN3: string[] = [
+    'Aquí estamos definiendo una función llamada evaluarConsumoEnergia que toma un parámetro llamado hardware.',
+    'Dentro de la función, estamos inicializando un diccionario llamado consumos.',
+    'Esta línea está agregando una entrada al diccionario consumos donde la clave es "MicrocontroladorA" y el valor asociado es 15 (que representa el consumo de energía en mA/h).',
+    'Similar a la línea anterior, aquí se agrega otra entrada al diccionario con la clave "MicrocontroladorB" y un valor de 20.',
+    'Esta línea es simplemente un comentario que indica que podrías agregar más microcontroladores y sus respectivos consumos de energía al diccionario.',
+    'Esta línea cierra el diccionario consumos.',
+    'Aquí, estamos utilizando el método get de los diccionarios de Python. Este método intenta recuperar el valor asociado con la clave que se le pasa como primer parámetro (en este caso, hardware). Si la clave no se encuentra en el diccionario, en lugar de lanzar un error, el método devuelve el valor que se le pasa como segundo parámetro (en este caso, -1). Por lo tanto, esta línea devolverá el consumo del hardware si se encuentra en el diccionario, o -1 si no se encuentra.',
+    'Esto es un comentario que indica que las líneas siguientes probarán la función que acabamos de definir.',
+    'Aquí estamos asignando el string "MicrocontroladorA" a la variable hardware_seleccionado.',
+    'En esta línea, llamamos a la función evaluarConsumoEnergia con hardware_seleccionado como argumento y almacenamos el resultado en la variable consumo.',
+    'Esta línea inicia una sentencia condicional. Estamos comprobando si el valor de consumo es diferente de -1.',
+    'Si el valor de consumo es diferente de -1, entonces ejecutamos esta línea, que imprime un mensaje informando del consumo del microcontrolador.',
+    'Si el valor de consumo es -1, entonces las instrucciones después de este else serán ejecutadas.',
+    'Esta línea imprime un mensaje indicando que el microcontrolador especificado no fue encontrado en el diccionario consumos.',
+  ];
+
+  max_line3: number = this.LINE_CODE3.length;
+
+
+  //CODE 4 ----------------------------------------------------------------
+
+
+  CODE4: string = `def evaluarCompatibilidadConectividad(hardware):
+  compatibilidades = {
+      'MicrocontroladorA': ['Wi-Fi', 'Bluetooth'],
+      'MicrocontroladorB': ['Zigbee', 'LoRaWAN'],
+      # ... otros microcontroladores y sus compatibilidades
+  }
+  return compatibilidades.get(hardware, None)  # Devuelve None si el hardware no se encuentra
+# Test de la función
+hardware_seleccionado = 'MicrocontroladorA'
+conectividades = evaluarCompatibilidadConectividad(hardware_seleccionado)
+if conectividades:
+  print(f'El {hardware_seleccionado} es compatible con: {", ".join(conectividades)}')
+else:
+  print(f'Hardware {hardware_seleccionado} no encontrado')`;
+
+  LINE_CODE4: string[] = [
+    'def evaluarCompatibilidadConectividad(hardware):',
+    '  compatibilidades = {',
+    '      "MicrocontroladorA": ["Wi-Fi", "Bluetooth"],',
+    '      "MicrocontroladorB": ["Zigbee", "LoRaWAN"],',
+    '      # ... otros microcontroladores y sus compatibilidades',
+    '  }',
+    '  return compatibilidades.get(hardware, None)  # Devuelve None si el hardware no se encuentra',
+    '# Test de la función',
+    'hardware_seleccionado = "MicrocontroladorA"',
+    'conectividades = evaluarCompatibilidadConectividad(hardware_seleccionado)',
+    'if conectividades:',
+    '  print(f"El {hardware_seleccionado} es compatible con: {", ".join(conectividades)}")',
+    'else:',
+    '  print(f"Hardware {hardware_seleccionado} no encontrado")'
+  ];
+
+  EXPLAIN4: string[] = [
+    'Aquí estamos definiendo una función llamada evaluarConsumoEnergia que toma un parámetro llamado hardware.',
+    'Dentro de la función, estamos inicializando un diccionario llamado consumos.',
+    'Esta línea está agregando una entrada al diccionario consumos donde la clave es "MicrocontroladorA" y el valor asociado es 15 (que representa el consumo de energía en mA/h).',
+    'Similar a la línea anterior, aquí se agrega otra entrada al diccionario con la clave "MicrocontroladorB" y un valor de 20.',
+    'Esta línea es simplemente un comentario que indica que podrías agregar más microcontroladores y sus respectivos consumos de energía al diccionario.',
+    'Esta línea cierra el diccionario consumos.',
+    'Aquí, estamos utilizando el método get de los diccionarios de Python. Este método intenta recuperar el valor asociado con la clave que se le pasa como primer parámetro (en este caso, hardware). Si la clave no se encuentra en el diccionario, en lugar de lanzar un error, el método devuelve el valor que se le pasa como segundo parámetro (en este caso, -1). Por lo tanto, esta línea devolverá el consumo del hardware si se encuentra en el diccionario, o -1 si no se encuentra.',
+    'Esto es un comentario que indica que las líneas siguientes probarán la función que acabamos de definir.',
+    'Aquí estamos asignando el string "MicrocontroladorA" a la variable hardware_seleccionado.',
+    'En esta línea, llamamos a la función evaluarConsumoEnergia con hardware_seleccionado como argumento y almacenamos el resultado en la variable consumo.',
+    'Esta línea inicia una sentencia condicional. Estamos comprobando si el valor de consumo es diferente de -1.',
+    'Si el valor de consumo es diferente de -1, entonces ejecutamos esta línea, que imprime un mensaje informando del consumo del microcontrolador.',
+    'Si el valor de consumo es -1, entonces las instrucciones después de este else serán ejecutadas.',
+    'Esta línea imprime un mensaje indicando que el microcontrolador especificado no fue encontrado en el diccionario consumos.',
+  ];
+
+  max_line4: number = this.LINE_CODE4.length;
+
+
+
+  //CODE 5 ----------------------------------------------------------------
+
+
+  CODE5: string = `# Este código es un ejemplo simplificado que representa cómo podrías leer datos de un sensor y enviarlos a través de Wi-Fi usando un ESP32.
+  # Utilizaremos un paquete ficticio llamado "esp32lib" para representar las funciones del ESP32.
+  import esp32lib
+  def conectar_wifi(SSID, password):
+      if esp32lib.wifi_connect(SSID, password):
+          print("Conectado al WiFi!")
+      else:
+          print("Error al conectar al WiFi.")
+  def leer_sensor_ambiente():
+      # Supongamos que este método lee un sensor de temperatura y humedad.
+      temperatura, humedad = esp32lib.read_ambient_sensor()
+      return temperatura, humedad
+  def enviar_datos_a_servidor(temperatura, humedad):
+      server_url = "http://mi-servidor-de-hogar-inteligente.com/api/data"
+      data = {
+          "temperatura": temperatura,
+          "humedad": humedad
+      }
+      esp32lib.post_data_to_server(server_url, data)
+  SSID = "Nombre_de_tu_red_WiFi"
+  password = "Contraseña_de_tu_red_WiFi"
+  conectar_wifi(SSID, password)
+  temperatura, humedad = leer_sensor_ambiente()
+  enviar_datos_a_servidor(temperatura, humedad)`;
+
+  LINE_CODE5: string[] = [
+    '# Este código es un ejemplo simplificado que representa cómo podrías leer datos de un sensor y enviarlos a través de Wi-Fi usando un ESP32.',
+    '# Utilizaremos un paquete ficticio llamado "esp32lib" para representar las funciones del ESP32.',
+    'import esp32lib',
+    'def conectar_wifi(SSID, password):',
+    '    if esp32lib.wifi_connect(SSID, password):',
+    '        print("Conectado al WiFi!")',
+    '    else:',
+    '        print("Error al conectar al WiFi.")',
+    'def leer_sensor_ambiente():',
+    '    # Supongamos que este método lee un sensor de temperatura y humedad.',
+    '    temperatura, humedad = esp32lib.read_ambient_sensor()',
+    '    return temperatura, humedad',
+    'def enviar_datos_a_servidor(temperatura, humedad):',
+    '    server_url = "http://mi-servidor-de-hogar-inteligente.com/api/data"',
+    '    data = {',
+    '        "temperatura": temperatura,',
+    '        "humedad": humedad',
+    '    }',
+    '    esp32lib.post_data_to_server(server_url, data)',
+    'SSID = "Nombre_de_tu_red_WiFi"',
+    'password = "Contraseña_de_tu_red_WiFi"',
+    'conectar_wifi(SSID, password)',
+    'temperatura, humedad = leer_sensor_ambiente()',
+    'enviar_datos_a_servidor(temperatura, humedad)',
+  ];
+
+  EXPLAIN5: string[] = [
+    'Describe la finalidad general del código.',
+    'Se aclara que se hará uso de un módulo ficticio para representar las funciones del hardware ESP32.',
+    'Se importa el módulo ficticio llamado "esp32lib".',
+    'Inicio de la definición de una función para conectarse al WiFi.',
+    'Se intenta conectar al WiFi usando la función del módulo ficticio.',
+    'Si se conecta exitosamente, imprime un mensaje de éxito.',
+    'Si la función anterior falla, se procede con el siguiente bloque.',
+    'Si hay un error en la conexión, se imprime un mensaje de error.',
+    'Inicio de la definición de una función para leer datos del sensor.',
+    'Explica que la siguiente función simula la lectura de un sensor.',
+    'Llamada a la función ficticia que simula la lectura del sensor.',
+    'La función devuelve dos valores: temperatura y humedad.',
+    'Inicio de la definición de una función para enviar datos al servidor.',
+    'Se define una URL de servidor ficticia.',
+    'Inicio de la definición de un diccionario llamado data',
+    'Se agrega la clave "temperatura" al diccionario con su respectivo valor.',
+    'Se agrega la clave "humedad" al diccionario con su respectivo valor.',
+    'Fin de la definición del diccionario.',
+    'Se envían los datos al servidor usando una función ficticia del módulo "esp32lib".',
+    'Se asigna una cadena de texto a la variable SSID.',
+    'Se asigna una cadena de texto a la variable password.',
+    'Se intenta conectar al WiFi usando la función previamente definida y los valores SSID y password.',
+    'Se leen los valores del sensor utilizando la función previamente definida.',
+    'Se envían los valores de temperatura y humedad al servidor con la función previamente definida.',
+  ];
+
+  max_line5: number = this.LINE_CODE5.length;
+
+
+
+
   constructor(private highlightService: HighlightService) { }
 
   ngOnInit(): void {
