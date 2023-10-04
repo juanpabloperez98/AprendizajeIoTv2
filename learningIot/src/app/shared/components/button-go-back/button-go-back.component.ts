@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'shared-button-go-back',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonGoBackComponent implements OnInit {
 
+
+  @Input() lastSection: boolean = false;
+
+  public direct: string = "#"
+
   constructor() { }
 
   ngOnInit(): void {
+    if(this.lastSection){
+      this.direct = '/aplicaciones/main'
+    }
   }
 
 }
