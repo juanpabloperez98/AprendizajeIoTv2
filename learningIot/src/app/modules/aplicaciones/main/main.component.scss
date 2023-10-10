@@ -16,6 +16,22 @@ p, li{
   grid-gap: 30px;
 }
 
+.info{
+  display: flex;
+  justify-content: center; /* Esto centra los hijos horizontalmente */
+  margin-bottom: 20px;
+}
+
+.info .col-lg-5{
+  text-align: center !important;
+  background-color:  rgb(4, 30, 67);
+  margin-top: 20px;
+  margin-left: 20px;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
 .ContenedorPadre1{
   display: grid;
   grid-template-columns:100% 100%;
