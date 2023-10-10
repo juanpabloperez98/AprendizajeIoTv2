@@ -9,6 +9,10 @@
   src: url("./assets/fonts/EB_Garamond/static/EBGaramond-Bold.ttf");
 }
 
+body, p, div {
+  text-align: justify;
+}
+
 .maxWidth{
   max-width: 80%;
 }
