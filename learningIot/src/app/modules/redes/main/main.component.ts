@@ -121,6 +121,112 @@ export class MainComponent implements OnInit {
     ];
     max_line2:number = 16;
 
+
+
+    // CODIGO 3
+    CODE3:string=
+    `import socket
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    host = 'localhost'
+    port = 12345
+    s.bind((host, port))
+    s.listen(5)
+    print(f'Esperando conexiones en {host}:{port}')
+    c, addr = s.accept()
+    print(f'Conexión desde {addr}')
+    c.sendall(b'Hola, cliente')
+    print(c.recv(1024))
+    c.close()`;
+    LINE_CODE3:string[]= [
+      "import socket",
+      "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)",
+      "host = 'localhost'",
+      "port = 12345",
+      "s.bind((host, port))",
+      "s.listen(5)",
+      "print(f'Esperando conexiones en {host}:{port}')",
+      "c, addr = s.accept()",
+      "print(f'Conexión desde {addr}')",
+      "c.sendall(b'Hola, cliente')",
+      "print(c.recv(1024))",
+      "c.close()",
+    ];
+    explain3:string[] = [
+      "Importa el módulo socket de Python, que proporciona una interfaz de bajo nivel para trabajar con conexiones de red.",
+      "Crea un nuevo objeto de socket usando socket.socket(). socket.AF_INET indica que el socket será de tipo IPv4. socket.SOCK_STREAM indica que el socket será de tipo TCP (basado en la conexión).",
+      "Define una variable host y la asigna al string 'localhost', que generalmente se refiere a la dirección IP 127.0.0.1, la dirección IP del host local.",
+      "Define una variable port y le asigna el valor 12345. Es el número de puerto en el que el socket estará escuchando conexiones.",
+      "Vincula el socket s a una dirección IP y un puerto. En este caso, vincula el socket a localhost (o 127.0.0.1) y al puerto 12345.",
+      "Hace que el socket s comience a escuchar conexiones entrantes. El número 5 es el número máximo de conexiones en cola que el sistema puede manejar. Si más de 5 conexiones intentan conectarse simultáneamente antes de que se acepte una, las adicionales serán rechazadas.",
+      "Imprime un mensaje en la consola indicando que el programa está esperando conexiones en la dirección y puerto especificados.",
+      "Espera y acepta una conexión entrante. Una vez que un cliente se conecta, retorna dos valores: c: un nuevo objeto socket para interactuar con el cliente. addr: la dirección del cliente que se ha conectado.",
+      "Imprime la dirección del cliente que se ha conectado",
+      "Envía el mensaje 'Hola, cliente' al cliente usando el socket c. El prefijo b antes del string convierte el string en bytes, ya que la función sendall requiere que los datos sean bytes.",
+      "Recibe datos del cliente a través del socket c. 1024 es el tamaño máximo de los datos que se recibirán (en bytes). Imprime los datos recibidos en la consola.",
+      "Cierra la conexión con el cliente.",
+    ];
+    max_line3:number = 12;
+
+
+    // CODIGO 4
+    CODE4:string=
+    `#include <stdio.h>
+    #include <arpa/inet.h>
+    #include <netdb.h>
+    int main() {
+        char *hostname = "www.example.com";
+        struct hostent *he;
+        struct in_addr **addr_list;
+        if ((he = gethostbyname(hostname)) == NULL) {
+            perror("gethostbyname");
+            return 1;
+        }
+        addr_list = (struct in_addr **) he->h_addr_list;
+        for(int i = 0; addr_list[i] != NULL; i++) {
+            printf("%s tiene la dirección IP %s\n", hostname, inet_ntoa(*addr_list[i]));
+        }
+        return 0;
+    }`;
+    LINE_CODE4:string[]= [
+      "#include <stdio.h>",
+      "#include <arpa/inet.h>",
+      "#include <netdb.h>",
+      "int main() {",
+      "    char *hostname = 'www.example.com';",
+      "    struct hostent *he;",
+      "    struct in_addr **addr_list;",
+      "    if ((he = gethostbyname(hostname)) == NULL) {",
+      "        perror('gethostbyname');",
+      "        return 1;",
+      "    }",
+      "    addr_list = (struct in_addr **) he->h_addr_list;",
+      "    for(int i = 0; addr_list[i] != NULL; i++) {",
+      "        printf('%s tiene la dirección IP %s\n', hostname, inet_ntoa(*addr_list[i]));",
+      "    }",
+      "    return 0;",
+      "}",
+    ];
+    explain4:string[] = [
+      "Esta línea incluye el encabezado estándar de entrada/salida en C, lo que nos permite usar funciones como printf() para imprimir información en la consola.",
+      "Este encabezado proporciona declaraciones y definiciones para operaciones de internet. En este código, se utiliza específicamente para la función inet_ntoa().",
+      "Incluye funciones y estructuras relacionadas con la base de datos de red. En este código, se utiliza para la función gethostbyname() y la estructura hostent.",
+      "Declara el punto de entrada del programa. Cuando el programa se ejecuta, comienza desde aquí.",
+      "Declara un puntero a un carácter llamado hostname y lo inicializa con la dirección del string literal 'www.example.com'.",
+      "Declara un puntero hacia una estructura hostent llamado he. La estructura hostent se utiliza para almacenar la información de un host, incluidas sus direcciones IP.",
+      "Declara un puntero doble hacia una estructura in_addr. Esta estructura se utiliza para representar una dirección IPv4.",
+      "La función gethostbyname() trata de encontrar la entrada de la base de datos de nombres de host que corresponda al nombre hostname. Si tiene éxito, devuelve un puntero a una estructura hostent. De lo contrario, devuelve NULL.Esta línea también asigna el resultado de gethostbyname() a he y comprueba si es NULL en una única operación.",
+      "Si gethostbyname() devolvió NULL, esta función imprimirá un mensaje de error descriptivo en la consola.",
+      "En caso de error (si he es NULL), el programa se termina inmediatamente y devuelve un valor de 1 para indicar que hubo un error.",
+      "Cierra el bloque if.",
+      "Asigna el puntero h_addr_list de la estructura hostent apuntada por he al puntero addr_list. Esto da acceso directo a la lista de direcciones IP.",
+      "Comienza un bucle que se ejecutará mientras el elemento i en addr_list no sea NULL.",
+      "Imprime el nombre del host y su dirección IP correspondiente. inet_ntoa() convierte la dirección IP (que está en formato binario) a una cadena de caracteres.",
+      "Cierra el bucle for.",
+      "Termina el programa y devuelve un valor de 0 para indicar que se ejecutó con éxito.",
+      "Cierra el bloque de la función main.",
+    ];
+    max_line4:number = 17;
+
   QUESTION_PATH = "/redes/questions";
   constructor() { }
 
