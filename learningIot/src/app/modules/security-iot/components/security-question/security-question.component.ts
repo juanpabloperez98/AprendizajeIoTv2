@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 import Swal from 'sweetalert2';
 
 import { LIST_DRAG_SECURITY } from '../../constant/question.constant';
+import { DragQuestionComponent } from '../drag-question/drag-question.component';
 
 @Component({
   selector: 'app-security-question',
@@ -11,16 +12,16 @@ import { LIST_DRAG_SECURITY } from '../../constant/question.constant';
   styleUrls: ['./security-question.component.scss'],
 })
 export class SecurityQuestionComponent implements OnInit {
-  LIST_DRAG_SECURITY = [...LIST_DRAG_SECURITY];
+  @ViewChild(DragQuestionComponent) dragComponent!: DragQuestionComponent
 
-  isFirstLoad: boolean = false;
+  LIST_DRAG_SECURITY = [...LIST_DRAG_SECURITY];
 
   constructor(private readonly router: Router) { }
 
   ngOnInit(): void { }
 
   validateAnswers(): void {
-    this.isFirstLoad = true;
+    this.dragComponent.validateResponse()
 
     const validation: Record<string, boolean> = {
       question1: this.validateArray(0),
