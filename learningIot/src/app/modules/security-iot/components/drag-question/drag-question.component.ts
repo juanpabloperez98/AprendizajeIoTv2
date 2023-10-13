@@ -12,19 +12,30 @@ export class DragQuestionComponent {
 
   @Input() orderList!: OrderList;
 
+  @Input('newValidation') set changeNewValidation(newValidation: boolean) {
+    if (newValidation) this.validateResponse();
+  }
+
   responseCorrect: Record<string, boolean> = {};
 
-  constructor() { }
+  constructor() {}
 
   onDrop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.orderList.question, event.previousIndex, event.currentIndex);
+    moveItemInArray(
+      this.orderList.question,
+      event.previousIndex,
+      event.currentIndex
+    );
   }
 
   validateResponse(): void {
-    this.responseCorrect = {}
-    const filterCorrect = this.orderList.question.filter((question, index) => this.orderList.response[index] === question)
-    filterCorrect.forEach(correct => {
-      this.responseCorrect[correct] = true
-    })
+    this.responseCorrect = {};
+    const filterCorrect = this.orderList.question.filter(
+      (question, index) => this.orderList.response[index] === question
+    );
+    filterCorrect.forEach((correct) => {
+      this.responseCorrect[correct] = true;
+    });
+    console.log(filterCorrect);
   }
 }

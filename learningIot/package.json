@@ -21,7 +21,7 @@
     "@angular/router": "^14.1.0",
     "bootstrap": "^5.3.0",
     "monaco-editor": "^0.43.0",
-    "ngx-monaco-editor": "^6.0.0",
+    "ngx-monaco-editor": "6",
     "prismjs": "^1.29.0",
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.7.28",
