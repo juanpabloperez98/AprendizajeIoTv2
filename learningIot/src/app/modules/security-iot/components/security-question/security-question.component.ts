@@ -12,16 +12,24 @@ import { DragQuestionComponent } from '../drag-question/drag-question.component'
   styleUrls: ['./security-question.component.scss'],
 })
 export class SecurityQuestionComponent implements OnInit {
-  @ViewChild(DragQuestionComponent) dragComponent!: DragQuestionComponent
+  @ViewChild(DragQuestionComponent) dragComponent!: DragQuestionComponent;
 
   LIST_DRAG_SECURITY = [...LIST_DRAG_SECURITY];
 
-  constructor(private readonly router: Router) { }
+  newValidation: boolean = false;
 
-  ngOnInit(): void { }
+  constructor(private readonly router: Router) {}
+
+  ngOnInit(): void {}
 
   validateAnswers(): void {
-    this.dragComponent.validateResponse()
+    this.newValidation = true;
+
+    setTimeout(() => {
+      this.newValidation = false;
+    }, 3000);
+
+    this.dragComponent.validateResponse();
 
     const validation: Record<string, boolean> = {
       question1: this.validateArray(0),
@@ -44,11 +52,11 @@ export class SecurityQuestionComponent implements OnInit {
       return;
     }
 
-    const subject1 = this.countResponse(0)
-    const subject2 = this.countResponse(1)
-    const subject3 = this.countResponse(2)
-    const subject4 = this.countResponse(3)
-    const subject5 = this.countResponse(4)
+    const subject1 = this.countResponse(0);
+    const subject2 = this.countResponse(1);
+    const subject3 = this.countResponse(2);
+    const subject4 = this.countResponse(3);
+    const subject5 = this.countResponse(4);
 
     Swal.fire(
       'Lo sentimos no haz aprobado el cuestionario',
@@ -73,14 +81,14 @@ export class SecurityQuestionComponent implements OnInit {
   }
 
   private countResponse(index: number): [number, number] {
-    let correct: number = 0
+    let correct: number = 0;
     let error: number = 0;
 
-    const LIST_DRAG = this.LIST_DRAG_SECURITY[index].orderList
+    const LIST_DRAG = this.LIST_DRAG_SECURITY[index].orderList;
     LIST_DRAG.question.forEach((question, index) => {
       if (LIST_DRAG.response[index] === question) correct++;
       else error++;
-    })
-    return [correct, error]
+    });
+    return [correct, error];
   }
 }
